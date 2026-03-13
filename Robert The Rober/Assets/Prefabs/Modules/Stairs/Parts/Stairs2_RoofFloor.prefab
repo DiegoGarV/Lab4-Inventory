@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2757874426550096382}
   - component: {fileID: 6202284807219997411}
   - component: {fileID: 4894057174996811376}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stairs2_RoofFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1068833402684532487}
+  - component: {fileID: 3197464279732226824}
   m_Layer: 0
   m_Name: Exterior_Wall
   m_TagString: Untagged
@@ -33,6 +34,27 @@ Transform:
   - {fileID: 7093169593966897082}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3197464279732226824
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404922634009394621}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.5, y: 2.5, z: 0.224267}
+  m_Center: {x: 0, y: 1.25, z: 0.0017356835}
 --- !u!1 &4165183721016410384
 GameObject:
   m_ObjectHideFlags: 0
