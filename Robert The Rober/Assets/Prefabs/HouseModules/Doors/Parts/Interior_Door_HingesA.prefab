@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 402358825243817778}
   - component: {fileID: 478882471575458603}
   - component: {fileID: 4136567567701538161}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Interior_Door_HingesA
   m_TagString: Untagged
   m_Icon: {fileID: 0}

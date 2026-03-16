@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 8945628110036089733}
   - component: {fileID: 2867367193560755261}
   - component: {fileID: 5195182300788298998}
-  m_Layer: 0
+  - component: {fileID: 881291464968489081}
+  m_Layer: 6
   m_Name: Carpet1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,3 +92,24 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &881291464968489081
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6587480301217930878}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.8433895, y: 0.056186464, z: 2.7312412}
+  m_Center: {x: -0.00000011920929, y: 0, z: -0.016353428}

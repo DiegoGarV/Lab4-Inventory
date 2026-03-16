@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 802237575660548731}
   - component: {fileID: 4363360519985872350}
   - component: {fileID: 1975164954649053460}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_8 Variant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 2760711410863324687}
   - component: {fileID: 3999005469462710865}
   - component: {fileID: 5259642267136970640}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_5 Variant (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 1170783589692933110}
   - component: {fileID: 610270536212887527}
   - component: {fileID: 6062972995917723152}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_8 Variant (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 4768915631185320935}
   - component: {fileID: 8472421497236181137}
   - component: {fileID: 3748889095547132737}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_9 Variant (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 3680757502552859101}
   - component: {fileID: 69333479953206641}
   - component: {fileID: 6146946516781358775}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_2 Variant (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -463,7 +463,7 @@ GameObject:
   - component: {fileID: 649766221744251254}
   - component: {fileID: 7673056931180864550}
   - component: {fileID: 4484181510964282227}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_3 Variant (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -554,7 +554,7 @@ GameObject:
   - component: {fileID: 5302541477629719450}
   - component: {fileID: 8586022839652146163}
   - component: {fileID: 6124018258226946830}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_1 Variant (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -646,7 +646,7 @@ GameObject:
   - component: {fileID: 3447250836222950061}
   - component: {fileID: 2384214471214326346}
   - component: {fileID: 7390840022336093818}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_7 Variant (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -737,7 +737,7 @@ GameObject:
   - component: {fileID: 8511238923175019738}
   - component: {fileID: 5560005912237896333}
   - component: {fileID: 6733810425040385543}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_9 Variant (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -827,7 +827,7 @@ GameObject:
   - component: {fileID: 1854529360723740419}
   - component: {fileID: 3527098936145903398}
   - component: {fileID: 8468644228262095394}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_6 Variant (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -918,7 +918,7 @@ GameObject:
   - component: {fileID: 5714200058010581043}
   - component: {fileID: 2249971700926513364}
   - component: {fileID: 8996381668264137726}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_7 Variant (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1009,7 +1009,7 @@ GameObject:
   - component: {fileID: 1465265454652362396}
   - component: {fileID: 2592508503968678201}
   - component: {fileID: 296824117194880499}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_9 Variant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1099,7 +1099,7 @@ GameObject:
   - component: {fileID: 6566503563822722527}
   - component: {fileID: 8127590054679351758}
   - component: {fileID: 1554895983643270480}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_3 Variant (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1190,7 +1190,7 @@ GameObject:
   - component: {fileID: 4167594726269841538}
   - component: {fileID: 6203671364452235701}
   - component: {fileID: 5082041272451297070}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring Variant (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1281,7 +1281,7 @@ GameObject:
   - component: {fileID: 5674605217564996784}
   - component: {fileID: 3860962094621605797}
   - component: {fileID: 5971527185912606985}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_7 Variant (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1372,7 +1372,7 @@ GameObject:
   - component: {fileID: 8619107829702505548}
   - component: {fileID: 221541195642332160}
   - component: {fileID: 3685135588951949239}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_5 Variant (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1463,7 +1463,7 @@ GameObject:
   - component: {fileID: 2668806905597988790}
   - component: {fileID: 1343860670290460691}
   - component: {fileID: 3837820465441207513}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring Variant (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1554,7 +1554,7 @@ GameObject:
   - component: {fileID: 7827322563047629091}
   - component: {fileID: 7225875863212082403}
   - component: {fileID: 6664498088059305126}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_1 Variant (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1646,7 +1646,7 @@ GameObject:
   - component: {fileID: 1214222086836648413}
   - component: {fileID: 2462976920210364799}
   - component: {fileID: 9069379018295704669}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_2 Variant (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1737,7 +1737,7 @@ GameObject:
   - component: {fileID: 5975436725184866328}
   - component: {fileID: 116846399799537250}
   - component: {fileID: 4873519414596497170}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_6 Variant (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1828,7 +1828,7 @@ GameObject:
   - component: {fileID: 1711625331846507662}
   - component: {fileID: 4954069319940962305}
   - component: {fileID: 7439055361413473306}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_6 Variant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1919,7 +1919,7 @@ GameObject:
   - component: {fileID: 8947749890313936515}
   - component: {fileID: 311426027569951609}
   - component: {fileID: 7633726984385621572}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_9 Variant (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2009,7 +2009,7 @@ GameObject:
   - component: {fileID: 1022049065581929855}
   - component: {fileID: 67161770722445078}
   - component: {fileID: 4061442346964161058}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_3 Variant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2100,7 +2100,7 @@ GameObject:
   - component: {fileID: 852501180146037780}
   - component: {fileID: 8923091846300272004}
   - component: {fileID: 6528254177189404613}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_2 Variant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2191,7 +2191,7 @@ GameObject:
   - component: {fileID: 522148054762553716}
   - component: {fileID: 8795596291857044999}
   - component: {fileID: 934130280185053505}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_4 Variant (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2282,7 +2282,7 @@ GameObject:
   - component: {fileID: 3899298470600682004}
   - component: {fileID: 122385376356574641}
   - component: {fileID: 2762460911527481723}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_7 Variant (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2373,7 +2373,7 @@ GameObject:
   - component: {fileID: 4083676842801954171}
   - component: {fileID: 2689709008131132781}
   - component: {fileID: 4878836549542965206}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_8 Variant (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2463,7 +2463,7 @@ GameObject:
   - component: {fileID: 2875973642249568537}
   - component: {fileID: 3381687408501994185}
   - component: {fileID: 2177492018630848355}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_5 Variant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2554,7 +2554,7 @@ GameObject:
   - component: {fileID: 3745239405355414085}
   - component: {fileID: 8780612251657067303}
   - component: {fileID: 5181767297648350277}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_4 Variant (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2645,7 +2645,7 @@ GameObject:
   - component: {fileID: 2967701898647727062}
   - component: {fileID: 4681923305706120185}
   - component: {fileID: 2046922609049702852}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring Variant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2736,7 +2736,7 @@ GameObject:
   - component: {fileID: 2153944453277513145}
   - component: {fileID: 2322228456395102020}
   - component: {fileID: 659826083646581362}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_3 Variant (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2827,7 +2827,7 @@ GameObject:
   - component: {fileID: 5147870618100512989}
   - component: {fileID: 3271689271709553717}
   - component: {fileID: 4020856090842070715}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_9 Variant (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2917,7 +2917,7 @@ GameObject:
   - component: {fileID: 5185901264994748093}
   - component: {fileID: 8095183136625641752}
   - component: {fileID: 6319440219529362898}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_4 Variant (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3008,7 +3008,7 @@ GameObject:
   - component: {fileID: 7405808688021769801}
   - component: {fileID: 2837747622601930158}
   - component: {fileID: 3228638028825773752}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_8 Variant (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3098,7 +3098,7 @@ GameObject:
   - component: {fileID: 4824747366976031442}
   - component: {fileID: 8831817381717412871}
   - component: {fileID: 8927216669929570551}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_7 Variant (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3189,7 +3189,7 @@ GameObject:
   - component: {fileID: 8828896310934575432}
   - component: {fileID: 2558942247382718897}
   - component: {fileID: 5289344712940064707}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_1 Variant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3281,7 +3281,7 @@ GameObject:
   - component: {fileID: 6314903817972250761}
   - component: {fileID: 6223712287427626031}
   - component: {fileID: 282576412428137339}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_5 Variant (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3372,7 +3372,7 @@ GameObject:
   - component: {fileID: 2217410517712756374}
   - component: {fileID: 7516677958932695934}
   - component: {fileID: 7051651189038416550}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_4 Variant (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3463,8 +3463,8 @@ GameObject:
   - component: {fileID: 6740273381111012415}
   - component: {fileID: 7648688287064495002}
   - component: {fileID: 5602880568531052368}
-  - component: {fileID: -7149236192412428811}
-  m_Layer: 0
+  - component: {fileID: 6596506267536891723}
+  m_Layer: 6
   m_Name: SM_stand_1 Variant (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3479,7 +3479,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6251438566184109701}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.18905418, y: -0, z: -0, w: 0.9819667}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.082, y: 0.708, z: -7.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3535,7 +3535,7 @@ Transform:
   - {fileID: 8828896310934575432}
   - {fileID: 2967701898647727062}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 21.795, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7648688287064495002
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3593,8 +3593,8 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &-7149236192412428811
-MeshCollider:
+--- !u!65 &6596506267536891723
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3611,10 +3611,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -7026044914867049646, guid: 4a127b51b3277d042984beff123210ac, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 0.5, y: 0.060101748, z: 0.29999998}
+  m_Center: {x: 0, y: 0.030050874, z: -0.14999999}
 --- !u!1 &6302665811591933415
 GameObject:
   m_ObjectHideFlags: 0
@@ -3626,7 +3625,7 @@ GameObject:
   - component: {fileID: 6646259190641719133}
   - component: {fileID: 7751708779180259576}
   - component: {fileID: 5509992900601056306}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_3 Variant (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3717,7 +3716,7 @@ GameObject:
   - component: {fileID: 4581580883467353714}
   - component: {fileID: 1711147340650771857}
   - component: {fileID: 2452616794853700327}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_8 Variant (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3807,7 +3806,7 @@ GameObject:
   - component: {fileID: 3976379812771098442}
   - component: {fileID: 3685400005555010447}
   - component: {fileID: 3078371501501617072}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_6 Variant (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3898,7 +3897,7 @@ GameObject:
   - component: {fileID: 5778907396325455791}
   - component: {fileID: 7466148212623292426}
   - component: {fileID: 4645992379474824384}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_5 Variant (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3989,7 +3988,7 @@ GameObject:
   - component: {fileID: 3069628257596552933}
   - component: {fileID: 5221268180305078158}
   - component: {fileID: 8811427062051194760}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_4 Variant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4080,7 +4079,7 @@ GameObject:
   - component: {fileID: 5773510996430854299}
   - component: {fileID: 5676198308631356886}
   - component: {fileID: 1808978115488734714}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring Variant (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4171,7 +4170,7 @@ GameObject:
   - component: {fileID: 7614658076002767409}
   - component: {fileID: 6774373405257588116}
   - component: {fileID: 8784165458433255774}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_1 Variant (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4263,7 +4262,7 @@ GameObject:
   - component: {fileID: 7192091745796591259}
   - component: {fileID: 6080047252019511614}
   - component: {fileID: 8323880861932353012}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_6 Variant (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4354,7 +4353,7 @@ GameObject:
   - component: {fileID: 925142933490942403}
   - component: {fileID: 8420041005125823301}
   - component: {fileID: 7671749812326399386}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_1 Variant (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4446,7 +4445,7 @@ GameObject:
   - component: {fileID: 9026383741967325543}
   - component: {fileID: 5398676471623308994}
   - component: {fileID: 7858505287220404744}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_2 Variant (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4537,7 +4536,7 @@ GameObject:
   - component: {fileID: 514776847896606979}
   - component: {fileID: 100589154322222769}
   - component: {fileID: 3058427174992475107}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring Variant (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4628,7 +4627,7 @@ GameObject:
   - component: {fileID: 2267304033025486983}
   - component: {fileID: 371104130102268462}
   - component: {fileID: 6779570142001971986}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_ring_2 Variant (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

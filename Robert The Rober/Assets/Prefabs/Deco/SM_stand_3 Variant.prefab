@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 233841343009671211}
   - component: {fileID: 3787842722470774670}
   - component: {fileID: 1402283778771759940}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_bracelet_4 Variant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,8 @@ GameObject:
   - component: {fileID: 1855051642729575329}
   - component: {fileID: 3319623751412857860}
   - component: {fileID: 717580318012950734}
-  m_Layer: 0
+  - component: {fileID: 4419874677848152052}
+  m_Layer: 6
   m_Name: SM_stand_3 Variant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,6 +187,27 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4419874677848152052
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366181746560133403}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5, y: 0.19102252, z: 0.12666894}
+  m_Center: {x: -0.0037650764, y: 0.09551126, z: 0}
 --- !u!1 &2195231416904581072
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +219,7 @@ GameObject:
   - component: {fileID: 1530335448028652906}
   - component: {fileID: 2491348685869329103}
   - component: {fileID: 394059641416343045}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_bracelet_5 Variant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,7 +309,7 @@ GameObject:
   - component: {fileID: 3694799346759898503}
   - component: {fileID: 353897588576426530}
   - component: {fileID: 2525882441934565096}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_bracelet_3 Variant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +399,7 @@ GameObject:
   - component: {fileID: 3550030764488727956}
   - component: {fileID: 498744790729364017}
   - component: {fileID: 2382143581295011579}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_bracelet_1 Variant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -393,7 +415,7 @@ Transform:
   m_GameObject: {fileID: 4183824844481054510}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.016004562, y: 0, z: 0.0027861595}
+  m_LocalPosition: {x: -0.09, y: 0, z: 0.0027861595}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -467,7 +489,7 @@ GameObject:
   - component: {fileID: 5931656231077229185}
   - component: {fileID: 7349490310157188388}
   - component: {fileID: 4763213248915360238}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_bracelet_2 Variant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -557,7 +579,7 @@ GameObject:
   - component: {fileID: 8222698502343656517}
   - component: {fileID: 5022427474527226848}
   - component: {fileID: 7086352872447377194}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SM_bracelet Variant
   m_TagString: Untagged
   m_Icon: {fileID: 0}

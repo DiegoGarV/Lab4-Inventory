@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6562319718769157450}
   - component: {fileID: 8252926794199463953}
   - component: {fileID: 7684309937001399246}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Exterior_Corner_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}

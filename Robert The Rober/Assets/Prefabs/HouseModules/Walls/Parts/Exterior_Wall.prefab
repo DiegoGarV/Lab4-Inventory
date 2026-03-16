@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1068833402684532487}
   - component: {fileID: 3197464279732226824}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Exterior_Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,7 +66,7 @@ GameObject:
   - component: {fileID: 7093169593966897082}
   - component: {fileID: 2349257007072979541}
   - component: {fileID: 5961752497526542229}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ExteriorToInterior_wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 6814580649185081660}
   - component: {fileID: 3704668395948562573}
   - component: {fileID: 6686547142077416087}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Exterior_wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

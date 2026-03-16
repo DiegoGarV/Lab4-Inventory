@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5809618127568315173}
   - component: {fileID: 4281283491022372141}
   - component: {fileID: 5104702245765947707}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Drum1 Snare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 4281579998987944640}
   - component: {fileID: 18308581863563434}
   - component: {fileID: 1443702841407241468}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Drum1 Cymbal Stand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 505738126719710886}
   - component: {fileID: 3141772111522037763}
   - component: {fileID: 7951328153095072479}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Drum1 Hi Hat2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +288,8 @@ GameObject:
   - component: {fileID: 1511810774085583303}
   - component: {fileID: 194977137473869686}
   - component: {fileID: 8936443446611888759}
-  m_Layer: 0
+  - component: {fileID: 7976249661618551558}
+  m_Layer: 6
   m_Name: Drum1 Kick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -383,6 +384,27 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7976249661618551558
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2397352913233356153}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.336571, y: 1.3879626, z: 1.5549741}
+  m_Center: {x: -0.10205698, y: 0.23188269, z: -0.20297539}
 --- !u!1 &2418673966689197885
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,7 +416,7 @@ GameObject:
   - component: {fileID: 2913105630299405334}
   - component: {fileID: 2615384745151098972}
   - component: {fileID: 745249971589794759}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Drum1 Kick Pedal1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -484,7 +506,7 @@ GameObject:
   - component: {fileID: 8250300790024697138}
   - component: {fileID: 1943356888121824740}
   - component: {fileID: 6437752338518454014}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Drum1 Hi Hat2 Cymbal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -574,7 +596,7 @@ GameObject:
   - component: {fileID: 3165291502400898736}
   - component: {fileID: 8882699966414318092}
   - component: {fileID: 2738018502938828293}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Drum1 Hi Hat2 Cymbal 001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -664,7 +686,7 @@ GameObject:
   - component: {fileID: 5091728285847648159}
   - component: {fileID: 7706903437563243635}
   - component: {fileID: 2554708281705866203}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Drum1 Kick Pedal2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -754,7 +776,7 @@ GameObject:
   - component: {fileID: 4639364034750697287}
   - component: {fileID: 8700448429532763371}
   - component: {fileID: 7235158498075558206}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Drum1 Tomtom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -848,7 +870,7 @@ GameObject:
   - component: {fileID: 6559936342098782760}
   - component: {fileID: 8960943017958773682}
   - component: {fileID: 4024993882606879651}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Drum1 Cymbal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -971,7 +993,7 @@ GameObject:
   - component: {fileID: 4833793394336743475}
   - component: {fileID: 6244557842792192416}
   - component: {fileID: 2933107145160422416}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Drum1 Tom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1065,6 +1087,7 @@ GameObject:
   - component: {fileID: 6386320089034586953}
   - component: {fileID: 3534724690508857146}
   - component: {fileID: 8236129989970429451}
+  - component: {fileID: 2208094691706236813}
   m_Layer: 0
   m_Name: Drum Stool 002
   m_TagString: Untagged
@@ -1146,3 +1169,24 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2208094691706236813
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8551928989124106597}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.42500055, y: 0.55069983, z: 0.40935484}
+  m_Center: {x: 0.00085783005, y: 0, z: 0.0025708824}

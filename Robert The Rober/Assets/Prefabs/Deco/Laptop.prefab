@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5047653358704157788}
   - component: {fileID: 3093354777451933226}
   - component: {fileID: 4524794686408573738}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Laptop Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,8 @@ GameObject:
   - component: {fileID: 7154769223905743671}
   - component: {fileID: 4221968740955046683}
   - component: {fileID: 4684647133930494794}
-  m_Layer: 0
+  - component: {fileID: 9044874130564254870}
+  m_Layer: 6
   m_Name: Laptop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,3 +188,24 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &9044874130564254870
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8702249410611217806}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.52771616, y: 0.021157421, z: 0.46614346}
+  m_Center: {x: 0, y: 0, z: 0}

@@ -60,8 +60,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_folded_money Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fb9b47148455fab4db015dc90c382121, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fb9b47148455fab4db015dc90c382121, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3429103468638102568}
   m_SourcePrefab: {fileID: 100100000, guid: fb9b47148455fab4db015dc90c382121, type: 3}
+--- !u!1 &6162781568672354174 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fb9b47148455fab4db015dc90c382121, type: 3}
+  m_PrefabInstance: {fileID: 6433375569404457519}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &3429103468638102568
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6162781568672354174}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.08862792, y: 0.029379115, z: 0.07819517}
+  m_Center: {x: -0.0444953, y: 0.013753066, z: 0}

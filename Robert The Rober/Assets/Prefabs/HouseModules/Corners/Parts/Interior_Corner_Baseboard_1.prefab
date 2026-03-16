@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 650689674684381285}
   - component: {fileID: 6591773049991016188}
   - component: {fileID: 4084853286337480584}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Interior_Corner_Baseboard_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

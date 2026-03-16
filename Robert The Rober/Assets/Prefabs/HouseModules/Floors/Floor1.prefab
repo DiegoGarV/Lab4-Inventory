@@ -107,13 +107,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5484023896300864122, guid: fe09c155ffafe1c4d91d6ebd42d1f5aa, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3146d227fa83a924caffc8b6cc477731, type: 2}
     - target: {fileID: 5904616992672214524, guid: fe09c155ffafe1c4d91d6ebd42d1f5aa, type: 3}
       propertyPath: m_Name
       value: Interior_Floor
       objectReference: {fileID: 0}
     - target: {fileID: 5904616992672214524, guid: fe09c155ffafe1c4d91d6ebd42d1f5aa, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

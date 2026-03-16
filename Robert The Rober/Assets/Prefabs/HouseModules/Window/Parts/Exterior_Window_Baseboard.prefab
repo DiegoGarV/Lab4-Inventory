@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7535701619224937240}
   - component: {fileID: 3862194373765457919}
   - component: {fileID: 4329586882971904269}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Exterior_Window_Baseboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}

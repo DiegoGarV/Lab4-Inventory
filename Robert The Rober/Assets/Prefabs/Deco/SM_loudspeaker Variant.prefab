@@ -61,6 +61,10 @@ PrefabInstance:
       value: SM_loudspeaker Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 81289f922bc6cb646811f606dffa8790, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 81289f922bc6cb646811f606dffa8790, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}

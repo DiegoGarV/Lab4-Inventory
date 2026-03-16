@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4709393708931063484}
   - component: {fileID: 936021446558434127}
   - component: {fileID: 8684384596581674517}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Exterior_Door_Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}

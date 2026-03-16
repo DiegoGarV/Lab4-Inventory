@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4926356134537457098}
   - component: {fileID: 3995874808427833700}
   - component: {fileID: 3514311049965971752}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Interior_Door_WallB
   m_TagString: Untagged
   m_Icon: {fileID: 0}

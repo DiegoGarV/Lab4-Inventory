@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6985609365659845506}
   - component: {fileID: 942016174564633169}
   - component: {fileID: 3454991714231082695}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Exterior_Window_HingesB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
