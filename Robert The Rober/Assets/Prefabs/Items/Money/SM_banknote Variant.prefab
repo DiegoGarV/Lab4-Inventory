@@ -120,6 +120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edbd5083fcfe322489c0ff95c2d17e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoneyController
+  itemName: Money
+  itemIcon: {fileID: 0}
   sackValue: 0
   monetaryValue: 10
 --- !u!54 &1704074750514245166

@@ -127,5 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2155d18a0116d745b7327d949862d69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DecorationPickup
+  itemName: Decorations
+  itemIcon: {fileID: 21300000, guid: f440d73c9411b29409b1ffdddf8017b5, type: 3}
   sackValue: 20
   monetaryValue: 250

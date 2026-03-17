@@ -8,28 +8,42 @@ public class InventorySlotUI : MonoBehaviour
     [SerializeField] private TMP_Text nameText;
     [SerializeField] private TMP_Text quantityText;
 
+    private string itemName;
+    private int quantity = 0;
+
+    public string ItemName => itemName;
+
     public void SetData(InventoryItemData data)
     {
-        Debug.Log("SetData llamado para: " + data.itemName);
+        itemName = data.itemName;
+        quantity = 1;
 
         if (iconImage != null)
         {
             iconImage.sprite = data.itemIcon;
             iconImage.enabled = data.itemIcon != null;
             iconImage.preserveAspect = true;
-
-            Debug.Log("Icono asignado: " + (data.itemIcon != null ? data.itemIcon.name : "NULL"));
         }
 
         if (nameText != null)
         {
             nameText.text = data.itemName;
-            Debug.Log("Nombre asignado: " + data.itemName);
         }
 
+        UpdateQuantityText();
+    }
+
+    public void AddOne()
+    {
+        quantity++;
+        UpdateQuantityText();
+    }
+
+    private void UpdateQuantityText()
+    {
         if (quantityText != null)
         {
-            quantityText.text = "x1";
+            quantityText.text = "x" + quantity;
         }
     }
 }

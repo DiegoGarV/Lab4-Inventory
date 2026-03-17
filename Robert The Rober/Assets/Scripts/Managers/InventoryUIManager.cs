@@ -9,8 +9,9 @@ public class InventoryUIManager : MonoBehaviour
     [SerializeField] private Transform gridParent;
     [SerializeField] private GameObject inventorySlotPrefab;
 
-    private readonly List<InventoryItemData> inventoryItems = new();
     private bool isInventoryOpen = false;
+
+    private readonly Dictionary<string, InventorySlotUI> slotByName = new();
 
     private void OnEnable()
     {
@@ -40,23 +41,48 @@ public class InventoryUIManager : MonoBehaviour
 
     private void HandlePickupCollected(Pickup pickup)
     {
-        if (pickup is MoneyPickup) return;
-
         InventoryItemData newItem = new InventoryItemData(pickup);
-        inventoryItems.Add(newItem);
+
+        if (slotByName.TryGetValue(newItem.itemName, out InventorySlotUI existingSlot))
+        {
+            existingSlot.AddOne();
+            return;
+        }
+
         AddSlotToUI(newItem);
     }
 
     private void AddSlotToUI(InventoryItemData itemData)
     {
-        if (gridParent == null || inventorySlotPrefab == null) return;
+        if (gridParent == null)
+        {
+            Debug.LogError("gridParent no está asignado");
+            return;
+        }
+
+        if (inventorySlotPrefab == null)
+        {
+            Debug.LogError("inventorySlotPrefab no está asignado");
+            return;
+        }
 
         GameObject slotGO = Instantiate(inventorySlotPrefab, gridParent);
-        InventorySlotUI slotUI = slotGO.GetComponent<InventorySlotUI>();
 
+        RectTransform rt = slotGO.GetComponent<RectTransform>();
+        if (rt != null)
+        {
+            rt.localScale = Vector3.one;
+        }
+
+        InventorySlotUI slotUI = slotGO.GetComponent<InventorySlotUI>();
         if (slotUI != null)
         {
             slotUI.SetData(itemData);
+            slotByName[itemData.itemName] = slotUI;
+        }
+        else
+        {
+            Debug.LogError("El prefab no tiene InventorySlotUI");
         }
     }
 
