@@ -49,30 +49,15 @@ public class InventoryUIManager : MonoBehaviour
 
     private void AddSlotToUI(InventoryItemData itemData)
     {
-        if (gridParent == null)
-        {
-            Debug.LogError("gridParent no está asignado");
-            return;
-        }
-
-        if (inventorySlotPrefab == null)
-        {
-            Debug.LogError("inventorySlotPrefab no está asignado");
-            return;
-        }
-
-        GameObject slotGO = Instantiate(inventorySlotPrefab, gridParent);
-        Debug.Log("Se instanció slot: " + slotGO.name);
-
         if (gridParent == null || inventorySlotPrefab == null) return;
 
-        //GameObject slotGO = Instantiate(inventorySlotPrefab, gridParent);
-        //InventorySlotUI slotUI = slotGO.GetComponent<InventorySlotUI>();
+        GameObject slotGO = Instantiate(inventorySlotPrefab, gridParent);
+        InventorySlotUI slotUI = slotGO.GetComponent<InventorySlotUI>();
 
-        //if (slotUI != null)
-        //{
-        //    slotUI.SetData(itemData);
-        //}
+        if (slotUI != null)
+        {
+            slotUI.SetData(itemData);
+        }
     }
 
     private void ToggleInventory()
