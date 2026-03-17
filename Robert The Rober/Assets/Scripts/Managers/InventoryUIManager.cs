@@ -10,7 +10,6 @@ public class InventoryUIManager : MonoBehaviour
     [SerializeField] private GameObject inventorySlotPrefab;
 
     private bool isInventoryOpen = false;
-
     private readonly Dictionary<string, InventorySlotUI> slotByName = new();
 
     private void OnEnable()
@@ -41,28 +40,13 @@ public class InventoryUIManager : MonoBehaviour
 
     private void HandlePickupCollected(Pickup pickup)
     {
-        InventoryItemData newItem = new InventoryItemData(pickup);
+        if (pickup == null) return;
 
-        if (slotByName.TryGetValue(newItem.itemName, out InventorySlotUI existingSlot))
+        InventoryItemData itemData = new InventoryItemData(pickup);
+
+        if (slotByName.TryGetValue(itemData.itemName, out InventorySlotUI existingSlot))
         {
             existingSlot.AddOne();
-            return;
-        }
-
-        AddSlotToUI(newItem);
-    }
-
-    private void AddSlotToUI(InventoryItemData itemData)
-    {
-        if (gridParent == null)
-        {
-            Debug.LogError("gridParent no está asignado");
-            return;
-        }
-
-        if (inventorySlotPrefab == null)
-        {
-            Debug.LogError("inventorySlotPrefab no está asignado");
             return;
         }
 
@@ -75,15 +59,14 @@ public class InventoryUIManager : MonoBehaviour
         }
 
         InventorySlotUI slotUI = slotGO.GetComponent<InventorySlotUI>();
-        if (slotUI != null)
+        if (slotUI == null)
         {
-            slotUI.SetData(itemData);
-            slotByName[itemData.itemName] = slotUI;
+            Debug.LogError("El prefab del slot no tiene InventorySlotUI.");
+            return;
         }
-        else
-        {
-            Debug.LogError("El prefab no tiene InventorySlotUI");
-        }
+
+        slotUI.SetData(itemData);
+        slotByName[itemData.itemName] = slotUI;
     }
 
     private void ToggleInventory()
