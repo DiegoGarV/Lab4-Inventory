@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 4028390160020439158}
   - component: {fileID: 1153837158124123324}
   - component: {fileID: 8190380500954381041}
-  m_Layer: 0
+  - component: {fileID: -5585817460444050050}
+  m_Layer: 9
   m_Name: Hatchback Car_15
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,6 +118,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.0153255, y: 1.30608, z: 4.4259872}
   m_Center: {x: -0.0000014901161, y: 0.9412773, z: 0.06991875}
+--- !u!54 &-5585817460444050050
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793685457875359081}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3210515104880433319
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,7 +156,7 @@ GameObject:
   - component: {fileID: 4498468162685408788}
   - component: {fileID: 1805692475483797881}
   - component: {fileID: 4600069739193035152}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hatchback Car_15 FR Tire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +246,7 @@ GameObject:
   - component: {fileID: 7138620432557908254}
   - component: {fileID: 8463636496577524949}
   - component: {fileID: 400414378487165451}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hatchback Car_15 BL Tire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,7 +336,7 @@ GameObject:
   - component: {fileID: 767706805387183259}
   - component: {fileID: 5222208674068269365}
   - component: {fileID: 6500059388046122340}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hatchback Car_15 BR Tire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -398,7 +426,7 @@ GameObject:
   - component: {fileID: 2030528479331076016}
   - component: {fileID: 1515881871372843956}
   - component: {fileID: 8529420732030203127}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hatchback Car_15 FL Tire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
