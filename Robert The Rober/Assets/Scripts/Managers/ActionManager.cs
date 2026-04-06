@@ -22,12 +22,19 @@ public class ActionManager : MonoBehaviour
             if (cam == null) return;
         }
 
+        if (Keyboard.current != null && Keyboard.current.pKey.wasPressedThisFrame)
+        {
+            if (UIManager.Instance != null)
+            {
+                UIManager.Instance.TogglePauseMenu();
+            }
+
+            return;
+        }
+
         bool interactPressed = false;
 
         if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
-            interactPressed = true;
-
-        if (Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
             interactPressed = true;
 
         if (!interactPressed) return;

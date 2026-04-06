@@ -23,6 +23,13 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Text runawayItemsMoneyText;
     [SerializeField] private TMP_Text runawayTotalText;
 
+    [Header("Pause Menu")]
+    [SerializeField] private GameObject pauseMenu;
+
+    private bool isPaused = false;
+
+    public bool IsPaused => isPaused;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -131,6 +138,49 @@ public class UIManager : MonoBehaviour
         {
             runawayTotalText.text = $"${totalCollected}";
         }
+    }
+
+    public void TogglePauseMenu()
+    {
+        if (runawayScreen != null && runawayScreen.activeSelf)
+            return;
+
+        isPaused = !isPaused;
+
+        if (pauseMenu != null)
+        {
+            pauseMenu.SetActive(isPaused);
+        }
+
+        if (firstPersonController != null)
+        {
+            firstPersonController.enabled = !isPaused;
+        }
+
+        Time.timeScale = isPaused ? 0f : 1f;
+        Cursor.lockState = isPaused ? CursorLockMode.None : CursorLockMode.Locked;
+        Cursor.visible = isPaused;
+    }
+
+    public void ResumeGame()
+    {
+        if (!isPaused) return;
+
+        isPaused = false;
+
+        if (pauseMenu != null)
+        {
+            pauseMenu.SetActive(false);
+        }
+
+        if (firstPersonController != null)
+        {
+            firstPersonController.enabled = true;
+        }
+
+        Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public void CloseGame()
