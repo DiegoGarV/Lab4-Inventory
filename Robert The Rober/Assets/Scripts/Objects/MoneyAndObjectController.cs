@@ -87,4 +87,16 @@ public class MoneyAndObjectsController : MonoBehaviour
         OnCashChanged?.Invoke(cashScore);
         OnSackChanged?.Invoke(currentSackLoad, maxSackLoad);
     }
+
+    public void LoadFromSaveData(SaveData data)
+    {
+        if (data == null) return;
+
+        cashScore = data.cashScore;
+        storedLootValue = data.storedLootValue;
+        currentSackLoad = data.currentSackLoad;
+
+        OnCashChanged?.Invoke(cashScore);
+        OnSackChanged?.Invoke(currentSackLoad, maxSackLoad);
+    }
 }

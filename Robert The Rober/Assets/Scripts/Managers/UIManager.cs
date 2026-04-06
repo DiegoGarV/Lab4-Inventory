@@ -87,6 +87,17 @@ public class UIManager : MonoBehaviour
                 MoneyAndObjectsController.Instance.MaxSackLoad
             );
         }
+
+        if (pauseMenu != null)
+        {
+            pauseMenu.SetActive(false);
+        }
+
+        if (PersistenceManager.Instance != null && PersistenceManager.Instance.ShouldLoadGame)
+        {
+            PersistenceManager.Instance.ApplyLoadedGame();
+            PersistenceManager.Instance.ClearLoadFlag();
+        }
     }
 
     private void UpdateCashText(int currentCash)
@@ -207,6 +218,22 @@ public class UIManager : MonoBehaviour
 #endif
     }
 
+    public void SafeCloseGame()
+    {
+        Time.timeScale = 1f;
+
+        if (PersistenceManager.Instance != null)
+        {
+            PersistenceManager.Instance.SaveGame();
+        }
+
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
+
     public void RestartGame()
     {
         Time.timeScale = 1f;
@@ -216,11 +243,33 @@ public class UIManager : MonoBehaviour
     public void NewGame()
     {
         Time.timeScale = 1f;
+
+        if (PersistenceManager.Instance != null)
+        {
+            PersistenceManager.Instance.PrepareNewGame();
+        }
+
         SceneManager.LoadScene("Level");
     }
 
     public void LoadGame()
     {
+        Time.timeScale = 1f;
+
+        if (PersistenceManager.Instance == null)
+        {
+            Debug.LogWarning("PersistenceManager.Instance es null.");
+            return;
+        }
+
+        if (!PersistenceManager.Instance.HasSaveFile())
+        {
+            Debug.LogWarning("No existe archivo de guardado.");
+            return;
+        }
+
+        PersistenceManager.Instance.PrepareLoadGame();
+        SceneManager.LoadScene("Level");
     }
 
     public void OpenSettings()

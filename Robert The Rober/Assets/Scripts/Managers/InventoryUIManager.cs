@@ -50,6 +50,17 @@ public class InventoryUIManager : MonoBehaviour
             return;
         }
 
+        AddSlotToUI(itemData);
+    }
+
+    private void AddSlotToUI(InventoryItemData itemData)
+    {
+        if (inventorySlotPrefab == null || gridParent == null)
+        {
+            Debug.LogError("InventoryUIManager: faltan referencias de inventorySlotPrefab o gridParent.");
+            return;
+        }
+
         GameObject slotGO = Instantiate(inventorySlotPrefab, gridParent);
 
         RectTransform rt = slotGO.GetComponent<RectTransform>();
@@ -78,5 +89,46 @@ public class InventoryUIManager : MonoBehaviour
 
         Cursor.lockState = isInventoryOpen ? CursorLockMode.None : CursorLockMode.Locked;
         Cursor.visible = isInventoryOpen;
+    }
+
+    public void LoadInventoryFromSave(List<string> collectedPickupIds)
+    {
+        if (collectedPickupIds == null) return;
+
+        ClearInventoryUI();
+
+        Pickup[] allPickups = FindObjectsByType<Pickup>(FindObjectsSortMode.None);
+
+        foreach (string id in collectedPickupIds)
+        {
+            foreach (Pickup pickup in allPickups)
+            {
+                if (pickup.PickupId == id)
+                {
+                    InventoryItemData itemData = new InventoryItemData(pickup);
+
+                    if (slotByName.TryGetValue(itemData.itemName, out InventorySlotUI existingSlot))
+                    {
+                        existingSlot.AddOne();
+                    }
+                    else
+                    {
+                        AddSlotToUI(itemData);
+                    }
+
+                    break;
+                }
+            }
+        }
+    }
+
+    public void ClearInventoryUI()
+    {
+        slotByName.Clear();
+
+        for (int i = gridParent.childCount - 1; i >= 0; i--)
+        {
+            Destroy(gridParent.GetChild(i).gameObject);
+        }
     }
 }
