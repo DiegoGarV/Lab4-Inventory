@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 926137585392591026}
   - component: {fileID: 4638088812894459032}
   - component: {fileID: 7354594500990988024}
+  - component: {fileID: 5860213110264680157}
   m_Layer: 9
   m_Name: N_Muscle Car_10
   m_TagString: Car
@@ -145,6 +146,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5860213110264680157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718881139866272103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7afd19b690b6f774f9ef0b260ab6c1ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CarController
+  runawayScreen: {fileID: 0}
 --- !u!1 &5374494991868441772
 GameObject:
   m_ObjectHideFlags: 0

@@ -44,14 +44,25 @@ public class ActionManager : MonoBehaviour
 
             if (pickup != null)
             {
-                if (UIManager.Instance != null && UIManager.Instance.CanCollect(pickup))
+                if (MoneyAndObjectsController.Instance != null &&
+                    MoneyAndObjectsController.Instance.CanCollect(pickup))
                 {
                     pickup.Collect();
                 }
                 else
                 {
-                    Debug.Log("La bolsa est· llena. Solo puedes recoger billetes.");
+                    Debug.Log("La bolsa est√° llena. Solo puedes recoger billetes.");
                 }
+
+                return;
+            }
+
+            CarController car = hit.collider.GetComponentInParent<CarController>();
+
+            if (car != null)
+            {
+                car.Interact();
+                return;
             }
         }
     }

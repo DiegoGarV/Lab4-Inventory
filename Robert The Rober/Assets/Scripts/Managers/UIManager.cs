@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -11,13 +12,13 @@ public class UIManager : MonoBehaviour
     [Header("Sack UI")]
     [SerializeField] private Animator sackAnimator;
     [SerializeField] private string sackParameterName = "SackNormalized";
-    [SerializeField] private float maxSackLoad = 10f;
 
-    private int cashScore = 0;
-    private float currentSackLoad = 0f;
+    [Header("Controllers")]
+    [SerializeField] private MonoBehaviour firstPersonController;
+    [SerializeField] private MonoBehaviour actionManager;
 
-    public float CurrentSackLoad => currentSackLoad;
-    public float MaxSackLoad => maxSackLoad;
+    [Header("Runaway Screen")]
+    [SerializeField] private GameObject runawayScreen;
 
     private void Awake()
     {
@@ -32,57 +33,91 @@ public class UIManager : MonoBehaviour
 
     private void OnEnable()
     {
-        Pickup.OnPickupCollected += HandlePickupCollected;
+        if (MoneyAndObjectsController.Instance != null)
+        {
+            MoneyAndObjectsController.Instance.OnCashChanged += UpdateCashText;
+            MoneyAndObjectsController.Instance.OnSackChanged += UpdateSackBar;
+        }
     }
 
     private void OnDisable()
     {
-        Pickup.OnPickupCollected -= HandlePickupCollected;
+        if (MoneyAndObjectsController.Instance != null)
+        {
+            MoneyAndObjectsController.Instance.OnCashChanged -= UpdateCashText;
+            MoneyAndObjectsController.Instance.OnSackChanged -= UpdateSackBar;
+        }
     }
 
     private void Start()
     {
-        UpdateCashText();
-        UpdateSackBar();
-    }
-
-    private void HandlePickupCollected(Pickup pickup)
-    {
-        cashScore += pickup.MonetaryValue;
-
-        if (!(pickup is MoneyPickup))
+        if (runawayScreen != null)
         {
-            currentSackLoad += pickup.SackValue;
-            currentSackLoad = Mathf.Clamp(currentSackLoad, 0f, maxSackLoad);
-            UpdateSackBar();
+            runawayScreen.SetActive(false);
         }
 
-        UpdateCashText();
+        if (MoneyAndObjectsController.Instance != null)
+        {
+            UpdateCashText(MoneyAndObjectsController.Instance.CashScore);
+            UpdateSackBar(
+                MoneyAndObjectsController.Instance.CurrentSackLoad,
+                MoneyAndObjectsController.Instance.MaxSackLoad
+            );
+        }
     }
 
-    private void UpdateCashText()
+    private void UpdateCashText(int currentCash)
     {
         if (cashText != null)
         {
-            cashText.text = "Cash: $" + cashScore;
+            cashText.text = "Cash: $" + currentCash;
         }
     }
 
-    private void UpdateSackBar()
+    private void UpdateSackBar(float currentLoad, float maxLoad)
     {
         if (sackAnimator == null) return;
 
-        float normalizedLoad = Mathf.InverseLerp(0f, maxSackLoad, currentSackLoad);
+        float normalizedLoad = Mathf.InverseLerp(0f, maxLoad, currentLoad);
         sackAnimator.SetFloat(sackParameterName, normalizedLoad);
     }
 
-    public bool CanCollect(Pickup pickup)
+    public void ShowRunawayScreen()
     {
-        if (pickup == null) return false;
+        if (runawayScreen != null)
+        {
+            runawayScreen.SetActive(true);
+        }
 
-        if (pickup is MoneyPickup)
-            return true;
+        if (firstPersonController != null)
+        {
+            firstPersonController.enabled = false;
+        }
 
-        return currentSackLoad + pickup.SackValue <= maxSackLoad;
+        if (actionManager != null)
+        {
+            actionManager.enabled = false;
+        }
+
+        Time.timeScale = 0f;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    public void CloseGame()
+    {
+        Time.timeScale = 1f;
+
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
+
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
