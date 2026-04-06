@@ -9,9 +9,11 @@ public class MoneyAndObjectsController : MonoBehaviour
     [SerializeField] private float maxSackLoad = 150f;
 
     private int cashScore = 0;
+    private int storedLootValue = 0;
     private float currentSackLoad = 0f;
 
     public int CashScore => cashScore;
+    public int StoredLootValue => storedLootValue;
     public float CurrentSackLoad => currentSackLoad;
     public float MaxSackLoad => maxSackLoad;
 
@@ -48,15 +50,18 @@ public class MoneyAndObjectsController : MonoBehaviour
     {
         if (pickup == null) return;
 
-        cashScore += pickup.MonetaryValue;
-        OnCashChanged?.Invoke(cashScore);
-
-        if (!(pickup is MoneyPickup))
+        if (pickup is MoneyPickup)
         {
-            currentSackLoad += pickup.SackValue;
-            currentSackLoad = Mathf.Clamp(currentSackLoad, 0f, maxSackLoad);
-            OnSackChanged?.Invoke(currentSackLoad, maxSackLoad);
+            cashScore += pickup.MonetaryValue;
+            OnCashChanged?.Invoke(cashScore);
+            return;
         }
+
+        currentSackLoad += pickup.SackValue;
+        currentSackLoad = Mathf.Clamp(currentSackLoad, 0f, maxSackLoad);
+        storedLootValue += pickup.MonetaryValue;
+
+        OnSackChanged?.Invoke(currentSackLoad, maxSackLoad);
     }
 
     public bool CanCollect(Pickup pickup)
@@ -72,6 +77,7 @@ public class MoneyAndObjectsController : MonoBehaviour
     public void ResetState()
     {
         cashScore = 0;
+        storedLootValue = 0;
         currentSackLoad = 0f;
         NotifyCurrentState();
     }
