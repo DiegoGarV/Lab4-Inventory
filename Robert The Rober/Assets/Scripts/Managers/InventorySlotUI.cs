@@ -18,13 +18,14 @@ public class InventorySlotUI : MonoBehaviour
         itemName = data.itemName;
         quantity = 1;
 
+        Debug.Log("Nombre item: " + data.itemName);
+        Debug.Log("Sprite item: " + (data.itemIcon != null ? data.itemIcon.name : "NULL"));
+
         if (iconImage != null)
         {
             iconImage.sprite = data.itemIcon;
-            iconImage.overrideSprite = data.itemIcon;
             iconImage.enabled = data.itemIcon != null;
             iconImage.preserveAspect = true;
-            iconImage.color = Color.white;
         }
 
         if (nameText != null)

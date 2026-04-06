@@ -42,6 +42,8 @@ public class InventoryUIManager : MonoBehaviour
     {
         if (pickup == null) return;
 
+        if (pickup is MoneyPickup) return;
+
         InventoryItemData itemData = new InventoryItemData(pickup);
 
         if (slotByName.TryGetValue(itemData.itemName, out InventorySlotUI existingSlot))
@@ -105,6 +107,8 @@ public class InventoryUIManager : MonoBehaviour
             {
                 if (pickup.PickupId == id)
                 {
+                    if (pickup is MoneyPickup) break;
+
                     InventoryItemData itemData = new InventoryItemData(pickup);
 
                     if (slotByName.TryGetValue(itemData.itemName, out InventorySlotUI existingSlot))
