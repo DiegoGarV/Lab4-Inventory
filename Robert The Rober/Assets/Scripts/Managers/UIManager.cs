@@ -19,6 +19,9 @@ public class UIManager : MonoBehaviour
 
     [Header("Runaway Screen")]
     [SerializeField] private GameObject runawayScreen;
+    [SerializeField] private TMP_Text runawayCashText;
+    [SerializeField] private TMP_Text runawayItemsMoneyText;
+    [SerializeField] private TMP_Text runawayTotalText;
 
     private void Awake()
     {
@@ -84,6 +87,8 @@ public class UIManager : MonoBehaviour
 
     public void ShowRunawayScreen()
     {
+        UpdateRunawayScreenValues();
+
         if (runawayScreen != null)
         {
             runawayScreen.SetActive(true);
@@ -102,6 +107,30 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 0f;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+    }
+
+    private void UpdateRunawayScreenValues()
+    {
+        if (MoneyAndObjectsController.Instance == null) return;
+
+        int cashCollected = MoneyAndObjectsController.Instance.CashScore;
+        int itemsMoneyCollected = MoneyAndObjectsController.Instance.StoredLootValue;
+        int totalCollected = cashCollected + itemsMoneyCollected;
+
+        if (runawayCashText != null)
+        {
+            runawayCashText.text = $"${cashCollected}";
+        }
+
+        if (runawayItemsMoneyText != null)
+        {
+            runawayItemsMoneyText.text = $"${itemsMoneyCollected}";
+        }
+
+        if (runawayTotalText != null)
+        {
+            runawayTotalText.text = $"${totalCollected}";
+        }
     }
 
     public void CloseGame()
