@@ -3,6 +3,9 @@ using System;
 
 public abstract class Pickup : MonoBehaviour
 {
+    [Header("Persistence")]
+    [SerializeField] private string pickupId;
+
     [Header("Inventory Info")]
     [SerializeField] private string itemName;
     [SerializeField] private Sprite itemIcon;
@@ -11,6 +14,7 @@ public abstract class Pickup : MonoBehaviour
     [SerializeField] private float sackValue = 0f;
     [SerializeField] private int monetaryValue = 0;
 
+    public string PickupId => pickupId;
     public string ItemName => itemName;
     public Sprite ItemIcon => itemIcon;
     public float SackValue => sackValue;

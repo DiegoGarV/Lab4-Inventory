@@ -61,6 +61,19 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1f;
+
+        if (SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+
         if (runawayScreen != null)
         {
             runawayScreen.SetActive(false);
@@ -198,5 +211,19 @@ public class UIManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void NewGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Level");
+    }
+
+    public void LoadGame()
+    {
+    }
+
+    public void OpenSettings()
+    {
     }
 }
