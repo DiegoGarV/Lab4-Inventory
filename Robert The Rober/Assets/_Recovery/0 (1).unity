@@ -336,7 +336,6 @@ MonoBehaviour:
   runawayItemsMoneyText: {fileID: 0}
   runawayTotalText: {fileID: 0}
   pauseMenu: {fileID: 0}
-  loadGameButton: {fileID: 183570372}
 --- !u!4 &735436963
 Transform:
   m_ObjectHideFlags: 0

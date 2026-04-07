@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -25,6 +26,9 @@ public class UIManager : MonoBehaviour
 
     [Header("Pause Menu")]
     [SerializeField] private GameObject pauseMenu;
+
+    [Header("Main Menu")]
+    [SerializeField] private Button loadGameButton;
 
     private bool isPaused = false;
 
@@ -67,6 +71,12 @@ public class UIManager : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+
+            if (loadGameButton != null)
+            {
+                bool hasSave = PersistenceManager.Instance != null && PersistenceManager.Instance.HasSaveFile();
+                loadGameButton.interactable = hasSave;
+            }
         }
         else
         {
