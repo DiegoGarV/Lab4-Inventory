@@ -18,6 +18,7 @@ public class UIManager : MonoBehaviour
     private GameObject pauseMenu;
     private Button loadGameButton;
     private MoneyAndObjectsController boundMoneyController;
+    private GameObject returnToTownPrompt;
 
     private bool isPaused = false;
     public bool IsPaused => isPaused;
@@ -107,6 +108,7 @@ public class UIManager : MonoBehaviour
         runawayTotalText = refs.runawayTotalText;
         pauseMenu = refs.pauseMenu;
         loadGameButton = refs.loadGameButton;
+        returnToTownPrompt = refs.returnToTownPrompt;
 
         Debug.Log($"UIManager: referencias enlazadas para escena {scene.name}");
     }
@@ -123,6 +125,7 @@ public class UIManager : MonoBehaviour
         runawayTotalText = null;
         pauseMenu = null;
         loadGameButton = null;
+        returnToTownPrompt = null;
     }
 
     private void ApplySceneUIState(Scene scene)
@@ -152,6 +155,9 @@ public class UIManager : MonoBehaviour
 
         if (pauseMenu != null)
             pauseMenu.SetActive(false);
+
+        if (returnToTownPrompt != null)
+            returnToTownPrompt.SetActive(false);
 
         if (MoneyAndObjectsController.Instance != null)
         {
@@ -326,5 +332,55 @@ public class UIManager : MonoBehaviour
 
     public void OpenSettings()
     {
+    }
+
+    public void ShowReturnToTownPrompt()
+    {
+        if (returnToTownPrompt != null)
+        {
+            returnToTownPrompt.SetActive(true);
+        }
+
+        if (firstPersonController != null)
+        {
+            firstPersonController.enabled = false;
+        }
+
+        if (actionController != null)
+        {
+            actionController.enabled = false;
+        }
+
+        Time.timeScale = 0f;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    public void ConfirmReturnToTown()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("AfternoonLevel");
+    }
+
+    public void CancelReturnToTown()
+    {
+        if (returnToTownPrompt != null)
+        {
+            returnToTownPrompt.SetActive(false);
+        }
+
+        if (firstPersonController != null)
+        {
+            firstPersonController.enabled = true;
+        }
+
+        if (actionController != null)
+        {
+            actionController.enabled = true;
+        }
+
+        Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }

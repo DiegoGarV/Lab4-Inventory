@@ -15,8 +15,14 @@ EditorBuildSettings:
     path: Assets/Scenes/MorningLevel.unity
     guid: 16996010ffac54543b69c4b65ec0b2fb
   - enabled: 1
+    path: Assets/Scenes/AfternoonLevel.unity
+    guid: 6a652764affd93644b2807a39ad3e0b5
+  - enabled: 1
     path: Assets/Scenes/Shop.unity
     guid: 6f08b06d4ab3def46ab2933c1f4deb53
+  - enabled: 1
+    path: Assets/Scenes/LoadingScreenScene.unity
+    guid: 3d9a02a827f1474479e4d60ce3625160
   - enabled: 1
     path: Assets/Scenes/BootstrapScene.unity
     guid: c5f08aa51a355394f9a61c0acf103baf

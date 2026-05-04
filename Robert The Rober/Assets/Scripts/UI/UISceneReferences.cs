@@ -25,4 +25,7 @@ public class UISceneReferences : MonoBehaviour
 
     [Header("Main Menu")]
     public Button loadGameButton;
+
+    [Header("Store Exit")]
+    public GameObject returnToTownPrompt;
 }

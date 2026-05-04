@@ -8,6 +8,7 @@ TagManager:
   - Money
   - Sackable
   - Car
+  - StoreDoor
   layers:
   - Default
   - TransparentFX

@@ -71,6 +71,14 @@ public class ActionController : MonoBehaviour
                 car.Interact();
                 return;
             }
+
+            StoreDoorController door = hit.collider.GetComponentInParent<StoreDoorController>();
+
+            if (door != null)
+            {
+                door.Interact();
+                return;
+            }
         }
     }
 }
