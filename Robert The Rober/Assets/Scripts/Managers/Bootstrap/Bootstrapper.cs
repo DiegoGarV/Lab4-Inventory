@@ -2,19 +2,17 @@ using UnityEngine;
 
 public class Bootstrapper : MonoBehaviour
 {
-    public static Bootstrapper instance;
+    public static Bootstrapper Instance;
 
     private void Awake()
     {
-        if (instance != null)
+        if (Instance != null && Instance != this)
         {
-            Destroy(instance);
+            Destroy(gameObject);
+            return;
         }
-        else
-        {
-            instance = this;
-        }
-        
+
+        Instance = this;
         DontDestroyOnLoad(gameObject);
     }
 }

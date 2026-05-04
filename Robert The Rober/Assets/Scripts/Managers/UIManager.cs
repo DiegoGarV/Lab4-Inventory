@@ -7,31 +7,18 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
 
-    [Header("HUD")]
-    [SerializeField] private TMP_Text cashText;
-
-    [Header("Sack UI")]
-    [SerializeField] private Animator sackAnimator;
-    [SerializeField] private string sackParameterName = "SackNormalized";
-
-    [Header("Controllers")]
-    [SerializeField] private MonoBehaviour firstPersonController;
-    [SerializeField] private MonoBehaviour actionManager;
-
-    [Header("Runaway Screen")]
-    [SerializeField] private GameObject runawayScreen;
-    [SerializeField] private TMP_Text runawayCashText;
-    [SerializeField] private TMP_Text runawayItemsMoneyText;
-    [SerializeField] private TMP_Text runawayTotalText;
-
-    [Header("Pause Menu")]
-    [SerializeField] private GameObject pauseMenu;
-
-    [Header("Main Menu")]
-    [SerializeField] private Button loadGameButton;
+    private TMP_Text cashText;
+    private Animator sackAnimator;
+    private MonoBehaviour firstPersonController;
+    private MonoBehaviour actionManager;
+    private GameObject runawayScreen;
+    private TMP_Text runawayCashText;
+    private TMP_Text runawayItemsMoneyText;
+    private TMP_Text runawayTotalText;
+    private GameObject pauseMenu;
+    private Button loadGameButton;
 
     private bool isPaused = false;
-
     public bool IsPaused => isPaused;
 
     private void Awake()
@@ -47,6 +34,8 @@ public class UIManager : MonoBehaviour
 
     private void OnEnable()
     {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+
         if (MoneyAndObjectsController.Instance != null)
         {
             MoneyAndObjectsController.Instance.OnCashChanged += UpdateCashText;
@@ -56,6 +45,8 @@ public class UIManager : MonoBehaviour
 
     private void OnDisable()
     {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+
         if (MoneyAndObjectsController.Instance != null)
         {
             MoneyAndObjectsController.Instance.OnCashChanged -= UpdateCashText;
@@ -65,9 +56,84 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        Time.timeScale = 1f;
+        Scene currentScene = SceneManager.GetActiveScene();
 
-        if (SceneManager.GetActiveScene().name == "MainMenu")
+        if (currentScene.name != "BootstrapScene")
+        {
+            BindSceneReferences(currentScene);
+            ApplySceneUIState(currentScene);
+        }
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if(scene.name == "BootstrapScene")
+            return;
+        
+        BindSceneReferences(scene);
+        ApplySceneUIState(scene);
+
+        if (PersistenceManager.Instance != null && PersistenceManager.Instance.ShouldLoadGame)
+        {
+            PersistenceManager.Instance.ApplyLoadedGame();
+            PersistenceManager.Instance.ClearLoadFlag();
+        }
+    }
+
+    private void BindSceneReferences(Scene scene)
+    {
+        ClearSceneReferences();
+
+        GameObject[] roots = scene.GetRootGameObjects();
+        UISceneReferences refs = null;
+
+        foreach (GameObject root in roots)
+        {
+            refs = root.GetComponentInChildren<UISceneReferences>(true);
+            if (refs != null)
+                break;
+        }
+
+        if (refs == null)
+        {
+            Debug.LogWarning($"UIManager: no se encontró UISceneReferences en la escena {scene.name}");
+            return;
+        }
+
+        cashText = refs.cashText;
+        sackAnimator = refs.sackAnimator;
+        firstPersonController = refs.firstPersonController;
+        actionManager = refs.actionManager;
+        runawayScreen = refs.runawayScreen;
+        runawayCashText = refs.runawayCashText;
+        runawayItemsMoneyText = refs.runawayItemsMoneyText;
+        runawayTotalText = refs.runawayTotalText;
+        pauseMenu = refs.pauseMenu;
+        loadGameButton = refs.loadGameButton;
+
+        Debug.Log($"UIManager: referencias enlazadas para escena {scene.name}");
+    }
+
+    private void ClearSceneReferences()
+    {
+        cashText = null;
+        sackAnimator = null;
+        firstPersonController = null;
+        actionManager = null;
+        runawayScreen = null;
+        runawayCashText = null;
+        runawayItemsMoneyText = null;
+        runawayTotalText = null;
+        pauseMenu = null;
+        loadGameButton = null;
+    }
+
+    private void ApplySceneUIState(Scene scene)
+    {
+        Time.timeScale = 1f;
+        isPaused = false;
+
+        if (scene.name == "MainMenu")
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -85,9 +151,10 @@ public class UIManager : MonoBehaviour
         }
 
         if (runawayScreen != null)
-        {
             runawayScreen.SetActive(false);
-        }
+
+        if (pauseMenu != null)
+            pauseMenu.SetActive(false);
 
         if (MoneyAndObjectsController.Instance != null)
         {
@@ -97,25 +164,12 @@ public class UIManager : MonoBehaviour
                 MoneyAndObjectsController.Instance.MaxSackLoad
             );
         }
-
-        if (pauseMenu != null)
-        {
-            pauseMenu.SetActive(false);
-        }
-
-        if (PersistenceManager.Instance != null && PersistenceManager.Instance.ShouldLoadGame)
-        {
-            PersistenceManager.Instance.ApplyLoadedGame();
-            PersistenceManager.Instance.ClearLoadFlag();
-        }
     }
 
     private void UpdateCashText(int currentCash)
     {
         if (cashText != null)
-        {
             cashText.text = "Cash: $" + currentCash;
-        }
     }
 
     private void UpdateSackBar(float currentLoad, float maxLoad)
@@ -123,7 +177,7 @@ public class UIManager : MonoBehaviour
         if (sackAnimator == null) return;
 
         float normalizedLoad = Mathf.InverseLerp(0f, maxLoad, currentLoad);
-        sackAnimator.SetFloat(sackParameterName, normalizedLoad);
+        sackAnimator.SetFloat("SackNormalized", normalizedLoad);
     }
 
     public void ShowRunawayScreen()
@@ -131,19 +185,13 @@ public class UIManager : MonoBehaviour
         UpdateRunawayScreenValues();
 
         if (runawayScreen != null)
-        {
             runawayScreen.SetActive(true);
-        }
 
         if (firstPersonController != null)
-        {
             firstPersonController.enabled = false;
-        }
 
         if (actionManager != null)
-        {
             actionManager.enabled = false;
-        }
 
         Time.timeScale = 0f;
         Cursor.lockState = CursorLockMode.None;
@@ -159,19 +207,13 @@ public class UIManager : MonoBehaviour
         int totalCollected = cashCollected + itemsMoneyCollected;
 
         if (runawayCashText != null)
-        {
             runawayCashText.text = $"${cashCollected}";
-        }
 
         if (runawayItemsMoneyText != null)
-        {
             runawayItemsMoneyText.text = $"${itemsMoneyCollected}";
-        }
 
         if (runawayTotalText != null)
-        {
             runawayTotalText.text = $"${totalCollected}";
-        }
     }
 
     public void TogglePauseMenu()
@@ -182,14 +224,10 @@ public class UIManager : MonoBehaviour
         isPaused = !isPaused;
 
         if (pauseMenu != null)
-        {
             pauseMenu.SetActive(isPaused);
-        }
 
         if (firstPersonController != null)
-        {
             firstPersonController.enabled = !isPaused;
-        }
 
         Time.timeScale = isPaused ? 0f : 1f;
         Cursor.lockState = isPaused ? CursorLockMode.None : CursorLockMode.Locked;
@@ -203,14 +241,10 @@ public class UIManager : MonoBehaviour
         isPaused = false;
 
         if (pauseMenu != null)
-        {
             pauseMenu.SetActive(false);
-        }
 
         if (firstPersonController != null)
-        {
             firstPersonController.enabled = true;
-        }
 
         Time.timeScale = 1f;
         Cursor.lockState = CursorLockMode.Locked;
@@ -219,8 +253,6 @@ public class UIManager : MonoBehaviour
 
     public void CloseGame()
     {
-        Time.timeScale = 1f;
-
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
@@ -233,9 +265,7 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1f;
 
         if (PersistenceManager.Instance != null)
-        {
             PersistenceManager.Instance.SaveGame();
-        }
 
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
@@ -255,31 +285,20 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1f;
 
         if (PersistenceManager.Instance != null)
-        {
             PersistenceManager.Instance.PrepareNewGame();
-        }
 
-        SceneManager.LoadScene("Level");
+        SceneManager.LoadScene("MorningLevel");
     }
 
     public void LoadGame()
     {
         Time.timeScale = 1f;
 
-        if (PersistenceManager.Instance == null)
-        {
-            Debug.LogWarning("PersistenceManager.Instance es null.");
+        if (PersistenceManager.Instance == null || !PersistenceManager.Instance.HasSaveFile())
             return;
-        }
-
-        if (!PersistenceManager.Instance.HasSaveFile())
-        {
-            Debug.LogWarning("No existe archivo de guardado.");
-            return;
-        }
 
         PersistenceManager.Instance.PrepareLoadGame();
-        SceneManager.LoadScene("Level");
+        SceneManager.LoadScene("MorningLevel");
     }
 
     public void OpenSettings()

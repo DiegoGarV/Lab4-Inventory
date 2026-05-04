@@ -9,6 +9,6 @@ public static class BootstrapLoader
         if (Object.FindFirstObjectByType<Bootstrapper>() != null)
             return;
 
-        SceneManager.LoadScene("BootstrapScene");
+        SceneManager.LoadScene("BootstrapScene", LoadSceneMode.Additive);
     }
 }

@@ -202,7 +202,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 735436962}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: LoadGame
         m_Mode: 1
@@ -252,7 +252,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 183570370}
   m_CullTransparentMesh: 1
---- !u!1 &443618769
+--- !u!1 &252842421
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -260,75 +260,29 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 443618771}
-  - component: {fileID: 443618770}
+  - component: {fileID: 252842423}
+  - component: {fileID: 252842422}
   m_Layer: 0
-  m_Name: PersistanceManager
+  m_Name: UIReferences
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &443618770
+--- !u!114 &252842422
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 443618769}
+  m_GameObject: {fileID: 252842421}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1693ad5d96cdd6c4e8da57f0395fb39c, type: 3}
+  m_Script: {fileID: 11500000, guid: 7371a94d6094302468594885c71e9db7, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PersistenceManager
-  playerTransform: {fileID: 0}
---- !u!4 &443618771
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 443618769}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 77.97713, y: 0, z: 19.196}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &735436961
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 735436963}
-  - component: {fileID: 735436962}
-  m_Layer: 0
-  m_Name: UIManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &735436962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 735436961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4f9971b676438c49901937aa8b8b81d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIManager
+  m_EditorClassIdentifier: Assembly-CSharp::UISceneReferences
   cashText: {fileID: 0}
   sackAnimator: {fileID: 0}
-  sackParameterName: SackNormalized
   firstPersonController: {fileID: 0}
   actionManager: {fileID: 0}
   runawayScreen: {fileID: 0}
@@ -337,16 +291,16 @@ MonoBehaviour:
   runawayTotalText: {fileID: 0}
   pauseMenu: {fileID: 0}
   loadGameButton: {fileID: 183570372}
---- !u!4 &735436963
+--- !u!4 &252842423
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 735436961}
+  m_GameObject: {fileID: 252842421}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 76.64789, y: 0, z: 14.36652}
+  m_LocalPosition: {x: 454.76376, y: 195.53622, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -904,7 +858,7 @@ PrefabInstance:
     - target: {fileID: 5061995437110162928, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 735436962}
+      objectReference: {fileID: 0}
     - target: {fileID: 5061995437110162928, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -1086,7 +1040,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 735436962}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: OpenSettings
         m_Mode: 1
@@ -1269,7 +1223,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1211984667}
   - {fileID: 1941418567}
-  - {fileID: 735436963}
   - {fileID: 1803958911}
   - {fileID: 1176210175}
-  - {fileID: 443618771}
+  - {fileID: 252842423}

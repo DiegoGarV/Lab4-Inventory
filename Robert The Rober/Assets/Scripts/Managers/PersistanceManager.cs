@@ -6,8 +6,6 @@ public class PersistenceManager : MonoBehaviour
 {
     public static PersistenceManager Instance;
 
-    [SerializeField] private Transform playerTransform;
-
     private string saveFilePath;
     private SaveData loadedData;
     private List<string> collectedPickupIds = new();
@@ -16,6 +14,7 @@ public class PersistenceManager : MonoBehaviour
     public List<string> CollectedPickupIds => collectedPickupIds;
 
     public bool ShouldLoadGame { get; private set; }
+    private Transform playerTransform;
 
     private void Awake()
     {
@@ -58,14 +57,11 @@ public class PersistenceManager : MonoBehaviour
 
     public void SaveGame()
     {
-        if (playerTransform == null)
-        {
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            if (player != null)
-            {
-                playerTransform = player.transform;
-            }
-        }
+        playerTransform = null;
+
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+            playerTransform = player.transform;
 
         if (playerTransform == null)
         {
