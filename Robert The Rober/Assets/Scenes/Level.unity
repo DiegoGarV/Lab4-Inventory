@@ -21807,7 +21807,7 @@ GameObject:
   - component: {fileID: 798044215}
   - component: {fileID: 798044214}
   m_Layer: 5
-  m_Name: sackStorage
+  m_Name: sackStorageTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38826,6 +38826,7 @@ MonoBehaviour:
   runawayItemsMoneyText: {fileID: 1898142152}
   runawayTotalText: {fileID: 1927103083}
   pauseMenu: {fileID: 1966394824}
+  loadGameButton: {fileID: 0}
 --- !u!4 &1415870491
 Transform:
   m_ObjectHideFlags: 0
@@ -44033,7 +44034,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 735257260090232771, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.14325
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 735257260090232771, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
       propertyPath: m_LocalRotation.w
@@ -44041,23 +44042,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 735257260090232771, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 735257260090232771, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 735257260090232771, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 735257260090232771, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -77.97572
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 735257260090232771, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.045
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 735257260090232771, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
