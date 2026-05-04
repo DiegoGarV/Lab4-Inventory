@@ -59,18 +59,10 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 5a429c0c7374c7e4891a1496ef158d2a, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
-      objectReference: {fileID: 2100000, guid: 49545e5bef5df8e438aa74dbc4efe1fe, type: 2}
+      objectReference: {fileID: 2100000, guid: 58a43b414d5f83a4fbb9d237baf7ac48, type: 2}
     - target: {fileID: 919132149155446097, guid: 5a429c0c7374c7e4891a1496ef158d2a, type: 3}
       propertyPath: m_Name
       value: SM_watch Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 5a429c0c7374c7e4891a1496ef158d2a, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 5a429c0c7374c7e4891a1496ef158d2a, type: 3}
-      propertyPath: m_TagString
-      value: Sackable
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5a429c0c7374c7e4891a1496ef158d2a, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -82,18 +74,15 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a429c0c7374c7e4891a1496ef158d2a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 189055817002972637}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a429c0c7374c7e4891a1496ef158d2a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 415643245934887669}
+      addedObject: {fileID: 134998311780449197}
   m_SourcePrefab: {fileID: 100100000, guid: 5a429c0c7374c7e4891a1496ef158d2a, type: 3}
 --- !u!1 &4563730956392895797 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a429c0c7374c7e4891a1496ef158d2a, type: 3}
   m_PrefabInstance: {fileID: 3716816533898242148}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &189055817002972637
-BoxCollider:
+--- !u!64 &134998311780449197
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -110,22 +99,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.41517547, y: 2.2437234, z: 0.42361906}
-  m_Center: {x: 0, y: 1.1218617, z: 0}
---- !u!114 &415643245934887669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4563730956392895797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2155d18a0116d745b7327d949862d69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DecorationPickup
-  itemName: Decoration
-  itemIcon: {fileID: 21300000, guid: f440d73c9411b29409b1ffdddf8017b5, type: 3}
-  sackValue: 100
-  monetaryValue: 2300
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2154346264296351956, guid: 5a429c0c7374c7e4891a1496ef158d2a, type: 3}

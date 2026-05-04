@@ -60,64 +60,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_mirror Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 298a4e8a691c1cd41847dd616c5540ed, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 298a4e8a691c1cd41847dd616c5540ed, type: 3}
-      propertyPath: m_TagString
-      value: Sackable
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 298a4e8a691c1cd41847dd616c5540ed, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4960834047798702160}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 298a4e8a691c1cd41847dd616c5540ed, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4260389554215436882}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 298a4e8a691c1cd41847dd616c5540ed, type: 3}
---- !u!1 &1945677635528349647 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 298a4e8a691c1cd41847dd616c5540ed, type: 3}
-  m_PrefabInstance: {fileID: 1711656282049211038}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &4960834047798702160
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1945677635528349647}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.17994487, y: 0.31511495, z: 0.12739171}
-  m_Center: {x: 0, y: 0.15140526, z: 0}
---- !u!114 &4260389554215436882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1945677635528349647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2155d18a0116d745b7327d949862d69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DecorationPickup
-  itemName: Decoration
-  itemIcon: {fileID: 21300000, guid: f440d73c9411b29409b1ffdddf8017b5, type: 3}
-  sackValue: 20
-  monetaryValue: 120

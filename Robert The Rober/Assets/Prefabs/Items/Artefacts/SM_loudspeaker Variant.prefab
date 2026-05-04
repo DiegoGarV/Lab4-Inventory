@@ -61,14 +61,6 @@ PrefabInstance:
       value: SM_loudspeaker Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 81289f922bc6cb646811f606dffa8790, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 81289f922bc6cb646811f606dffa8790, type: 3}
-      propertyPath: m_TagString
-      value: Sackable
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 81289f922bc6cb646811f606dffa8790, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -79,9 +71,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 81289f922bc6cb646811f606dffa8790, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3913871027370599995}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 81289f922bc6cb646811f606dffa8790, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3391779329067142424}
   m_SourcePrefab: {fileID: 100100000, guid: 81289f922bc6cb646811f606dffa8790, type: 3}
 --- !u!1 &9093000576981506081 stripped
 GameObject:
@@ -110,19 +99,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4939133586795443533, guid: 81289f922bc6cb646811f606dffa8790, type: 3}
---- !u!114 &3391779329067142424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9093000576981506081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00916428c57ab3b479dc121062577fda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ArtefactsPickup
-  itemName: Artefact
-  itemIcon: {fileID: 21300000, guid: 4cf4277a3c907d84b9b2897f70055714, type: 3}
-  sackValue: 40
-  monetaryValue: 1530
