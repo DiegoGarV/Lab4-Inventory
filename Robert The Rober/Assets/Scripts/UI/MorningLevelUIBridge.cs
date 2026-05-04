@@ -33,4 +33,12 @@ public class MorningLevelUIBridge : MonoBehaviour
             UIManager.Instance.SafeCloseGame();
         }
     }
+
+    public void GoToStore()
+    {
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.GoToStore();
+        }
+    }
 }

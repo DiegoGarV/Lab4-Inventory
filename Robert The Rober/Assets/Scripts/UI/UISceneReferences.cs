@@ -4,10 +4,8 @@ using UnityEngine.UI;
 
 public class UISceneReferences : MonoBehaviour
 {
-    [Header("HUD")]
+    [Header("Heist HUD")]
     public TMP_Text cashText;
-
-    [Header("Sack UI")]
     public Animator sackAnimator;
 
     [Header("Controllers")]
@@ -28,4 +26,7 @@ public class UISceneReferences : MonoBehaviour
 
     [Header("Store Exit")]
     public GameObject returnToTownPrompt;
+
+    [Header("Store HUD")]
+    public TMP_Text currencyText;
 }

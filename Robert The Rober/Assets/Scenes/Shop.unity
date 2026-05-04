@@ -4473,6 +4473,7 @@ MonoBehaviour:
   pauseMenu: {fileID: 0}
   loadGameButton: {fileID: 0}
   returnToTownPrompt: {fileID: 466507032}
+  currencyText: {fileID: 704499236}
 --- !u!1001 &700993984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4635,6 +4636,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7020109330419507058, guid: cfc5b509ff618d04d8cd9372a55e8283, type: 3}
+      propertyPath: m_Name
+      value: CurrencyCount
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8926662137936227868, guid: cfc5b509ff618d04d8cd9372a55e8283, type: 3}
@@ -4648,6 +4653,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3491939741460754323, guid: cfc5b509ff618d04d8cd9372a55e8283, type: 3}
   m_PrefabInstance: {fileID: 704499234}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &704499236 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 102650789947128401, guid: cfc5b509ff618d04d8cd9372a55e8283, type: 3}
+  m_PrefabInstance: {fileID: 704499234}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &721818895 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6960496975883862407, guid: cd87cb73bef3f03439a9449bd63718e5, type: 3}

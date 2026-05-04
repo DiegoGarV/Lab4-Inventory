@@ -19,6 +19,7 @@ public class UIManager : MonoBehaviour
     private Button loadGameButton;
     private MoneyAndObjectsController boundMoneyController;
     private GameObject returnToTownPrompt;
+    private TMP_Text currencyText;
 
     private bool isPaused = false;
     public bool IsPaused => isPaused;
@@ -109,6 +110,7 @@ public class UIManager : MonoBehaviour
         pauseMenu = refs.pauseMenu;
         loadGameButton = refs.loadGameButton;
         returnToTownPrompt = refs.returnToTownPrompt;
+        currencyText = refs.currencyText;
 
         Debug.Log($"UIManager: referencias enlazadas para escena {scene.name}");
     }
@@ -126,6 +128,7 @@ public class UIManager : MonoBehaviour
         pauseMenu = null;
         loadGameButton = null;
         returnToTownPrompt = null;
+        currencyText = null;
     }
 
     private void ApplySceneUIState(Scene scene)
@@ -167,6 +170,8 @@ public class UIManager : MonoBehaviour
                 MoneyAndObjectsController.Instance.MaxSackLoad
             );
         }
+
+        UpdateStoreCurrency();
     }
 
     private void RebindMoneyController()
@@ -330,6 +335,22 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene("MorningLevel");
     }
 
+    public void GoToStore()
+    {
+        Time.timeScale = 1f;
+
+        if (MoneyAndObjectsController.Instance != null && PlayerProgressManager.Instance != null)
+        {
+            int totalCollected =
+                MoneyAndObjectsController.Instance.CashScore +
+                MoneyAndObjectsController.Instance.StoredLootValue;
+
+            PlayerProgressManager.Instance.SetLastHeistTotal(totalCollected);
+        }
+
+        SceneManager.LoadScene("Shop");
+    }
+
     public void OpenSettings()
     {
     }
@@ -382,5 +403,13 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1f;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+    }
+
+    private void UpdateStoreCurrency()
+    {
+        if (currencyText == null) return;
+        if (PlayerProgressManager.Instance == null) return;
+
+        currencyText.text = "Currency: $" + PlayerProgressManager.Instance.LastHeistTotal;
     }
 }

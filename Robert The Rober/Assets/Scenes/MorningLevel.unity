@@ -43058,6 +43058,8 @@ MonoBehaviour:
   runawayTotalText: {fileID: 438861673}
   pauseMenu: {fileID: 1172443540}
   loadGameButton: {fileID: 0}
+  returnToTownPrompt: {fileID: 0}
+  currencyText: {fileID: 0}
 --- !u!1001 &1574169448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43892,7 +43894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5061995437110162928, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RestartGame
+      value: GoToStore
       objectReference: {fileID: 0}
     - target: {fileID: 5061995437110162928, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -43909,6 +43911,14 @@ PrefabInstance:
     - target: {fileID: 5354346012814565336, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023409609530794471, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
+      propertyPath: m_text
+      value: To Shop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133572140182166698, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
+      propertyPath: m_Name
+      value: ToShopButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

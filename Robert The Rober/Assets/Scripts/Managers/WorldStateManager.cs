@@ -2,15 +2,17 @@ using UnityEngine;
 
 public class WorldStateManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public static WorldStateManager Instance;
+    
+    private void Awake()
     {
-        
-    }
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 }

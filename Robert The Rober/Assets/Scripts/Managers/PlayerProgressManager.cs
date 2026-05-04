@@ -2,15 +2,26 @@ using UnityEngine;
 
 public class PlayerProgressManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public static PlayerProgressManager Instance;
+
+    private int lastHeistTotal = 0;
+
+    public int LastHeistTotal => lastHeistTotal;
+
+    private void Awake()
     {
-        
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetLastHeistTotal(int value)
     {
-        
+        lastHeistTotal = value;
     }
 }
