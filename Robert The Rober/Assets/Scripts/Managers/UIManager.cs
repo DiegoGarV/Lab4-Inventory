@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour
     private TMP_Text cashText;
     private Animator sackAnimator;
     private MonoBehaviour firstPersonController;
-    private MonoBehaviour actionManager;
+    private MonoBehaviour actionController;
     private GameObject runawayScreen;
     private TMP_Text runawayCashText;
     private TMP_Text runawayItemsMoneyText;
@@ -103,7 +103,7 @@ public class UIManager : MonoBehaviour
         cashText = refs.cashText;
         sackAnimator = refs.sackAnimator;
         firstPersonController = refs.firstPersonController;
-        actionManager = refs.actionManager;
+        actionController = refs.actionController;
         runawayScreen = refs.runawayScreen;
         runawayCashText = refs.runawayCashText;
         runawayItemsMoneyText = refs.runawayItemsMoneyText;
@@ -119,7 +119,7 @@ public class UIManager : MonoBehaviour
         cashText = null;
         sackAnimator = null;
         firstPersonController = null;
-        actionManager = null;
+        actionController = null;
         runawayScreen = null;
         runawayCashText = null;
         runawayItemsMoneyText = null;
@@ -177,7 +177,7 @@ public class UIManager : MonoBehaviour
         if (sackAnimator == null) return;
 
         float normalizedLoad = Mathf.InverseLerp(0f, maxLoad, currentLoad);
-        sackAnimator.SetFloat("SackNormalized", normalizedLoad);
+        sackAnimator.SetFloat("Storage", normalizedLoad);
     }
 
     public void ShowRunawayScreen()
@@ -190,8 +190,8 @@ public class UIManager : MonoBehaviour
         if (firstPersonController != null)
             firstPersonController.enabled = false;
 
-        if (actionManager != null)
-            actionManager.enabled = false;
+        if (actionController != null)
+            actionController.enabled = false;
 
         Time.timeScale = 0f;
         Cursor.lockState = CursorLockMode.None;

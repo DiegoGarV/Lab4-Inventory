@@ -1,0 +1,36 @@
+using UnityEngine;
+
+public class MorningLevelUIBridge : MonoBehaviour
+{
+    public void ResumeGame()
+    {
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.ResumeGame();
+        }
+    }
+
+    public void RestartGame()
+    {
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.RestartGame();
+        }
+    }
+
+    public void CloseGame()
+    {
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.CloseGame();
+        }
+    }
+
+    public void SaveAndQuit()
+    {
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.SafeCloseGame();
+        }
+    }
+}

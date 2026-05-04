@@ -132,6 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00916428c57ab3b479dc121062577fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArtefactsPickup
+  pickupId: 
   itemName: Artefact
   itemIcon: {fileID: 21300000, guid: 4cf4277a3c907d84b9b2897f70055714, type: 3}
   sackValue: 75

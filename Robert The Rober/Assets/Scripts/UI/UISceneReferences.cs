@@ -12,7 +12,7 @@ public class UISceneReferences : MonoBehaviour
 
     [Header("Controllers")]
     public MonoBehaviour firstPersonController;
-    public MonoBehaviour actionManager;
+    public MonoBehaviour actionController;
 
     [Header("Runaway Screen")]
     public GameObject runawayScreen;

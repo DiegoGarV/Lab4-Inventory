@@ -65,6 +65,14 @@ PrefabInstance:
       value: SM_watch Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5a429c0c7374c7e4891a1496ef158d2a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a429c0c7374c7e4891a1496ef158d2a, type: 3}
+      propertyPath: m_TagString
+      value: Sackable
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a429c0c7374c7e4891a1496ef158d2a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}

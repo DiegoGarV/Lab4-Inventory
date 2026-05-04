@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class ActionManager : MonoBehaviour
+public class ActionController : MonoBehaviour
 {
     [Header("Raycast")]
     [SerializeField] private float interactDistance = 3f;
