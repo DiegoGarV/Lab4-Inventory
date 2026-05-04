@@ -21374,6 +21374,10 @@ PrefabInstance:
       propertyPath: pickupId
       value: books_005
       objectReference: {fileID: 0}
+    - target: {fileID: 253412498498051526, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: gold_003
+      objectReference: {fileID: 0}
     - target: {fileID: 315661637097477773, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: bundle_money_006
@@ -21389,6 +21393,10 @@ PrefabInstance:
     - target: {fileID: 379754658792638223, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: pc_chair_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 426929458484303939, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: diamond_003
       objectReference: {fileID: 0}
     - target: {fileID: 433506395287140013, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
@@ -21410,9 +21418,25 @@ PrefabInstance:
       propertyPath: pickupId
       value: folded_money_002
       objectReference: {fileID: 0}
+    - target: {fileID: 759872390765158197, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: loudspeaker_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 771357005349766066, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: bracelet_stand_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 797998925999200125, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: money_bundle_002
+      objectReference: {fileID: 0}
     - target: {fileID: 951878868550490700, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: diamond_007
+      objectReference: {fileID: 0}
+    - target: {fileID: 976487217827573634, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: diamond_011
       objectReference: {fileID: 0}
     - target: {fileID: 1037606996556867041, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
@@ -21430,9 +21454,17 @@ PrefabInstance:
       propertyPath: pickupId
       value: diamond_001
       objectReference: {fileID: 0}
+    - target: {fileID: 1129002411731368505, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1402356098213828550, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: bundle_money_005
+      objectReference: {fileID: 0}
+    - target: {fileID: 1463367575436575635, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: money_simple_008
       objectReference: {fileID: 0}
     - target: {fileID: 1521946558532937572, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
@@ -21442,6 +21474,10 @@ PrefabInstance:
       propertyPath: pickupId
       value: red_carpet_001
       objectReference: {fileID: 0}
+    - target: {fileID: 1627075619803614662, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: gold_001
+      objectReference: {fileID: 0}
     - target: {fileID: 1737701867015906034, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: books_002
@@ -21449,6 +21485,10 @@ PrefabInstance:
     - target: {fileID: 1747173937870488719, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: twisted_money_002
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888887166125108776, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: money_simple_005
       objectReference: {fileID: 0}
     - target: {fileID: 1910747624715456976, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
@@ -21458,13 +21498,61 @@ PrefabInstance:
       propertyPath: pickupId
       value: box_003
       objectReference: {fileID: 0}
+    - target: {fileID: 1958321771847299233, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: money_simple_006
+      objectReference: {fileID: 0}
+    - target: {fileID: 1968574436335607069, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: bracelet5_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1974347548803824005, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.3454
+      objectReference: {fileID: 0}
+    - target: {fileID: 2159010697491553989, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: bracelet1_001
+      objectReference: {fileID: 0}
     - target: {fileID: 2252230688645661276, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: diamond_necklace_001
       objectReference: {fileID: 0}
+    - target: {fileID: 2273012439377751114, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: diamond_006
+      objectReference: {fileID: 0}
+    - target: {fileID: 2309523873074576008, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: money_simple_004
+      objectReference: {fileID: 0}
     - target: {fileID: 2369094100011163977, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: diamond_008
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481737520436185725, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481737520436185725, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481737520436185725, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481737520436185725, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2481737520436185725, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2486678115759075402, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: money_twisted_002
       objectReference: {fileID: 0}
     - target: {fileID: 2509351634963339742, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
@@ -21477,6 +21565,14 @@ PrefabInstance:
     - target: {fileID: 2652828921657161372, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: box_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 2659044183000817059, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: ring_stand_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 2693791420906751661, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: money_folded_002
       objectReference: {fileID: 0}
     - target: {fileID: 2846032337211248549, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
@@ -21494,6 +21590,10 @@ PrefabInstance:
       propertyPath: pickupId
       value: books_006
       objectReference: {fileID: 0}
+    - target: {fileID: 3049128268603471936, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: money_twisted_001
+      objectReference: {fileID: 0}
     - target: {fileID: 3086314935655420554, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: diamond_009
@@ -21510,6 +21610,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Sackable
       objectReference: {fileID: 0}
+    - target: {fileID: 3297862633111244829, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: money_bundle_005
+      objectReference: {fileID: 0}
     - target: {fileID: 3340201560378376185, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: laptop_001
@@ -21522,9 +21626,17 @@ PrefabInstance:
       propertyPath: pickupId
       value: simple_money_008
       objectReference: {fileID: 0}
+    - target: {fileID: 3632780351496330963, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: diamond_012
+      objectReference: {fileID: 0}
     - target: {fileID: 3738854427896847641, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: loudspeaker_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824769956876599149, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: diamond_002
       objectReference: {fileID: 0}
     - target: {fileID: 3851816910854290847, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
@@ -21542,9 +21654,21 @@ PrefabInstance:
       propertyPath: pickupId
       value: dishes_001
       objectReference: {fileID: 0}
+    - target: {fileID: 4075487915332969501, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: clock_001
+      objectReference: {fileID: 0}
     - target: {fileID: 4135049132455430198, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: big_ring_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169604697108312588, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: diamond_004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4238735459534754134, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: money_bundle_006
       objectReference: {fileID: 0}
     - target: {fileID: 4341365184556278285, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
@@ -21558,9 +21682,17 @@ PrefabInstance:
       propertyPath: pickupId
       value: diamond_013
       objectReference: {fileID: 0}
+    - target: {fileID: 4469310828091445444, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: gold_002
+      objectReference: {fileID: 0}
     - target: {fileID: 4575061947499079953, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: chain_bracelet_002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703692635854001212, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: money_bundle_007
       objectReference: {fileID: 0}
     - target: {fileID: 4785138144865838499, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
@@ -21574,13 +21706,25 @@ PrefabInstance:
       propertyPath: pickupId
       value: lamp_001
       objectReference: {fileID: 0}
+    - target: {fileID: 4901821756030382626, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: money_twisted_004
+      objectReference: {fileID: 0}
     - target: {fileID: 4964221408766887745, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: simple_money_007
       objectReference: {fileID: 0}
+    - target: {fileID: 4989272478848038635, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: diamond_008
+      objectReference: {fileID: 0}
     - target: {fileID: 4997135699309620622, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: painting_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998331019527495136, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: chain_001
       objectReference: {fileID: 0}
     - target: {fileID: 5004600782327779996, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
@@ -21589,6 +21733,10 @@ PrefabInstance:
     - target: {fileID: 5013875571425302827, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: books_004
+      objectReference: {fileID: 0}
+    - target: {fileID: 5020990383549521765, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: bracelet_001
       objectReference: {fileID: 0}
     - target: {fileID: 5040660943458721524, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
@@ -21646,6 +21794,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5199244768075530855, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: money_bundle_004
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204467913153405242, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: ring9_001
+      objectReference: {fileID: 0}
     - target: {fileID: 5229367472623599689, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: bundle_money_001
@@ -21658,6 +21814,10 @@ PrefabInstance:
       propertyPath: pickupId
       value: simple_money_004
       objectReference: {fileID: 0}
+    - target: {fileID: 5271177279749509577, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: money_twisted_005
+      objectReference: {fileID: 0}
     - target: {fileID: 5378187725271628833, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: pan_001
@@ -21665,6 +21825,14 @@ PrefabInstance:
     - target: {fileID: 5599957147038627272, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: simple_money_005
+      objectReference: {fileID: 0}
+    - target: {fileID: 5630935582491825882, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: necklace3_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5695093641887106344, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: diamond_009
       objectReference: {fileID: 0}
     - target: {fileID: 5700481469434995516, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
@@ -21674,9 +21842,17 @@ PrefabInstance:
       propertyPath: pickupId
       value: green_white_carpet_001
       objectReference: {fileID: 0}
+    - target: {fileID: 5711346331610496051, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: bracelet5_002
+      objectReference: {fileID: 0}
     - target: {fileID: 5719254088331916972, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: gold_bar_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770735724991520585, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: ring_001
       objectReference: {fileID: 0}
     - target: {fileID: 5807973665915249612, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
@@ -21694,6 +21870,10 @@ PrefabInstance:
       propertyPath: pickupId
       value: drums_001
       objectReference: {fileID: 0}
+    - target: {fileID: 6010389784600028993, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: tiny_mirror_001
+      objectReference: {fileID: 0}
     - target: {fileID: 6086351089734199388, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: folded_money_003
@@ -21702,13 +21882,29 @@ PrefabInstance:
       propertyPath: pickupId
       value: books_001
       objectReference: {fileID: 0}
+    - target: {fileID: 6284211400610224821, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: gold_004
+      objectReference: {fileID: 0}
     - target: {fileID: 6320793357392546161, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: diamond_012
       objectReference: {fileID: 0}
+    - target: {fileID: 6361342086898841594, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: diamond_013
+      objectReference: {fileID: 0}
+    - target: {fileID: 6504616988383097745, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: chain2_001
+      objectReference: {fileID: 0}
     - target: {fileID: 6507167916766553772, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: gold_bar_003
+      objectReference: {fileID: 0}
+    - target: {fileID: 6517829193013962034, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: money_bundle_003
       objectReference: {fileID: 0}
     - target: {fileID: 6629486718897481134, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
@@ -21718,13 +21914,25 @@ PrefabInstance:
       propertyPath: pickupId
       value: simple_bracelet_001
       objectReference: {fileID: 0}
+    - target: {fileID: 6672030166853420836, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: money_simple_003
+      objectReference: {fileID: 0}
     - target: {fileID: 6704152318872409130, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: box_004
       objectReference: {fileID: 0}
+    - target: {fileID: 6713123274976139697, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6931321843452628961, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: diamond_003
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004823658334789665, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: diamond_010
       objectReference: {fileID: 0}
     - target: {fileID: 7065923911770419357, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
@@ -21734,9 +21942,17 @@ PrefabInstance:
       propertyPath: pickupId
       value: vase_002
       objectReference: {fileID: 0}
+    - target: {fileID: 7128487295260773220, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: money_simple_001
+      objectReference: {fileID: 0}
     - target: {fileID: 7182066275004707465, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: ring_stand_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7209112008077115993, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7256875576654848648, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
@@ -21745,6 +21961,10 @@ PrefabInstance:
     - target: {fileID: 7260239076618838761, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: bundle_money_003
+      objectReference: {fileID: 0}
+    - target: {fileID: 7270290799861043508, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: ring8_001
       objectReference: {fileID: 0}
     - target: {fileID: 7282712645340137462, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
@@ -21762,13 +21982,33 @@ PrefabInstance:
       propertyPath: pickupId
       value: diamond_011
       objectReference: {fileID: 0}
+    - target: {fileID: 7559294874027691502, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: diamond_007
+      objectReference: {fileID: 0}
+    - target: {fileID: 7686605903873142744, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: diamond_001
+      objectReference: {fileID: 0}
     - target: {fileID: 7691327557666794210, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: glass_001
       objectReference: {fileID: 0}
+    - target: {fileID: 7757831875730163494, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: necklace2_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763650667804260845, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: money_simple_002
+      objectReference: {fileID: 0}
     - target: {fileID: 7833076542968036943, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: bracelet_stand_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995855542174423035, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: money_simple_007
       objectReference: {fileID: 0}
     - target: {fileID: 8102761232052865701, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
@@ -21778,9 +22018,41 @@ PrefabInstance:
       propertyPath: pickupId
       value: arcade_machine_001
       objectReference: {fileID: 0}
+    - target: {fileID: 8180073815239766633, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7933534
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180073815239766633, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.60876137
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180073815239766633, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180073815239766633, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180073815239766633, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180073815239766633, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8180073815239766633, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8181587558300569259, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: diamond_earings_001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511809781058783122, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: money_bundle_001
       objectReference: {fileID: 0}
     - target: {fileID: 8532456089753063149, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
@@ -21790,6 +22062,10 @@ PrefabInstance:
       propertyPath: pickupId
       value: bundle_money_004
       objectReference: {fileID: 0}
+    - target: {fileID: 8557588307716578072, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: money_twisted_006
+      objectReference: {fileID: 0}
     - target: {fileID: 8666361426783793822, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -21797,6 +22073,14 @@ PrefabInstance:
     - target: {fileID: 8666361426783793822, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: m_TagString
       value: Sackable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8701615136234489089, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: money_folded_003
+      objectReference: {fileID: 0}
+    - target: {fileID: 8729732012482212177, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: necklace4_001
       objectReference: {fileID: 0}
     - target: {fileID: 8754377345770095816, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
@@ -21814,6 +22098,10 @@ PrefabInstance:
       propertyPath: pickupId
       value: simple_money_006
       objectReference: {fileID: 0}
+    - target: {fileID: 8948469441150307985, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: money_folded_001
+      objectReference: {fileID: 0}
     - target: {fileID: 9086969854846358605, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: chain_bracelet_001
@@ -21822,9 +22110,17 @@ PrefabInstance:
       propertyPath: pickupId
       value: twisted_money_002
       objectReference: {fileID: 0}
+    - target: {fileID: 9145389854826606451, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: money_twisted_003
+      objectReference: {fileID: 0}
     - target: {fileID: 9172339522185511640, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: box_002
+      objectReference: {fileID: 0}
+    - target: {fileID: 9176529258995713650, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: pickupId
+      value: diamond_005
       objectReference: {fileID: 0}
     - target: {fileID: 9194405471148574572, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId

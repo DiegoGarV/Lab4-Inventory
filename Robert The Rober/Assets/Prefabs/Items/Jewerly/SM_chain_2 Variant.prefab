@@ -71,5 +71,54 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1e3a06c9240256c488afb775771f7b6a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -3895732169986948401}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1e3a06c9240256c488afb775771f7b6a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6855065329651548844}
   m_SourcePrefab: {fileID: 100100000, guid: 1e3a06c9240256c488afb775771f7b6a, type: 3}
+--- !u!1 &4028881480770869474 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1e3a06c9240256c488afb775771f7b6a, type: 3}
+  m_PrefabInstance: {fileID: 4262691740901860787}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &-3895732169986948401
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4028881480770869474}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.17513585, y: 0.011268051, z: 0.30929428}
+  m_Center: {x: -0.020501275, y: 0, z: 0.061799087}
+--- !u!114 &-6855065329651548844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4028881480770869474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d703ff60ca03c6b45bed5877b5b6130f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JewerlyPickup
+  pickupId: 
+  itemName: Jewelry
+  itemIcon: {fileID: 21300000, guid: eb6dff12e0d14e94d9b8c78e44ac0fc6, type: 3}
+  sackValue: 20
+  monetaryValue: 620

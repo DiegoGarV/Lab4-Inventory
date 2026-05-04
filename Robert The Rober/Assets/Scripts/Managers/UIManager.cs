@@ -17,6 +17,7 @@ public class UIManager : MonoBehaviour
     private TMP_Text runawayTotalText;
     private GameObject pauseMenu;
     private Button loadGameButton;
+    private MoneyAndObjectsController boundMoneyController;
 
     private bool isPaused = false;
     public bool IsPaused => isPaused;
@@ -35,22 +36,16 @@ public class UIManager : MonoBehaviour
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
-
-        if (MoneyAndObjectsController.Instance != null)
-        {
-            MoneyAndObjectsController.Instance.OnCashChanged += UpdateCashText;
-            MoneyAndObjectsController.Instance.OnSackChanged += UpdateSackBar;
-        }
     }
 
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
 
-        if (MoneyAndObjectsController.Instance != null)
+        if (boundMoneyController != null)
         {
-            MoneyAndObjectsController.Instance.OnCashChanged -= UpdateCashText;
-            MoneyAndObjectsController.Instance.OnSackChanged -= UpdateSackBar;
+            boundMoneyController.OnCashChanged -= UpdateCashText;
+            boundMoneyController.OnSackChanged -= UpdateSackBar;
         }
     }
 
@@ -61,6 +56,7 @@ public class UIManager : MonoBehaviour
         if (currentScene.name != "BootstrapScene")
         {
             BindSceneReferences(currentScene);
+            RebindMoneyController();
             ApplySceneUIState(currentScene);
         }
     }
@@ -71,6 +67,7 @@ public class UIManager : MonoBehaviour
             return;
         
         BindSceneReferences(scene);
+        RebindMoneyController();
         ApplySceneUIState(scene);
 
         if (PersistenceManager.Instance != null && PersistenceManager.Instance.ShouldLoadGame)
@@ -163,6 +160,32 @@ public class UIManager : MonoBehaviour
                 MoneyAndObjectsController.Instance.CurrentSackLoad,
                 MoneyAndObjectsController.Instance.MaxSackLoad
             );
+        }
+    }
+
+    private void RebindMoneyController()
+    {
+        if (boundMoneyController != null)
+        {
+            boundMoneyController.OnCashChanged -= UpdateCashText;
+            boundMoneyController.OnSackChanged -= UpdateSackBar;
+        }
+
+        boundMoneyController = MoneyAndObjectsController.Instance;
+
+        if (boundMoneyController != null)
+        {
+            boundMoneyController.OnCashChanged += UpdateCashText;
+            boundMoneyController.OnSackChanged += UpdateSackBar;
+
+            UpdateCashText(boundMoneyController.CashScore);
+            UpdateSackBar(boundMoneyController.CurrentSackLoad, boundMoneyController.MaxSackLoad);
+
+            Debug.Log("UIManager: rebind a MoneyAndObjectsController exitoso.");
+        }
+        else
+        {
+            Debug.LogWarning("UIManager: no encontró MoneyAndObjectsController para enlazar.");
         }
     }
 
