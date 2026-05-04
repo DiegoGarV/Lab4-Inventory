@@ -923,7 +923,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5354346012814565336, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
       propertyPath: m_Name
-      value: RunawayScreen
+      value: Main Menu Screen
       objectReference: {fileID: 0}
     - target: {fileID: 6023409609530794471, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
       propertyPath: m_text
