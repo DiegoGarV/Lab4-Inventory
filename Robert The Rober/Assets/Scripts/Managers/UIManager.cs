@@ -321,7 +321,8 @@ public class UIManager : MonoBehaviour
         if (PersistenceManager.Instance != null)
             PersistenceManager.Instance.PrepareNewGame();
 
-        SceneManager.LoadScene("MorningLevel");
+        if (SceneTransitionManager.Instance != null)
+            SceneTransitionManager.Instance.LoadSceneWithLoadingScreen("MorningLevel");
     }
 
     public void LoadGame()
@@ -332,7 +333,8 @@ public class UIManager : MonoBehaviour
             return;
 
         PersistenceManager.Instance.PrepareLoadGame();
-        SceneManager.LoadScene("MorningLevel");
+        if (SceneTransitionManager.Instance != null)
+            SceneTransitionManager.Instance.LoadSceneWithLoadingScreen("MorningLevel");
     }
 
     public void GoToStore()
@@ -348,7 +350,8 @@ public class UIManager : MonoBehaviour
             PlayerProgressManager.Instance.SetLastHeistTotal(totalCollected);
         }
 
-        SceneManager.LoadScene("Shop");
+        if (SceneTransitionManager.Instance != null)
+            SceneTransitionManager.Instance.LoadSceneWithLoadingScreen("Shop");
     }
 
     public void OpenSettings()
@@ -358,19 +361,13 @@ public class UIManager : MonoBehaviour
     public void ShowReturnToTownPrompt()
     {
         if (returnToTownPrompt != null)
-        {
             returnToTownPrompt.SetActive(true);
-        }
 
         if (firstPersonController != null)
-        {
             firstPersonController.enabled = false;
-        }
 
         if (actionController != null)
-        {
             actionController.enabled = false;
-        }
 
         Time.timeScale = 0f;
         Cursor.lockState = CursorLockMode.None;
@@ -380,25 +377,20 @@ public class UIManager : MonoBehaviour
     public void ConfirmReturnToTown()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("AfternoonLevel");
+        if (SceneTransitionManager.Instance != null)
+            SceneTransitionManager.Instance.LoadSceneWithLoadingScreen("AfternoonLevel");
     }
 
     public void CancelReturnToTown()
     {
         if (returnToTownPrompt != null)
-        {
             returnToTownPrompt.SetActive(false);
-        }
 
         if (firstPersonController != null)
-        {
             firstPersonController.enabled = true;
-        }
 
         if (actionController != null)
-        {
             actionController.enabled = true;
-        }
 
         Time.timeScale = 1f;
         Cursor.lockState = CursorLockMode.Locked;

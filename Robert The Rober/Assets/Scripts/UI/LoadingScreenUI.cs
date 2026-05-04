@@ -1,19 +1,18 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class LoadingScreenUI : MonoBehaviour
 {
     [Header("UI References")]
-    [SerializeField] private RectTransform barContainer;
-    [SerializeField] private RectTransform barFill;
-    [SerializeField] private RectTransform thiefIcon;
+    [SerializeField] private Animator barAnimator;
     [SerializeField] private TMP_Text loadingText;
 
-    [Header("Animation")]
-    [SerializeField] private float fillLerpSpeed = 0.75f;
+    [Header("Animator Parameter")]
+    [SerializeField] private string loadingParameterName = "LoadingNormalized";
+
+    [Header("Visual Progress")]
+    [SerializeField] private float progressLerpSpeed = 0.8f;
     [SerializeField] private float minimumLoadingDuration = 1.5f;
-    [SerializeField] private float thiefOffset = 12f;
 
     private float realProgress = 0f;
     private float displayedProgress = 0f;
@@ -30,7 +29,6 @@ public class LoadingScreenUI : MonoBehaviour
 
         float visualTarget = realProgress;
 
-        // Evita que termine demasiado abrupto antes del tiempo mínimo
         if (!allowFinish)
         {
             visualTarget = Mathf.Min(realProgress, 0.9f);
@@ -44,21 +42,19 @@ public class LoadingScreenUI : MonoBehaviour
         displayedProgress = Mathf.MoveTowards(
             displayedProgress,
             visualTarget,
-            fillLerpSpeed * Time.unscaledDeltaTime
+            progressLerpSpeed * Time.unscaledDeltaTime
         );
-
-        UpdateBarVisuals();
 
         if (allowFinish && realProgress >= 1f)
         {
             displayedProgress = Mathf.MoveTowards(
                 displayedProgress,
                 1f,
-                (fillLerpSpeed * 1.5f) * Time.unscaledDeltaTime
+                (progressLerpSpeed * 1.5f) * Time.unscaledDeltaTime
             );
-
-            UpdateBarVisuals();
         }
+
+        UpdateBarVisuals();
     }
 
     public void SetRealProgress(float normalizedProgress)
@@ -83,20 +79,9 @@ public class LoadingScreenUI : MonoBehaviour
 
     private void UpdateBarVisuals()
     {
-        if (barContainer == null || barFill == null) return;
-
-        float containerWidth = barContainer.rect.width;
-        float fillWidth = containerWidth * displayedProgress;
-
-        Vector2 fillSize = barFill.sizeDelta;
-        fillSize.x = fillWidth;
-        barFill.sizeDelta = fillSize;
-
-        if (thiefIcon != null)
+        if (barAnimator != null)
         {
-            Vector2 thiefPos = thiefIcon.anchoredPosition;
-            thiefPos.x = fillWidth - (containerWidth * 0.5f) + thiefOffset;
-            thiefIcon.anchoredPosition = thiefPos;
+            barAnimator.SetFloat(loadingParameterName, displayedProgress);
         }
     }
 
