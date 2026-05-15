@@ -72,13 +72,25 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.202
       objectReference: {fileID: 0}
+    - target: {fileID: -344004081357383697, guid: 52b637f1f292fb744913bd705169ecac, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 592664080621265513, guid: 52b637f1f292fb744913bd705169ecac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.23
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 52b637f1f292fb744913bd705169ecac, type: 3}
       propertyPath: m_Name
-      value: 22079319_Assignment_Lockpick
+      value: lockpickingTools
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 52b637f1f292fb744913bd705169ecac, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 52b637f1f292fb744913bd705169ecac, type: 3}
+      propertyPath: m_TagString
+      value: Buyable
       objectReference: {fileID: 0}
     - target: {fileID: 2902008074560218088, guid: 52b637f1f292fb744913bd705169ecac, type: 3}
       propertyPath: m_LocalPosition.x
@@ -125,5 +137,59 @@ PrefabInstance:
     - {fileID: 7750397243111347764, guid: 52b637f1f292fb744913bd705169ecac, type: 3}
     - {fileID: 2040542448765327740, guid: 52b637f1f292fb744913bd705169ecac, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -344004081357383697, guid: 52b637f1f292fb744913bd705169ecac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7690721827225479156}
+    - targetCorrespondingSourceObject: {fileID: -344004081357383697, guid: 52b637f1f292fb744913bd705169ecac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5098525845906780124}
   m_SourcePrefab: {fileID: 100100000, guid: 52b637f1f292fb744913bd705169ecac, type: 3}
+--- !u!1 &8656470580218970563 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -344004081357383697, guid: 52b637f1f292fb744913bd705169ecac, type: 3}
+  m_PrefabInstance: {fileID: 222976820582733356}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &7690721827225479156
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8656470580218970563}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.18685156, y: 0.116304845, z: 0.039089423}
+  m_Center: {x: -0.0003315471, y: -0.0010586793, z: -0.000000027939677}
+--- !u!114 &5098525845906780124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8656470580218970563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a7f12b45ab87274b83509fc20383985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LockpickItem
+  itemName: Lock Picking Tools
+  itemIcon: {fileID: 21300000, guid: dea88b0be19372f42ba179f84e4f8433, type: 3}
+  itemPrice: 800
+  destroyOnPurchase: 0
+  isConsumable: 1
+  wasPurchased: 0
+  quantity: 0
+  effectType: 5
+  effectDescription: This item has a chance to open a door. If it fails, it breaks.
+  successChance: 0.5

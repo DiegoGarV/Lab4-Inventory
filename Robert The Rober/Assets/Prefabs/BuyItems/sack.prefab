@@ -56,6 +56,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: sack
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 413b90c5539bd024ba3e636ca4ab40a2, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 413b90c5539bd024ba3e636ca4ab40a2, type: 3}
+      propertyPath: m_TagString
+      value: Buyable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -63,6 +71,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 413b90c5539bd024ba3e636ca4ab40a2, type: 3}
       insertIndex: -1
       addedObject: {fileID: -1062756792057838583}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 413b90c5539bd024ba3e636ca4ab40a2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6441155039483576099}
   m_SourcePrefab: {fileID: 100100000, guid: 413b90c5539bd024ba3e636ca4ab40a2, type: 3}
 --- !u!1 &7285742366952850029 stripped
 GameObject:
@@ -90,3 +101,25 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.008144962, y: 0.0060559427, z: 0.009307104}
   m_Center: {x: 0.0001831913, y: 0.0006072018, z: 0.0046437574}
+--- !u!114 &6441155039483576099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7285742366952850029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efd1e52b004041e459bfe0dd4d362735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BiggerBagItem
+  itemName: Bigger Sack
+  itemIcon: {fileID: 21300000, guid: a4c7501413f1eb14ea1fe7f9537bbc3e, type: 3}
+  itemPrice: 10000
+  destroyOnPurchase: 1
+  isConsumable: 0
+  wasPurchased: 0
+  quantity: 0
+  effectType: 2
+  effectDescription: 'Increase sack size to 300 units. '
+  newSackCapacity: 300

@@ -60,6 +60,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: catalog
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fbbd9dc7e18229347aa02b57fc1641e5, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fbbd9dc7e18229347aa02b57fc1641e5, type: 3}
+      propertyPath: m_TagString
+      value: Buyable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -70,6 +78,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fbbd9dc7e18229347aa02b57fc1641e5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1324564420189822253}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fbbd9dc7e18229347aa02b57fc1641e5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -9064202433494778874}
   m_SourcePrefab: {fileID: 100100000, guid: fbbd9dc7e18229347aa02b57fc1641e5, type: 3}
 --- !u!1 &2538784209382403547 stripped
 GameObject:
@@ -97,6 +108,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.058503784, y: 0.10326249, z: 0.29307672}
   m_Center: {x: 0, y: 0.051631246, z: 0.07717964}
+--- !u!114 &-9064202433494778874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2538784209382403547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7db6bf32c268f644a9af2249193e0d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CatalogItem
+  itemName: Catalogue
+  itemIcon: {fileID: 21300000, guid: 97f6ec3fd2a798845ad1726f9b722772, type: 3}
+  itemPrice: 5000
+  destroyOnPurchase: 1
+  isConsumable: 0
+  wasPurchased: 0
+  quantity: 0
+  effectType: 4
+  effectDescription: This item reveals the price of each item before you grab it.
 --- !u!4 &2913901960655255393 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fbbd9dc7e18229347aa02b57fc1641e5, type: 3}
@@ -170,9 +202,21 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 3146d227fa83a924caffc8b6cc477731, type: 2}
+    - target: {fileID: -5660647302884397545, guid: e5cadb7b49a7cd4428eebc01bec50659, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -3429092103801790275, guid: e5cadb7b49a7cd4428eebc01bec50659, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e5cadb7b49a7cd4428eebc01bec50659, type: 3}
       propertyPath: m_Name
       value: sh3dMag
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e5cadb7b49a7cd4428eebc01bec50659, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1570826141394243617, guid: e5cadb7b49a7cd4428eebc01bec50659, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -182,6 +226,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 1fed8b6ce7b6c1245b6df3d7a118cb1a, type: 2}
+    - target: {fileID: 4757783611445426763, guid: e5cadb7b49a7cd4428eebc01bec50659, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

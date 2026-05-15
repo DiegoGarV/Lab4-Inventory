@@ -68,6 +68,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: pliers
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 79db08bf94b749d41887272e42e1907b, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 79db08bf94b749d41887272e42e1907b, type: 3}
+      propertyPath: m_TagString
+      value: Buyable
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: 79db08bf94b749d41887272e42e1907b, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9396927
@@ -84,6 +92,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: 79db08bf94b749d41887272e42e1907b, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -91,6 +103,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: 79db08bf94b749d41887272e42e1907b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8206342239303118970}
+    - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: 79db08bf94b749d41887272e42e1907b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8784422901090019554}
   m_SourcePrefab: {fileID: 100100000, guid: 79db08bf94b749d41887272e42e1907b, type: 3}
 --- !u!1 &722842660358391231 stripped
 GameObject:
@@ -118,3 +133,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 60.002987, y: 3.074989, z: 17.476328}
   m_Center: {x: -25.449144, y: 1.5398375, z: 0.000030517578}
+--- !u!114 &8784422901090019554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722842660358391231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07134b0b7031350429b0c001252f813f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WireCutterItem
+  itemName: Wire Cutter
+  itemIcon: {fileID: 21300000, guid: 263d1a82e57fcf1468aa9f5157028095, type: 3}
+  itemPrice: 9000
+  destroyOnPurchase: 1
+  isConsumable: 0
+  wasPurchased: 0
+  quantity: 0
+  effectType: 6
+  effectDescription: 'Use this item near any power box to cut the lights electric
+    power, disabling cameras.
+
+'

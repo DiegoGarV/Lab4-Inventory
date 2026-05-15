@@ -284,13 +284,15 @@ MonoBehaviour:
   cashText: {fileID: 0}
   sackAnimator: {fileID: 0}
   firstPersonController: {fileID: 0}
-  actionManager: {fileID: 0}
+  actionController: {fileID: 0}
   runawayScreen: {fileID: 0}
   runawayCashText: {fileID: 0}
   runawayItemsMoneyText: {fileID: 0}
   runawayTotalText: {fileID: 0}
   pauseMenu: {fileID: 0}
   loadGameButton: {fileID: 183570372}
+  returnToTownPrompt: {fileID: 0}
+  currencyText: {fileID: 0}
 --- !u!4 &252842423
 Transform:
   m_ObjectHideFlags: 0
@@ -885,11 +887,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1645495838156115895, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
       propertyPath: m_text
-      value: ROBERT THE ROBBER
+      value: ROBBERT THE ROBBER
       objectReference: {fileID: 0}
     - target: {fileID: 1645495838156115895, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
       propertyPath: m_HorizontalAlignment
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2305714908172985720, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
+      propertyPath: m_Name
+      value: GameTitle
       objectReference: {fileID: 0}
     - target: {fileID: 5061995437110162928, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

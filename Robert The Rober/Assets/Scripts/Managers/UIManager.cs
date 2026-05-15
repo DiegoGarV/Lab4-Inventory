@@ -20,7 +20,14 @@ public class UIManager : MonoBehaviour
     private MoneyAndObjectsController boundMoneyController;
     private GameObject returnToTownPrompt;
     private TMP_Text currencyText;
+    private GameObject buyItemPrompt;
+    private TMP_Text buyItemNameText;
+    private UnityEngine.UI.Image buyItemIconImage;
+    private TMP_Text buyItemDescriptionText;
+    private TMP_Text buyItemPriceText;
+    private TMP_Text currencyInText;
 
+    private StoreItemBase currentStoreItem;
     private bool isPaused = false;
     public bool IsPaused => isPaused;
 
@@ -111,6 +118,12 @@ public class UIManager : MonoBehaviour
         loadGameButton = refs.loadGameButton;
         returnToTownPrompt = refs.returnToTownPrompt;
         currencyText = refs.currencyText;
+        buyItemPrompt = refs.buyItemPrompt;
+        buyItemNameText = refs.buyItemNameText;
+        buyItemIconImage = refs.buyItemIconImage;
+        buyItemDescriptionText = refs.buyItemDescriptionText;
+        buyItemPriceText = refs.buyItemPriceText;
+        currencyInText = refs.currencyInText;
 
         Debug.Log($"UIManager: referencias enlazadas para escena {scene.name}");
     }
@@ -129,6 +142,13 @@ public class UIManager : MonoBehaviour
         loadGameButton = null;
         returnToTownPrompt = null;
         currencyText = null;
+        buyItemPrompt = null;
+        buyItemNameText = null;
+        buyItemIconImage = null;
+        buyItemDescriptionText = null;
+        buyItemPriceText = null;
+        currencyInText = null;
+        currentStoreItem = null;
     }
 
     private void ApplySceneUIState(Scene scene)
@@ -170,6 +190,9 @@ public class UIManager : MonoBehaviour
                 MoneyAndObjectsController.Instance.MaxSackLoad
             );
         }
+
+        if (buyItemPrompt != null)
+            buyItemPrompt.SetActive(false);
 
         UpdateStoreCurrency();
     }
@@ -403,5 +426,62 @@ public class UIManager : MonoBehaviour
         if (PlayerProgressManager.Instance == null) return;
 
         currencyText.text = "Currency: $" + PlayerProgressManager.Instance.LastHeistTotal;
+    }
+
+    public void ShowBuyItemPrompt(StoreItemBase storeItem)
+    {
+        if (storeItem == null) return;
+
+        currentStoreItem = storeItem;
+
+        if (buyItemNameText != null)
+            buyItemNameText.text = storeItem.ItemName;
+
+        if (buyItemIconImage != null)
+        {
+            buyItemIconImage.sprite = storeItem.ItemIcon;
+            buyItemIconImage.enabled = storeItem.ItemIcon != null;
+            buyItemIconImage.preserveAspect = true;
+        }
+
+        if (buyItemDescriptionText != null)
+            buyItemDescriptionText.text = storeItem.EffectDescription;
+
+        if (buyItemPriceText != null)
+            buyItemPriceText.text = "Price: $" + storeItem.ItemPrice;
+
+        if (currencyInText != null)
+            currencyInText.text = "Currency: $" + PlayerProgressManager.Instance.LastHeistTotal;
+
+        if (buyItemPrompt != null)
+            buyItemPrompt.SetActive(true);
+
+        if (firstPersonController != null)
+            firstPersonController.enabled = false;
+
+        if (actionController != null)
+            actionController.enabled = false;
+
+        Time.timeScale = 0f;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    public void CloseBuyItemPrompt()
+    {
+        currentStoreItem = null;
+
+        if (buyItemPrompt != null)
+            buyItemPrompt.SetActive(false);
+
+        if (firstPersonController != null)
+            firstPersonController.enabled = true;
+
+        if (actionController != null)
+            actionController.enabled = true;
+
+        Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }

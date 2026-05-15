@@ -29,4 +29,12 @@ public class UISceneReferences : MonoBehaviour
 
     [Header("Store HUD")]
     public TMP_Text currencyText;
+
+    [Header("Buy Item")]
+    public GameObject buyItemPrompt;
+    public TMP_Text buyItemNameText;
+    public Image buyItemIconImage;
+    public TMP_Text buyItemDescriptionText;
+    public TMP_Text buyItemPriceText;
+    public TMP_Text currencyInText;
 }

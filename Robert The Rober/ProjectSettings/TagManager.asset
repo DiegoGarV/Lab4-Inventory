@@ -9,6 +9,7 @@ TagManager:
   - Sackable
   - Car
   - StoreDoor
+  - Buyable
   layers:
   - Default
   - TransparentFX

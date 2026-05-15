@@ -17,4 +17,12 @@ public class ShopUIBridge : MonoBehaviour
             UIManager.Instance.CancelReturnToTown();
         }
     }
+
+    public void CloseBuyItemPrompt()
+    {
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.CloseBuyItemPrompt();
+        }
+    }
 }

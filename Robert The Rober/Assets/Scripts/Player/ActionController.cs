@@ -79,6 +79,18 @@ public class ActionController : MonoBehaviour
                 door.Interact();
                 return;
             }
+
+            StoreItemBase buyableItem = hit.collider.GetComponentInParent<StoreItemBase>();
+
+            if (buyableItem != null)
+            {
+                if (UIManager.Instance != null)
+                {
+                    UIManager.Instance.ShowBuyItemPrompt(buyableItem);
+                }
+
+                return;
+            }
         }
     }
 }
