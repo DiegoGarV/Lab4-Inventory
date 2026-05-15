@@ -14,6 +14,7 @@ public enum StoreItemEffectType
 public abstract class StoreItemBase : MonoBehaviour
 {
     [Header("Store Item Info")]
+    [SerializeField] private string itemId;
     [SerializeField] private string itemName;
     [SerializeField] private Sprite itemIcon;
     [SerializeField] private int itemPrice = 0;
@@ -31,6 +32,7 @@ public abstract class StoreItemBase : MonoBehaviour
     [TextArea]
     [SerializeField] private string effectDescription;
 
+    public string ItemId => itemId;
     public string ItemName => itemName;
     public Sprite ItemIcon => itemIcon;
     public int ItemPrice => itemPrice;

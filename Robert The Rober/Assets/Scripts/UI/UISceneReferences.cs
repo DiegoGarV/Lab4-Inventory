@@ -37,4 +37,5 @@ public class UISceneReferences : MonoBehaviour
     public TMP_Text buyItemDescriptionText;
     public TMP_Text buyItemPriceText;
     public TMP_Text currencyInText;
+    public UnityEngine.UI.Button buyItemButton;
 }

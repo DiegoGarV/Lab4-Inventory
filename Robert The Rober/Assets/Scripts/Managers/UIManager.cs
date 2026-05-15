@@ -26,6 +26,7 @@ public class UIManager : MonoBehaviour
     private TMP_Text buyItemDescriptionText;
     private TMP_Text buyItemPriceText;
     private TMP_Text currencyInText;
+    private Button buyItemButton;
 
     private StoreItemBase currentStoreItem;
     private bool isPaused = false;
@@ -124,6 +125,7 @@ public class UIManager : MonoBehaviour
         buyItemDescriptionText = refs.buyItemDescriptionText;
         buyItemPriceText = refs.buyItemPriceText;
         currencyInText = refs.currencyInText;
+        buyItemButton = refs.buyItemButton;
 
         Debug.Log($"UIManager: referencias enlazadas para escena {scene.name}");
     }
@@ -149,6 +151,7 @@ public class UIManager : MonoBehaviour
         buyItemPriceText = null;
         currencyInText = null;
         currentStoreItem = null;
+        buyItemButton = null;
     }
 
     private void ApplySceneUIState(Scene scene)
@@ -344,6 +347,9 @@ public class UIManager : MonoBehaviour
         if (PersistenceManager.Instance != null)
             PersistenceManager.Instance.PrepareNewGame();
 
+        if (PlayerProgressManager.Instance != null)
+            PlayerProgressManager.Instance.SetCurrentLevel("MorningLevel");
+
         if (SceneTransitionManager.Instance != null)
             SceneTransitionManager.Instance.LoadSceneWithLoadingScreen("MorningLevel");
     }
@@ -370,7 +376,8 @@ public class UIManager : MonoBehaviour
                 MoneyAndObjectsController.Instance.CashScore +
                 MoneyAndObjectsController.Instance.StoredLootValue;
 
-            PlayerProgressManager.Instance.SetLastHeistTotal(totalCollected);
+            PlayerProgressManager.Instance.AddCurrency(totalCollected);
+            PlayerProgressManager.Instance.SetCurrentLevel("Shop");
         }
 
         if (SceneTransitionManager.Instance != null)
@@ -400,6 +407,10 @@ public class UIManager : MonoBehaviour
     public void ConfirmReturnToTown()
     {
         Time.timeScale = 1f;
+
+        if (PlayerProgressManager.Instance != null)
+            PlayerProgressManager.Instance.SetCurrentLevel("AfternoonLevel");
+
         if (SceneTransitionManager.Instance != null)
             SceneTransitionManager.Instance.LoadSceneWithLoadingScreen("AfternoonLevel");
     }
@@ -425,7 +436,7 @@ public class UIManager : MonoBehaviour
         if (currencyText == null) return;
         if (PlayerProgressManager.Instance == null) return;
 
-        currencyText.text = "Currency: $" + PlayerProgressManager.Instance.LastHeistTotal;
+        currencyText.text = "Currency: $" + PlayerProgressManager.Instance.CurrentCurrency;
     }
 
     public void ShowBuyItemPrompt(StoreItemBase storeItem)
@@ -451,8 +462,10 @@ public class UIManager : MonoBehaviour
             buyItemPriceText.text = "Price: $" + storeItem.ItemPrice;
 
         if (currencyInText != null)
-            currencyInText.text = "Currency: $" + PlayerProgressManager.Instance.LastHeistTotal;
+            currencyInText.text = "Currency: $" + PlayerProgressManager.Instance.CurrentCurrency;
 
+        RefreshBuyItemUI();
+        
         if (buyItemPrompt != null)
             buyItemPrompt.SetActive(true);
 
@@ -483,5 +496,61 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1f;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+    }
+
+    private void RefreshBuyItemUI()
+    {
+        if (currentStoreItem == null) return;
+
+        int currentCurrency = PlayerProgressManager.Instance != null
+            ? PlayerProgressManager.Instance.CurrentCurrency
+            : 0;
+
+        if (buyItemPriceText != null)
+            buyItemPriceText.text = "Price: $" + currentStoreItem.ItemPrice;
+
+        if (currencyInText != null)
+            currencyInText.text = "Currency: $" + currentCurrency;
+
+        if (buyItemButton != null)
+            buyItemButton.interactable = currentStoreItem.CanBePurchased(currentCurrency);
+    }
+
+    public void BuyCurrentStoreItem()
+    {
+        if (currentStoreItem == null) return;
+        if (PlayerProgressManager.Instance == null) return;
+
+        int itemPrice = currentStoreItem.ItemPrice;
+
+        if (!currentStoreItem.CanBePurchased(PlayerProgressManager.Instance.CurrentCurrency))
+        {
+            RefreshBuyItemUI();
+            return;
+        }
+
+        bool spentSuccessfully = PlayerProgressManager.Instance.SpendCurrency(itemPrice);
+        if (!spentSuccessfully)
+        {
+            RefreshBuyItemUI();
+            return;
+        }
+
+        PlayerProgressManager.Instance.RegisterPurchase(currentStoreItem);
+
+        bool shouldDisappear = currentStoreItem.DestroyOnPurchase;
+
+        currentStoreItem.Purchase();
+
+        UpdateStoreCurrency();
+
+        if (shouldDisappear)
+        {
+            CloseBuyItemPrompt();
+        }
+        else
+        {
+            RefreshBuyItemUI();
+        }
     }
 }

@@ -25,4 +25,10 @@ public class ShopUIBridge : MonoBehaviour
             UIManager.Instance.CloseBuyItemPrompt();
         }
     }
+
+    public void BuyCurrentStoreItem()
+    {
+        if (UIManager.Instance != null)
+            UIManager.Instance.BuyCurrentStoreItem();
+    }
 }
