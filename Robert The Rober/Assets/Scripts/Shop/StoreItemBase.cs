@@ -5,10 +5,6 @@ public abstract class StoreItemBase : MonoBehaviour
     [Header("Item Definition")]
     [SerializeField] private StoreItemDefinition itemDefinition;
 
-    [Header("Purchase State")]
-    [SerializeField] private bool wasPurchased = false;
-    [SerializeField] private int quantity = 0;
-
     public StoreItemDefinition ItemDefinition => itemDefinition;
 
     public string ItemId => itemDefinition != null ? itemDefinition.itemId : "";
@@ -20,15 +16,13 @@ public abstract class StoreItemBase : MonoBehaviour
     public StoreItemEffectType EffectType => itemDefinition != null ? itemDefinition.effectType : StoreItemEffectType.None;
     public string EffectDescription => itemDefinition != null ? itemDefinition.effectDescription : "";
 
-    public bool WasPurchased => wasPurchased;
-    public int Quantity => quantity;
-
     public virtual bool CanBePurchased(int currentMoney)
     {
         if (itemDefinition == null) return false;
         if (currentMoney < ItemPrice) return false;
+        if (PlayerProgressManager.Instance == null) return false;
 
-        if (!IsConsumable && wasPurchased)
+        if (!IsConsumable && PlayerProgressManager.Instance.HasItem(ItemId))
             return false;
 
         return true;
@@ -36,49 +30,12 @@ public abstract class StoreItemBase : MonoBehaviour
 
     public virtual void Purchase()
     {
-        wasPurchased = true;
-        quantity++;
-
         OnPurchaseRegistered();
 
         if (DestroyOnPurchase)
         {
             Destroy(gameObject);
         }
-    }
-
-    public virtual bool CanBeUsed()
-    {
-        if (IsConsumable)
-            return quantity > 0;
-
-        return wasPurchased;
-    }
-
-    public virtual void Use()
-    {
-        if (!CanBeUsed())
-            return;
-
-        ApplyEffect();
-
-        if (IsConsumable)
-        {
-            quantity--;
-
-            if (quantity < 0)
-                quantity = 0;
-
-            if (ShouldBeRemovedAfterUse())
-            {
-                OnConsumedCompletely();
-            }
-        }
-    }
-
-    protected virtual bool ShouldBeRemovedAfterUse()
-    {
-        return IsConsumable && quantity <= 0;
     }
 
     protected virtual void OnPurchaseRegistered()

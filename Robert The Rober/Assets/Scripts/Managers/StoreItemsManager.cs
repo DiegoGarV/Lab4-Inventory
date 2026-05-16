@@ -45,4 +45,22 @@ public class StoreItemsManager : MonoBehaviour
         definitionsById.TryGetValue(itemId, out StoreItemDefinition definition);
         return definition;
     }
+
+    public void SyncStoreSceneItems()
+    {
+        if (PlayerProgressManager.Instance == null) return;
+
+        StoreItemBase[] allStoreItems = FindObjectsByType<StoreItemBase>(FindObjectsSortMode.None);
+
+        foreach (StoreItemBase item in allStoreItems)
+        {
+            if (item == null) continue;
+
+            // Si no es consumible y ya fue comprado, ocultarlo/destruirlo en tienda
+            if (!item.IsConsumable && PlayerProgressManager.Instance.HasItem(item.ItemId))
+            {
+                Destroy(item.gameObject);
+            }
+        }
+    }
 }

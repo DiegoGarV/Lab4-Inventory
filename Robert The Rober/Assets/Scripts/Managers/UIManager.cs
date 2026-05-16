@@ -229,6 +229,11 @@ public class UIManager : MonoBehaviour
         if (stolenItemsPanel != null)
             stolenItemsPanel.SetActive(false);
 
+        if (scene.name == "Shop" && StoreItemsManager.Instance != null)
+        {
+            StoreItemsManager.Instance.SyncStoreSceneItems();
+        }
+
         UpdateStoreCurrency();
     }
 

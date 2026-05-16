@@ -16,21 +16,23 @@ public class PurchasedItemsUIController : MonoBehaviour
         if (PlayerProgressManager.Instance == null)
             return;
 
+        if (StoreItemsManager.Instance == null)
+            return;
+
         List<PurchasedStoreItemData> purchasedItems = PlayerProgressManager.Instance.PurchasedItems;
         if (purchasedItems == null) return;
 
         foreach (PurchasedStoreItemData purchasedItem in purchasedItems)
         {
-            // Luego aquí cambiaremos a catálogo global
-            StoreItemBase storeItem = FindStoreItemById(purchasedItem.itemId);
-            if (storeItem == null) continue;
+            StoreItemDefinition itemDef = StoreItemsManager.Instance.GetDefinitionById(purchasedItem.itemId);
+            if (itemDef == null) continue;
 
             PurchasedItemUIData uiData = new PurchasedItemUIData(
                 purchasedItem.itemId,
-                storeItem.ItemName,
-                storeItem.ItemIcon,
+                itemDef.itemName,
+                itemDef.itemIcon,
                 purchasedItem.quantity,
-                storeItem.IsConsumable
+                itemDef.isConsumable
             );
 
             AddSlotToUI(uiData);
