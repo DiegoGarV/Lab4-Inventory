@@ -38,4 +38,10 @@ public class UISceneReferences : MonoBehaviour
     public TMP_Text buyItemPriceText;
     public TMP_Text currencyInText;
     public UnityEngine.UI.Button buyItemButton;
+
+    [Header("Inventories")]
+    public GameObject purchasedItemsPanel;
+    public MonoBehaviour purchasedItemsUIController;
+    public GameObject stolenItemsPanel;
+    public MonoBehaviour stolenItemsUIController;
 }

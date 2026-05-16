@@ -16,8 +16,6 @@ public class EventManager : MonoBehaviour
         }
 
         Instance = this;
-
-        DontDestroyOnLoad(gameObject);
     }
 
     public void MoneyCollected()

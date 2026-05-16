@@ -25,7 +25,6 @@ public class PlayerProgressManager : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject);
     }
 
     public void SetCurrency(int value)

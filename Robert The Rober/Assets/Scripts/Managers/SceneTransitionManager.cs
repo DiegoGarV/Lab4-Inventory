@@ -22,7 +22,6 @@ public class SceneTransitionManager : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject);
     }
 
     public void LoadSceneWithLoadingScreen(string targetSceneName)
@@ -58,8 +57,6 @@ public class SceneTransitionManager : MonoBehaviour
 
         AsyncOperation sceneLoadOperation = SceneManager.LoadSceneAsync(targetSceneName, LoadSceneMode.Single);
         sceneLoadOperation.allowSceneActivation = false;
-
-        float fakeProgress = 0f;
 
         while (sceneLoadOperation.progress < 0.9f)
         {

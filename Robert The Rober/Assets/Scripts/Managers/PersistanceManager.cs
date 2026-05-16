@@ -25,7 +25,6 @@ public class PersistenceManager : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject);
 
         saveFilePath = Path.Combine(Application.persistentDataPath, "savegame.json");
     }
@@ -177,7 +176,7 @@ public class PersistenceManager : MonoBehaviour
 
         RemoveCollectedPickups(loadedData.collectedPickupIds);
 
-        InventoryUIManager inventoryUI = FindFirstObjectByType<InventoryUIManager>();
+        InventoryUIController inventoryUI = FindFirstObjectByType<InventoryUIController>();
         if (inventoryUI != null)
         {
             inventoryUI.LoadInventoryFromSave(loadedData.collectedPickupIds);

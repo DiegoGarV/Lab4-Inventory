@@ -245,6 +245,7 @@ Transform:
   - {fileID: 361822054}
   - {fileID: 45922305}
   - {fileID: 778087598}
+  - {fileID: 1042947553}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &392737262
@@ -391,6 +392,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a09e265171e41464ba44a82962e9a16f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldStateManager
+--- !u!1 &1042947552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1042947553}
+  - component: {fileID: 1042947554}
+  m_Layer: 0
+  m_Name: ShopItemsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1042947553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042947552}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 392737261}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1042947554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1042947552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e9f7b23ae45b34c9380a74aeea4f4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StoreItemsManager
+  itemDefinitions:
+  - {fileID: 11400000, guid: d24c5de71bb7a594d91610f742ec075e, type: 2}
+  - {fileID: 11400000, guid: b6209b1d4f3a8694dbb4d6a4120d0157, type: 2}
+  - {fileID: 11400000, guid: 24ec9183b4299b949aba8ad70796d10e, type: 2}
+  - {fileID: 11400000, guid: aab73eac29ff6054c8b4ae577f8ab8bf, type: 2}
+  - {fileID: 11400000, guid: 1bcc9b54fe0e0a14f82939eae14f6473, type: 2}
+  - {fileID: 11400000, guid: 6191cb278c2f85548aa264d7d4a93c98, type: 2}
 --- !u!1 &1384034369
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,6 +487,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04311d1e71f4de24190a847ad3d63c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerProgressManager
+  currentCurrency: 0
+  currentLevelName: 
+  purchasedItems: []
 --- !u!1 &2141990413
 GameObject:
   m_ObjectHideFlags: 0

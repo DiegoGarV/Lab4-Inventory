@@ -49,4 +49,34 @@ public class InventorySlotUI : MonoBehaviour
             quantityText.text = "x" + quantity;
         }
     }
+
+    public void SetPurchasedItemData(PurchasedItemUIData data)
+{
+    itemName = data.itemName;
+    quantity = data.quantity;
+
+    if (iconImage != null)
+    {
+        iconImage.sprite = data.itemIcon;
+        iconImage.enabled = data.itemIcon != null;
+        iconImage.preserveAspect = true;
+    }
+
+    if (nameText != null)
+    {
+        nameText.text = data.itemName;
+    }
+
+    if (quantityText != null)
+    {
+        if (data.isConsumable && data.quantity > 0)
+        {
+            quantityText.text = "x" + data.quantity;
+        }
+        else
+        {
+            quantityText.text = "";
+        }
+    }
+}
 }

@@ -1,15 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class InventoryUIManager : MonoBehaviour
+public class InventoryUIController : MonoBehaviour
 {
     [Header("Inventory UI")]
-    [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private Transform gridParent;
     [SerializeField] private GameObject inventorySlotPrefab;
 
-    private bool isInventoryOpen = false;
     private readonly Dictionary<string, InventorySlotUI> slotByName = new();
 
     private void OnEnable()
@@ -22,26 +19,9 @@ public class InventoryUIManager : MonoBehaviour
         Pickup.OnPickupCollected -= HandlePickupCollected;
     }
 
-    private void Start()
-    {
-        if (inventoryPanel != null)
-        {
-            inventoryPanel.SetActive(false);
-        }
-    }
-
-    private void Update()
-    {
-        if (Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
-        {
-            ToggleInventory();
-        }
-    }
-
     private void HandlePickupCollected(Pickup pickup)
     {
         if (pickup == null) return;
-
         if (pickup is MoneyPickup) return;
 
         InventoryItemData itemData = new InventoryItemData(pickup);
@@ -59,7 +39,7 @@ public class InventoryUIManager : MonoBehaviour
     {
         if (inventorySlotPrefab == null || gridParent == null)
         {
-            Debug.LogError("InventoryUIManager: faltan referencias de inventorySlotPrefab o gridParent.");
+            Debug.LogError("InventoryUIController: faltan referencias de inventorySlotPrefab o gridParent.");
             return;
         }
 
@@ -82,15 +62,11 @@ public class InventoryUIManager : MonoBehaviour
         slotByName[itemData.itemName] = slotUI;
     }
 
-    private void ToggleInventory()
+    public void RefreshStolenItemsUI()
     {
-        if (inventoryPanel == null) return;
-
-        isInventoryOpen = !isInventoryOpen;
-        inventoryPanel.SetActive(isInventoryOpen);
-
-        Cursor.lockState = isInventoryOpen ? CursorLockMode.None : CursorLockMode.Locked;
-        Cursor.visible = isInventoryOpen;
+        // Si tu inventario ya se llena en vivo por eventos,
+        // este método puede quedarse vacío por ahora.
+        // Lo dejamos para mantener la misma estructura que PurchasedItemsUIController.
     }
 
     public void LoadInventoryFromSave(List<string> collectedPickupIds)
@@ -129,6 +105,8 @@ public class InventoryUIManager : MonoBehaviour
     public void ClearInventoryUI()
     {
         slotByName.Clear();
+
+        if (gridParent == null) return;
 
         for (int i = gridParent.childCount - 1; i >= 0; i--)
         {

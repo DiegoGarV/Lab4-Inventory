@@ -183,14 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a7f12b45ab87274b83509fc20383985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LockpickItem
-  itemId: buy3
-  itemName: Lock Picking Tools
-  itemIcon: {fileID: 21300000, guid: dea88b0be19372f42ba179f84e4f8433, type: 3}
-  itemPrice: 800
-  destroyOnPurchase: 0
-  isConsumable: 1
+  itemDefinition: {fileID: 11400000, guid: b6209b1d4f3a8694dbb4d6a4120d0157, type: 2}
   wasPurchased: 0
   quantity: 0
-  effectType: 5
-  effectDescription: This item has a chance to open a door. If it fails, it breaks.
   successChance: 0.5

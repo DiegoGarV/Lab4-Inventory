@@ -120,16 +120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7db6bf32c268f644a9af2249193e0d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CatalogItem
-  itemId: buy1
-  itemName: Catalogue
-  itemIcon: {fileID: 21300000, guid: 97f6ec3fd2a798845ad1726f9b722772, type: 3}
-  itemPrice: 5000
-  destroyOnPurchase: 1
-  isConsumable: 0
+  itemDefinition: {fileID: 11400000, guid: d24c5de71bb7a594d91610f742ec075e, type: 2}
   wasPurchased: 0
   quantity: 0
-  effectType: 4
-  effectDescription: This item reveals the price of each item before you grab it.
 --- !u!4 &2913901960655255393 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fbbd9dc7e18229347aa02b57fc1641e5, type: 3}

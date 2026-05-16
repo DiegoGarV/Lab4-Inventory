@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class UIManager : MonoBehaviour
 {
@@ -27,6 +28,10 @@ public class UIManager : MonoBehaviour
     private TMP_Text buyItemPriceText;
     private TMP_Text currencyInText;
     private Button buyItemButton;
+    public GameObject purchasedItemsPanel;
+    public MonoBehaviour purchasedItemsUIController;
+    public GameObject stolenItemsPanel;
+    public MonoBehaviour stolenItemsUIController;
 
     private StoreItemBase currentStoreItem;
     private bool isPaused = false;
@@ -56,6 +61,19 @@ public class UIManager : MonoBehaviour
         {
             boundMoneyController.OnCashChanged -= UpdateCashText;
             boundMoneyController.OnSackChanged -= UpdateSackBar;
+        }
+    }
+
+    private void Update()
+    {
+        if (Keyboard.current != null && Keyboard.current.qKey.wasPressedThisFrame)
+        {
+            TogglePurchasedItemsPanel();
+        }
+
+        if (Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
+        {
+            ToggleStolenItemsPanel();
         }
     }
 
@@ -126,6 +144,10 @@ public class UIManager : MonoBehaviour
         buyItemPriceText = refs.buyItemPriceText;
         currencyInText = refs.currencyInText;
         buyItemButton = refs.buyItemButton;
+        purchasedItemsPanel = refs.purchasedItemsPanel;
+        purchasedItemsUIController = refs.purchasedItemsUIController;
+        stolenItemsPanel = refs.stolenItemsPanel;
+        stolenItemsUIController = refs.stolenItemsUIController;
 
         Debug.Log($"UIManager: referencias enlazadas para escena {scene.name}");
     }
@@ -152,6 +174,10 @@ public class UIManager : MonoBehaviour
         currencyInText = null;
         currentStoreItem = null;
         buyItemButton = null;
+        purchasedItemsPanel = null;
+        purchasedItemsUIController = null;
+        stolenItemsPanel = null;
+        stolenItemsUIController = null;
     }
 
     private void ApplySceneUIState(Scene scene)
@@ -196,6 +222,12 @@ public class UIManager : MonoBehaviour
 
         if (buyItemPrompt != null)
             buyItemPrompt.SetActive(false);
+
+        if (purchasedItemsPanel != null)
+            purchasedItemsPanel.SetActive(false);
+
+        if (stolenItemsPanel != null)
+            stolenItemsPanel.SetActive(false);
 
         UpdateStoreCurrency();
     }
@@ -551,6 +583,108 @@ public class UIManager : MonoBehaviour
         else
         {
             RefreshBuyItemUI();
+        }
+    }
+
+    public void TogglePurchasedItemsPanel()
+    {
+        if (purchasedItemsPanel == null)
+        {
+            Debug.LogWarning("UIManager: purchasedItemsPanel es null.");
+            return;
+        }
+
+        if (stolenItemsPanel != null && stolenItemsPanel.activeSelf)
+            return;
+
+        bool willOpen = !purchasedItemsPanel.activeSelf;
+        Debug.Log("UIManager: TogglePurchasedItemsPanel -> " + willOpen);
+
+        purchasedItemsPanel.SetActive(willOpen);
+
+        if (willOpen)
+        {
+            if (firstPersonController != null)
+                firstPersonController.enabled = false;
+
+            if (actionController != null)
+                actionController.enabled = false;
+
+            if (purchasedItemsUIController != null)
+            {
+                PurchasedItemsUIController controller = purchasedItemsUIController as PurchasedItemsUIController;
+                if (controller != null)
+                {
+                    controller.RefreshPurchasedItemsUI();
+                }
+            }
+
+            Time.timeScale = 0f;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            if (firstPersonController != null)
+                firstPersonController.enabled = true;
+
+            if (actionController != null)
+                actionController.enabled = true;
+
+            Time.timeScale = 1f;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+    }
+
+    public void ToggleStolenItemsPanel()
+    {
+        if (stolenItemsPanel == null)
+        {
+            Debug.LogWarning("UIManager: stolenItemsPanel es null.");
+            return;
+        }
+
+        if (purchasedItemsPanel != null && purchasedItemsPanel.activeSelf)
+            return;
+
+        bool willOpen = !stolenItemsPanel.activeSelf;
+        Debug.Log("UIManager: ToggleStolenItemsPanel -> " + willOpen);
+
+        stolenItemsPanel.SetActive(willOpen);
+
+        if (willOpen)
+        {
+            if (firstPersonController != null)
+                firstPersonController.enabled = false;
+
+            if (actionController != null)
+                actionController.enabled = false;
+
+            if (stolenItemsUIController != null)
+            {
+                InventoryUIController controller = stolenItemsUIController as InventoryUIController;
+                if (controller != null)
+                {
+                    controller.RefreshStolenItemsUI();
+                }
+            }
+
+            Time.timeScale = 0f;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            if (firstPersonController != null)
+                firstPersonController.enabled = true;
+
+            if (actionController != null)
+                actionController.enabled = true;
+
+            Time.timeScale = 1f;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
     }
 }
