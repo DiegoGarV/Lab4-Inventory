@@ -3376,6 +3376,10 @@ PrefabInstance:
       propertyPath: pickupId
       value: book-1-002
       objectReference: {fileID: 0}
+    - target: {fileID: -3160422894359480863, guid: 23f96c6f17e0d5b4bacaf839fb197387, type: 3}
+      propertyPath: id
+      value: 3048e671-8840-4c24-8f90-de3e83801511
+      objectReference: {fileID: 0}
     - target: {fileID: 4300868251209000738, guid: 23f96c6f17e0d5b4bacaf839fb197387, type: 3}
       propertyPath: m_Name
       value: Books (5)
@@ -6545,6 +6549,14 @@ PrefabInstance:
       propertyPath: pickupId
       value: book-1-001
       objectReference: {fileID: 0}
+    - target: {fileID: 880247282643075255, guid: 01703f21ce284a1498b9b8bea9ac8103, type: 3}
+      propertyPath: id
+      value: d0d5b9fd-df2f-43f6-9ece-7b12321bb2b1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482395404858896625, guid: 01703f21ce284a1498b9b8bea9ac8103, type: 3}
+      propertyPath: id
+      value: 08c337a5-b614-47d1-9d02-e973debbd4ac
+      objectReference: {fileID: 0}
     - target: {fileID: 2122756164528844852, guid: 01703f21ce284a1498b9b8bea9ac8103, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.19427013
@@ -6589,6 +6601,10 @@ PrefabInstance:
       propertyPath: pickupId
       value: book-1-006
       objectReference: {fileID: 0}
+    - target: {fileID: 2688521619079673543, guid: 01703f21ce284a1498b9b8bea9ac8103, type: 3}
+      propertyPath: id
+      value: ed2bc434-9fdb-4145-b5a5-1be1dec5e7ef
+      objectReference: {fileID: 0}
     - target: {fileID: 4005106805973009645, guid: 01703f21ce284a1498b9b8bea9ac8103, type: 3}
       propertyPath: pickupId
       value: book-1-005
@@ -6596,6 +6612,18 @@ PrefabInstance:
     - target: {fileID: 4119483539487698828, guid: 01703f21ce284a1498b9b8bea9ac8103, type: 3}
       propertyPath: pickupId
       value: tv_002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5268038540014209832, guid: 01703f21ce284a1498b9b8bea9ac8103, type: 3}
+      propertyPath: id
+      value: 7c95e7a9-af7b-4c90-8289-4801f3824c19
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363806346643018609, guid: 01703f21ce284a1498b9b8bea9ac8103, type: 3}
+      propertyPath: id
+      value: 8d7ed15e-4c5b-4442-9dc7-118224126f79
+      objectReference: {fileID: 0}
+    - target: {fileID: 6293196520126775956, guid: 01703f21ce284a1498b9b8bea9ac8103, type: 3}
+      propertyPath: id
+      value: 25de673c-c5a4-4937-b522-3342a60b1dba
       objectReference: {fileID: 0}
     - target: {fileID: 6335136109953716667, guid: 01703f21ce284a1498b9b8bea9ac8103, type: 3}
       propertyPath: m_Name

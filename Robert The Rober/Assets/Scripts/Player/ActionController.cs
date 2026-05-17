@@ -12,32 +12,64 @@ public class ActionController : MonoBehaviour
     private void Start()
     {
         cam = Camera.main;
+
+        if (EventManager.Instance != null)
+        {
+            EventManager.Instance.OnPausePressed += HandlePausePressed;
+            EventManager.Instance.OnInteractPressed += HandleInteractPressed;
+            EventManager.Instance.OnUseItemPressed += HandleUseItemPressed;
+            EventManager.Instance.OnPurchasedInventoryPressed += HandlePurchasedInventoryPressed;
+            EventManager.Instance.OnStolenInventoryPressed += HandleStolenInventoryPressed;
+        }
+        else
+        {
+            Debug.LogWarning("ActionController: EventManager.Instance es null en Start.");
+        }
     }
 
-    private void Update()
+    private void OnDestroy()
+    {
+        if (EventManager.Instance != null)
+        {
+            EventManager.Instance.OnPausePressed -= HandlePausePressed;
+            EventManager.Instance.OnInteractPressed -= HandleInteractPressed;
+            EventManager.Instance.OnUseItemPressed -= HandleUseItemPressed;
+            EventManager.Instance.OnPurchasedInventoryPressed -= HandlePurchasedInventoryPressed;
+            EventManager.Instance.OnStolenInventoryPressed -= HandleStolenInventoryPressed;
+        }
+    }
+
+    private void HandlePausePressed()
+    {
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.TogglePauseMenu();
+        }
+    }
+
+    private void HandlePurchasedInventoryPressed()
+    {
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.TogglePurchasedItemsPanel();
+        }
+    }
+
+    private void HandleStolenInventoryPressed()
+    {
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.ToggleStolenItemsPanel();
+        }
+    }
+
+    private void HandleInteractPressed()
     {
         if (cam == null)
         {
             cam = Camera.main;
             if (cam == null) return;
         }
-
-        if (Keyboard.current != null && Keyboard.current.pKey.wasPressedThisFrame)
-        {
-            if (UIManager.Instance != null)
-            {
-                UIManager.Instance.TogglePauseMenu();
-            }
-
-            return;
-        }
-
-        bool interactPressed = false;
-
-        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
-            interactPressed = true;
-
-        if (!interactPressed) return;
 
         if (Physics.Raycast(
             cam.transform.position,
@@ -92,5 +124,11 @@ public class ActionController : MonoBehaviour
                 return;
             }
         }
+    }
+
+    private void HandleUseItemPressed()
+    {
+        // TODO: Implementar lógica para usar un objeto del inventario
+        Debug.Log("UseItem presionado.");
     }
 }

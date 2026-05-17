@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5809618127568315173}
   - component: {fileID: 4281283491022372141}
   - component: {fileID: 5104702245765947707}
-  - component: {fileID: 9200702927996460480}
   m_Layer: 6
   m_Name: Drum1 Snare
   m_TagString: Sackable
@@ -95,22 +94,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &9200702927996460480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 688861669647130753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00916428c57ab3b479dc121062577fda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ArtefactsPickup
-  itemName: 
-  itemIcon: {fileID: 0}
-  sackValue: 0
-  monetaryValue: 0
 --- !u!1 &749288722147649432
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,7 +105,6 @@ GameObject:
   - component: {fileID: 4281579998987944640}
   - component: {fileID: 18308581863563434}
   - component: {fileID: 1443702841407241468}
-  - component: {fileID: 2638249726463462825}
   m_Layer: 6
   m_Name: Drum1 Cymbal Stand
   m_TagString: Sackable
@@ -203,22 +185,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2638249726463462825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 749288722147649432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00916428c57ab3b479dc121062577fda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ArtefactsPickup
-  itemName: 
-  itemIcon: {fileID: 0}
-  sackValue: 0
-  monetaryValue: 0
 --- !u!1 &2383391003835446796
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,7 +196,6 @@ GameObject:
   - component: {fileID: 505738126719710886}
   - component: {fileID: 3141772111522037763}
   - component: {fileID: 7951328153095072479}
-  - component: {fileID: 7274410685317303803}
   m_Layer: 6
   m_Name: Drum1 Hi Hat2
   m_TagString: Sackable
@@ -312,22 +277,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7274410685317303803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2383391003835446796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00916428c57ab3b479dc121062577fda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ArtefactsPickup
-  itemName: 
-  itemIcon: {fileID: 0}
-  sackValue: 0
-  monetaryValue: 0
 --- !u!1 &2397352913233356153
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,7 +435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EntityID
-  id: ef2f5331-ffbe-4de6-9887-3019a54ded47
+  id: 870f6bc2-2c28-4582-b30c-aab5ee94846f
 --- !u!1 &2418673966689197885
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,7 +447,6 @@ GameObject:
   - component: {fileID: 2913105630299405334}
   - component: {fileID: 2615384745151098972}
   - component: {fileID: 745249971589794759}
-  - component: {fileID: 8158497561804836858}
   m_Layer: 6
   m_Name: Drum1 Kick Pedal1
   m_TagString: Sackable
@@ -578,22 +526,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8158497561804836858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2418673966689197885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00916428c57ab3b479dc121062577fda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ArtefactsPickup
-  itemName: 
-  itemIcon: {fileID: 0}
-  sackValue: 0
-  monetaryValue: 0
 --- !u!1 &2766385701153472901
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,7 +537,6 @@ GameObject:
   - component: {fileID: 8250300790024697138}
   - component: {fileID: 1943356888121824740}
   - component: {fileID: 6437752338518454014}
-  - component: {fileID: 6010643110739823313}
   m_Layer: 6
   m_Name: Drum1 Hi Hat2 Cymbal
   m_TagString: Sackable
@@ -685,22 +616,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6010643110739823313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2766385701153472901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00916428c57ab3b479dc121062577fda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ArtefactsPickup
-  itemName: 
-  itemIcon: {fileID: 0}
-  sackValue: 0
-  monetaryValue: 0
 --- !u!1 &3363543760587445875
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,7 +627,6 @@ GameObject:
   - component: {fileID: 3165291502400898736}
   - component: {fileID: 8882699966414318092}
   - component: {fileID: 2738018502938828293}
-  - component: {fileID: 4966385134272115332}
   m_Layer: 6
   m_Name: Drum1 Hi Hat2 Cymbal 001
   m_TagString: Sackable
@@ -792,22 +706,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4966385134272115332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3363543760587445875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00916428c57ab3b479dc121062577fda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ArtefactsPickup
-  itemName: 
-  itemIcon: {fileID: 0}
-  sackValue: 0
-  monetaryValue: 0
 --- !u!1 &4069507990796428472
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,7 +717,6 @@ GameObject:
   - component: {fileID: 5091728285847648159}
   - component: {fileID: 7706903437563243635}
   - component: {fileID: 2554708281705866203}
-  - component: {fileID: 3867125989751556986}
   m_Layer: 6
   m_Name: Drum1 Kick Pedal2
   m_TagString: Sackable
@@ -899,22 +796,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3867125989751556986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4069507990796428472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00916428c57ab3b479dc121062577fda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ArtefactsPickup
-  itemName: 
-  itemIcon: {fileID: 0}
-  sackValue: 0
-  monetaryValue: 0
 --- !u!1 &5061986911076012472
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,7 +807,6 @@ GameObject:
   - component: {fileID: 4639364034750697287}
   - component: {fileID: 8700448429532763371}
   - component: {fileID: 7235158498075558206}
-  - component: {fileID: 8104188987414024481}
   m_Layer: 6
   m_Name: Drum1 Tomtom
   m_TagString: Sackable
@@ -1010,22 +890,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8104188987414024481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5061986911076012472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00916428c57ab3b479dc121062577fda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ArtefactsPickup
-  itemName: 
-  itemIcon: {fileID: 0}
-  sackValue: 0
-  monetaryValue: 0
 --- !u!1 &6764826645082978150
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,7 +901,6 @@ GameObject:
   - component: {fileID: 6559936342098782760}
   - component: {fileID: 8960943017958773682}
   - component: {fileID: 4024993882606879651}
-  - component: {fileID: 6916038550141785864}
   m_Layer: 6
   m_Name: Drum1 Cymbal
   m_TagString: Sackable
@@ -1117,22 +980,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6916038550141785864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6764826645082978150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00916428c57ab3b479dc121062577fda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ArtefactsPickup
-  itemName: 
-  itemIcon: {fileID: 0}
-  sackValue: 0
-  monetaryValue: 0
 --- !u!1 &7619714048759145824
 GameObject:
   m_ObjectHideFlags: 0
@@ -1177,7 +1024,6 @@ GameObject:
   - component: {fileID: 4833793394336743475}
   - component: {fileID: 6244557842792192416}
   - component: {fileID: 2933107145160422416}
-  - component: {fileID: 2899746688663564057}
   m_Layer: 6
   m_Name: Drum1 Tom
   m_TagString: Sackable
@@ -1261,22 +1107,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2899746688663564057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7763091297072809859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00916428c57ab3b479dc121062577fda, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ArtefactsPickup
-  itemName: 
-  itemIcon: {fileID: 0}
-  sackValue: 0
-  monetaryValue: 0
 --- !u!1 &8551928989124106597
 GameObject:
   m_ObjectHideFlags: 0

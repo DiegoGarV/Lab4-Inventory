@@ -64,19 +64,6 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (Keyboard.current != null && Keyboard.current.qKey.wasPressedThisFrame)
-        {
-            TogglePurchasedItemsPanel();
-        }
-
-        if (Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
-        {
-            ToggleStolenItemsPanel();
-        }
-    }
-
     private void Start()
     {
         Scene currentScene = SceneManager.GetActiveScene();
@@ -612,9 +599,6 @@ public class UIManager : MonoBehaviour
             if (firstPersonController != null)
                 firstPersonController.enabled = false;
 
-            if (actionController != null)
-                actionController.enabled = false;
-
             if (purchasedItemsUIController != null)
             {
                 PurchasedItemsUIController controller = purchasedItemsUIController as PurchasedItemsUIController;
@@ -632,9 +616,6 @@ public class UIManager : MonoBehaviour
         {
             if (firstPersonController != null)
                 firstPersonController.enabled = true;
-
-            if (actionController != null)
-                actionController.enabled = true;
 
             Time.timeScale = 1f;
             Cursor.lockState = CursorLockMode.Locked;
@@ -663,9 +644,6 @@ public class UIManager : MonoBehaviour
             if (firstPersonController != null)
                 firstPersonController.enabled = false;
 
-            if (actionController != null)
-                actionController.enabled = false;
-
             if (stolenItemsUIController != null)
             {
                 InventoryUIController controller = stolenItemsUIController as InventoryUIController;
@@ -683,9 +661,6 @@ public class UIManager : MonoBehaviour
         {
             if (firstPersonController != null)
                 firstPersonController.enabled = true;
-
-            if (actionController != null)
-                actionController.enabled = true;
 
             Time.timeScale = 1f;
             Cursor.lockState = CursorLockMode.Locked;
