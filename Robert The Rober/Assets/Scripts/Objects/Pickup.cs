@@ -3,9 +3,6 @@ using System;
 
 public abstract class Pickup : MonoBehaviour
 {
-    [Header("Persistence")]
-    [SerializeField] private string pickupId;
-
     [Header("Inventory Info")]
     [SerializeField] private string itemName;
     [SerializeField] private Sprite itemIcon;
@@ -14,13 +11,25 @@ public abstract class Pickup : MonoBehaviour
     [SerializeField] private float sackValue = 0f;
     [SerializeField] private int monetaryValue = 0;
 
-    public string PickupId => pickupId;
+    private EntityID entityID;
+
+    public string PickupId => entityID != null ? entityID.ID : "";
     public string ItemName => itemName;
     public Sprite ItemIcon => itemIcon;
     public float SackValue => sackValue;
     public int MonetaryValue => monetaryValue;
 
     public static event Action<Pickup> OnPickupCollected;
+
+    protected virtual void Awake()
+    {
+        entityID = GetComponent<EntityID>();
+
+        if (entityID == null)
+        {
+            Debug.LogError($"Pickup en {gameObject.name} no tiene EntityID.");
+        }
+    }
 
     public void Collect()
     {

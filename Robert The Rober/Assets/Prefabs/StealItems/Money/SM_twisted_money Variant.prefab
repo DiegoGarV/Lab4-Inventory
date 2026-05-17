@@ -74,6 +74,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: db13c977e999c9f4c9d70f8043f5fa38, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2848867260316896186}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: db13c977e999c9f4c9d70f8043f5fa38, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 74221252917184173}
   m_SourcePrefab: {fileID: 100100000, guid: db13c977e999c9f4c9d70f8043f5fa38, type: 3}
 --- !u!1 &243470933117461826 stripped
 GameObject:
@@ -113,8 +116,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edbd5083fcfe322489c0ff95c2d17e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MoneyPickup
-  pickupId: 
   itemName: Money
   itemIcon: {fileID: 0}
   sackValue: 0
   monetaryValue: 500
+--- !u!114 &74221252917184173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243470933117461826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: b7c1d369-53a2-4c81-9333-6fbf4bdb47bd

@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 4684647133930494794}
   - component: {fileID: 9044874130564254870}
   - component: {fileID: 921909633978813599}
+  - component: {fileID: 3410552604030888244}
   m_Layer: 6
   m_Name: Laptop
   m_TagString: Sackable
@@ -226,3 +227,16 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: f8121b394d385eb4fb4b2e118922ea6d, type: 3}
   sackValue: 45
   monetaryValue: 1400
+--- !u!114 &3410552604030888244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8702249410611217806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: b9118efe-6397-4adc-a525-18121b9ef475

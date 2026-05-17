@@ -311,6 +311,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 233541574ca4aa446815f271d7d43335, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7856412723483335357}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 233541574ca4aa446815f271d7d43335, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -2242119576356169739}
   m_SourcePrefab: {fileID: 100100000, guid: 233541574ca4aa446815f271d7d43335, type: 3}
 --- !u!1 &1366181746560133403 stripped
 GameObject:
@@ -350,11 +353,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d703ff60ca03c6b45bed5877b5b6130f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JewerlyPickup
-  pickupId: 
   itemName: Jewelry
   itemIcon: {fileID: 21300000, guid: eb6dff12e0d14e94d9b8c78e44ac0fc6, type: 3}
   sackValue: 35
   monetaryValue: 4560
+--- !u!114 &-2242119576356169739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366181746560133403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: 91f5ddd5-52c1-4f1d-b01b-447ec487ff03
 --- !u!4 &1855051642729575329 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 233541574ca4aa446815f271d7d43335, type: 3}

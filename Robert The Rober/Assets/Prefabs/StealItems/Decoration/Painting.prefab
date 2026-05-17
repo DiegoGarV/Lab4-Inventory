@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1996027227662638713}
   - component: {fileID: 2713471992292075099}
   - component: {fileID: 1497141544642402278}
+  - component: {fileID: -1941611223240815132}
   m_Layer: 6
   m_Name: Painting
   m_TagString: Sackable
@@ -159,3 +160,16 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: f440d73c9411b29409b1ffdddf8017b5, type: 3}
   sackValue: 40
   monetaryValue: 26420
+--- !u!114 &-1941611223240815132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4445998969632137391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: f0d5999f-f101-4353-baa1-aa386f30c354

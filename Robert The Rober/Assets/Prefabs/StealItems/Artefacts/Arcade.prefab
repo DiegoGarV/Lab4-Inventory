@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 717750744427422254}
   - component: {fileID: 5845337284134461296}
   - component: {fileID: -1954022006579976349}
+  - component: {fileID: 2946202076734550881}
   m_Layer: 6
   m_Name: Arcade
   m_TagString: Sackable
@@ -132,8 +133,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00916428c57ab3b479dc121062577fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArtefactsPickup
-  pickupId: 
   itemName: Artefact
   itemIcon: {fileID: 21300000, guid: 4cf4277a3c907d84b9b2897f70055714, type: 3}
   sackValue: 75
   monetaryValue: 1500
+--- !u!114 &2946202076734550881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763191375744185478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: d67b158e-7cd5-41ac-bf5d-777aaebe52dc

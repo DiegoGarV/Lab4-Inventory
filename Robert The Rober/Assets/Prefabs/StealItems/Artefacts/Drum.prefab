@@ -107,7 +107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00916428c57ab3b479dc121062577fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArtefactsPickup
-  pickupId: 
   itemName: 
   itemIcon: {fileID: 0}
   sackValue: 0
@@ -216,7 +215,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00916428c57ab3b479dc121062577fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArtefactsPickup
-  pickupId: 
   itemName: 
   itemIcon: {fileID: 0}
   sackValue: 0
@@ -326,7 +324,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00916428c57ab3b479dc121062577fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArtefactsPickup
-  pickupId: 
   itemName: 
   itemIcon: {fileID: 0}
   sackValue: 0
@@ -344,6 +341,7 @@ GameObject:
   - component: {fileID: 8936443446611888759}
   - component: {fileID: 7976249661618551558}
   - component: {fileID: 3605010311357979986}
+  - component: {fileID: 7288300997183479584}
   m_Layer: 6
   m_Name: Drum1 Kick
   m_TagString: Sackable
@@ -472,11 +470,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00916428c57ab3b479dc121062577fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArtefactsPickup
-  pickupId: 
   itemName: Artefact
   itemIcon: {fileID: 21300000, guid: 4cf4277a3c907d84b9b2897f70055714, type: 3}
   sackValue: 75
   monetaryValue: 500
+--- !u!114 &7288300997183479584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2397352913233356153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: ef2f5331-ffbe-4de6-9887-3019a54ded47
 --- !u!1 &2418673966689197885
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,7 +590,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00916428c57ab3b479dc121062577fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArtefactsPickup
-  pickupId: 
   itemName: 
   itemIcon: {fileID: 0}
   sackValue: 0
@@ -688,7 +697,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00916428c57ab3b479dc121062577fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArtefactsPickup
-  pickupId: 
   itemName: 
   itemIcon: {fileID: 0}
   sackValue: 0
@@ -796,7 +804,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00916428c57ab3b479dc121062577fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArtefactsPickup
-  pickupId: 
   itemName: 
   itemIcon: {fileID: 0}
   sackValue: 0
@@ -904,7 +911,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00916428c57ab3b479dc121062577fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArtefactsPickup
-  pickupId: 
   itemName: 
   itemIcon: {fileID: 0}
   sackValue: 0
@@ -1016,7 +1022,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00916428c57ab3b479dc121062577fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArtefactsPickup
-  pickupId: 
   itemName: 
   itemIcon: {fileID: 0}
   sackValue: 0
@@ -1124,7 +1129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00916428c57ab3b479dc121062577fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArtefactsPickup
-  pickupId: 
   itemName: 
   itemIcon: {fileID: 0}
   sackValue: 0
@@ -1269,7 +1273,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00916428c57ab3b479dc121062577fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArtefactsPickup
-  pickupId: 
   itemName: 
   itemIcon: {fileID: 0}
   sackValue: 0

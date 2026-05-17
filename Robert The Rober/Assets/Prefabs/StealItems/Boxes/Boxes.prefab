@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7125147098920907176}
   - component: {fileID: 7124624186942027238}
   - component: {fileID: 5743853358960819317}
+  - component: {fileID: 9133798366362943736}
   m_Layer: 6
   m_Name: Box 003
   m_TagString: Sackable
@@ -128,11 +129,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 430d891052fae774187ff5e75ae0c190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  pickupId: 
   itemName: Boxes
   itemIcon: {fileID: 21300000, guid: 60cd4be0d996aa14fa8f11222a97dce6, type: 3}
   sackValue: 40
   monetaryValue: 1
+--- !u!114 &9133798366362943736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3586407520569445242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: 5a80d8d6-360d-44ff-890a-5d5d194827d3
 --- !u!1 &6648260584177281223
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,6 +159,7 @@ GameObject:
   - component: {fileID: 1574148059065505130}
   - component: {fileID: 7023625703246524627}
   - component: {fileID: 3054149554017569064}
+  - component: {fileID: 1814857018523541113}
   m_Layer: 6
   m_Name: Box 002
   m_TagString: Sackable
@@ -261,11 +275,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 430d891052fae774187ff5e75ae0c190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  pickupId: 
   itemName: Boxes
   itemIcon: {fileID: 21300000, guid: 60cd4be0d996aa14fa8f11222a97dce6, type: 3}
   sackValue: 40
   monetaryValue: 1
+--- !u!114 &1814857018523541113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6648260584177281223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: c004e3df-b4b1-4986-b42b-90ae6589bcc3
 --- !u!1 &6727166186902103358
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,6 +339,7 @@ GameObject:
   - component: {fileID: 9097074485019934742}
   - component: {fileID: 5562122240801893813}
   - component: {fileID: 8212467018583489900}
+  - component: {fileID: 5169938177751319299}
   m_Layer: 6
   m_Name: Box 001
   m_TagString: Sackable
@@ -428,8 +455,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 430d891052fae774187ff5e75ae0c190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  pickupId: 
   itemName: Boxes
   itemIcon: {fileID: 21300000, guid: 60cd4be0d996aa14fa8f11222a97dce6, type: 3}
   sackValue: 40
   monetaryValue: 1
+--- !u!114 &5169938177751319299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8252459739642367119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: 9f0256a8-f66c-4b53-bf4d-327852587e89

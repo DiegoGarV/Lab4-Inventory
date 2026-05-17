@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6701023450319374954}
   - component: {fileID: 8756397065591711437}
   - component: {fileID: 4153800589508222967}
+  - component: {fileID: -1379656779019113301}
   m_Layer: 6
   m_Name: Kitchen Stuff
   m_TagString: Sackable
@@ -132,3 +133,16 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: f8121b394d385eb4fb4b2e118922ea6d, type: 3}
   sackValue: 20
   monetaryValue: 100
+--- !u!114 &-1379656779019113301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4334940995630784369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: da2a57b8-b9b5-4b45-a4a0-37ee9d333d6e

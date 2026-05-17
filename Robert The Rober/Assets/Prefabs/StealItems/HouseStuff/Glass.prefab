@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7266265131699228943}
   - component: {fileID: 1474744512531143472}
   - component: {fileID: 6986638447172487557}
+  - component: {fileID: 5802599891003289843}
   m_Layer: 6
   m_Name: Glass
   m_TagString: Sackable
@@ -129,6 +130,19 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: f8121b394d385eb4fb4b2e118922ea6d, type: 3}
   sackValue: 5
   monetaryValue: 5
+--- !u!114 &5802599891003289843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164480085971992917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: 5664e06b-7309-49bf-b975-8ecb61fd150c
 --- !u!1 &207757994594963403
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,6 +156,7 @@ GameObject:
   - component: {fileID: 4393992780547058324}
   - component: {fileID: 748002935436901062}
   - component: {fileID: 4796078256977847155}
+  - component: {fileID: 6197797705340195189}
   m_Layer: 6
   m_Name: Glass 001
   m_TagString: Sackable
@@ -258,6 +273,19 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: f8121b394d385eb4fb4b2e118922ea6d, type: 3}
   sackValue: 5
   monetaryValue: 5
+--- !u!114 &6197797705340195189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207757994594963403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: 2a80f6e2-d889-435c-af63-4b98d713c788
 --- !u!1 &3405885803321674261
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,6 +299,7 @@ GameObject:
   - component: {fileID: 3275136452407148838}
   - component: {fileID: 1263286131060508942}
   - component: {fileID: 3308106023169672723}
+  - component: {fileID: 7506872971706954360}
   m_Layer: 6
   m_Name: Glass 003
   m_TagString: Sackable
@@ -387,6 +416,19 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: f8121b394d385eb4fb4b2e118922ea6d, type: 3}
   sackValue: 5
   monetaryValue: 5
+--- !u!114 &7506872971706954360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3405885803321674261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: dfc74196-cd1b-4d79-8af9-49d60bd6034a
 --- !u!1 &5162820104981236683
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,6 +478,7 @@ GameObject:
   - component: {fileID: 9097896769077948353}
   - component: {fileID: 8948604895875387854}
   - component: {fileID: 6534661104812162262}
+  - component: {fileID: 2281046402721227697}
   m_Layer: 6
   m_Name: Glass 002
   m_TagString: Sackable
@@ -552,6 +595,19 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: f8121b394d385eb4fb4b2e118922ea6d, type: 3}
   sackValue: 5
   monetaryValue: 5
+--- !u!114 &2281046402721227697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5486834032284762547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: 0ea96777-f2b4-42c3-b0cd-16ba5418f622
 --- !u!1 &7390913176932022043
 GameObject:
   m_ObjectHideFlags: 0
@@ -565,6 +621,7 @@ GameObject:
   - component: {fileID: 723361530892632925}
   - component: {fileID: 6047131828825075265}
   - component: {fileID: 175006517188163159}
+  - component: {fileID: 8406360557438778732}
   m_Layer: 6
   m_Name: Glass 004
   m_TagString: Sackable
@@ -681,3 +738,16 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: f8121b394d385eb4fb4b2e118922ea6d, type: 3}
   sackValue: 5
   monetaryValue: 5
+--- !u!114 &8406360557438778732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7390913176932022043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: 8f3ad7a3-ff98-4e0e-b572-1bdb48b6bf33

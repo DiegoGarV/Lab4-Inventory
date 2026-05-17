@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4904568412488751198}
   - component: {fileID: 5638170428015125393}
   - component: {fileID: 4708201567003527627}
+  - component: {fileID: -3419723635631476250}
   m_Layer: 6
   m_Name: Pan
   m_TagString: Sackable
@@ -133,3 +134,16 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: f8121b394d385eb4fb4b2e118922ea6d, type: 3}
   sackValue: 20
   monetaryValue: 130
+--- !u!114 &-3419723635631476250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595064583986059574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: 3c68fe16-bce7-461b-bb68-6064f1d25ea5

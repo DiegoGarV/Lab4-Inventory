@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6429681794489927593}
   - component: {fileID: 7967656147837155788}
   - component: {fileID: -3859797675333848235}
+  - component: {fileID: 6807210238543546756}
   m_Layer: 6
   m_Name: Microwave
   m_TagString: Sackable
@@ -132,3 +133,16 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: f8121b394d385eb4fb4b2e118922ea6d, type: 3}
   sackValue: 55
   monetaryValue: 1000
+--- !u!114 &6807210238543546756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3051862245945826289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: aa259c44-2889-4a6e-90c4-3ca9ff391250

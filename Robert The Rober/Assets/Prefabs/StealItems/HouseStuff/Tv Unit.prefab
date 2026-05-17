@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5154979019053700483}
   - component: {fileID: 3589045239747024095}
   - component: {fileID: 6727599845685160731}
+  - component: {fileID: 5633834570826508228}
   m_Layer: 6
   m_Name: Ps5 Cont
   m_TagString: Sackable
@@ -131,6 +132,19 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: f8121b394d385eb4fb4b2e118922ea6d, type: 3}
   sackValue: 15
   monetaryValue: 250
+--- !u!114 &5633834570826508228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406574022985459823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: 9b92ba3d-7009-4b27-a247-a27a12f2e9d0
 --- !u!1 &2740866293528640534
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,6 +158,7 @@ GameObject:
   - component: {fileID: 3021758241505979974}
   - component: {fileID: 4320078986827486955}
   - component: {fileID: 1167040540479358408}
+  - component: {fileID: 1057539649302477357}
   m_Layer: 6
   m_Name: Ps5
   m_TagString: Sackable
@@ -262,6 +277,19 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: f8121b394d385eb4fb4b2e118922ea6d, type: 3}
   sackValue: 35
   monetaryValue: 750
+--- !u!114 &1057539649302477357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2740866293528640534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: a71c2b99-2bed-48be-aa5a-ef06e7743d2b
 --- !u!1 &6335136109953716667
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,6 +424,7 @@ GameObject:
   - component: {fileID: 8715688886542651664}
   - component: {fileID: 2678103289561738574}
   - component: {fileID: 4119483539487698828}
+  - component: {fileID: 6293196520126775956}
   m_Layer: 6
   m_Name: Television
   m_TagString: Sackable
@@ -513,6 +542,19 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: f8121b394d385eb4fb4b2e118922ea6d, type: 3}
   sackValue: 45
   monetaryValue: 3400
+--- !u!114 &6293196520126775956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7633078590863173186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: 1a7cafdb-e722-47e6-8255-ecda0470da1d
 --- !u!1 &7680306882866410672
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,6 +568,7 @@ GameObject:
   - component: {fileID: 1585333064884241253}
   - component: {fileID: 2846785658431338512}
   - component: {fileID: 8960843279876247732}
+  - component: {fileID: 4193658664047500015}
   m_Layer: 6
   m_Name: Ps5 Cpnt
   m_TagString: Sackable
@@ -644,6 +687,19 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: f8121b394d385eb4fb4b2e118922ea6d, type: 3}
   sackValue: 15
   monetaryValue: 250
+--- !u!114 &4193658664047500015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7680306882866410672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: 311d1b50-b90a-4f55-8b45-48f1d64883f4
 --- !u!1001 &2105495752857730761
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -652,6 +708,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2122756164528844852}
     m_Modifications:
+    - target: {fileID: -3160422894359480863, guid: 23f96c6f17e0d5b4bacaf839fb197387, type: 3}
+      propertyPath: id
+      value: 7c95e7a9-af7b-4c90-8289-4801f3824c19
+      objectReference: {fileID: 0}
     - target: {fileID: 4300868251209000738, guid: 23f96c6f17e0d5b4bacaf839fb197387, type: 3}
       propertyPath: m_Name
       value: Books (2)
@@ -722,6 +782,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2122756164528844852}
     m_Modifications:
+    - target: {fileID: -3160422894359480863, guid: 23f96c6f17e0d5b4bacaf839fb197387, type: 3}
+      propertyPath: id
+      value: 8d7ed15e-4c5b-4442-9dc7-118224126f79
+      objectReference: {fileID: 0}
     - target: {fileID: 4300868251209000738, guid: 23f96c6f17e0d5b4bacaf839fb197387, type: 3}
       propertyPath: m_Name
       value: Books (1)
@@ -792,6 +856,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2122756164528844852}
     m_Modifications:
+    - target: {fileID: -3160422894359480863, guid: 23f96c6f17e0d5b4bacaf839fb197387, type: 3}
+      propertyPath: id
+      value: 08c337a5-b614-47d1-9d02-e973debbd4ac
+      objectReference: {fileID: 0}
     - target: {fileID: 4300868251209000738, guid: 23f96c6f17e0d5b4bacaf839fb197387, type: 3}
       propertyPath: m_Name
       value: Books
@@ -862,6 +930,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2122756164528844852}
     m_Modifications:
+    - target: {fileID: -3160422894359480863, guid: 23f96c6f17e0d5b4bacaf839fb197387, type: 3}
+      propertyPath: id
+      value: d0d5b9fd-df2f-43f6-9ece-7b12321bb2b1
+      objectReference: {fileID: 0}
     - target: {fileID: 4300868251209000738, guid: 23f96c6f17e0d5b4bacaf839fb197387, type: 3}
       propertyPath: m_Name
       value: Books (3)
@@ -932,6 +1004,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2122756164528844852}
     m_Modifications:
+    - target: {fileID: -3160422894359480863, guid: 23f96c6f17e0d5b4bacaf839fb197387, type: 3}
+      propertyPath: id
+      value: 6f24848b-200c-41fb-9ffa-6e21fabeb6b2
+      objectReference: {fileID: 0}
     - target: {fileID: 4300868251209000738, guid: 23f96c6f17e0d5b4bacaf839fb197387, type: 3}
       propertyPath: m_Name
       value: Books (4)

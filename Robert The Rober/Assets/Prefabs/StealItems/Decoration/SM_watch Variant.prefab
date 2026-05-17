@@ -89,6 +89,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a429c0c7374c7e4891a1496ef158d2a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5564594915960007757}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5a429c0c7374c7e4891a1496ef158d2a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -2080649487190156631}
   m_SourcePrefab: {fileID: 100100000, guid: 5a429c0c7374c7e4891a1496ef158d2a, type: 3}
 --- !u!1 &4563730956392895797 stripped
 GameObject:
@@ -150,8 +153,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2155d18a0116d745b7327d949862d69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DecorationPickup
-  pickupId: 
   itemName: Decoration
   itemIcon: {fileID: 21300000, guid: f440d73c9411b29409b1ffdddf8017b5, type: 3}
   sackValue: 100
   monetaryValue: 2300
+--- !u!114 &-2080649487190156631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4563730956392895797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: 3c57b477-4ef3-4d6f-969a-abb9595093dc

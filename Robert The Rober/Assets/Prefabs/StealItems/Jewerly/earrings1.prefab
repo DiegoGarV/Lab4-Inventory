@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4198329051056797269}
   - component: {fileID: 4413346533313043097}
   - component: {fileID: 4093121156722240521}
+  - component: {fileID: -5844593193890371934}
   m_Layer: 6
   m_Name: earrings1
   m_TagString: Sackable
@@ -72,6 +73,19 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: eb6dff12e0d14e94d9b8c78e44ac0fc6, type: 3}
   sackValue: 5
   monetaryValue: 450
+--- !u!114 &-5844593193890371934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7697667316653555474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: 485af4b2-d650-4ae5-a25c-55afd1db00ca
 --- !u!1001 &2783293601222443785
 PrefabInstance:
   m_ObjectHideFlags: 0

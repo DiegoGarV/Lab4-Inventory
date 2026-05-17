@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6503150967077682460}
   - component: {fileID: 344245750079526141}
   - component: {fileID: 4133044657495849982}
+  - component: {fileID: -4612010685682018263}
   m_Layer: 6
   m_Name: Lamp
   m_TagString: Sackable
@@ -131,3 +132,16 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: f440d73c9411b29409b1ffdddf8017b5, type: 3}
   sackValue: 20
   monetaryValue: 250
+--- !u!114 &-4612010685682018263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8934777400652154204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: c03c74dc-42f6-4cd0-85bb-bfdd8625c583

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3666444421873361036}
   - component: {fileID: 7885446607018632420}
   - component: {fileID: 3125414600704034074}
+  - component: {fileID: 8510131056501893757}
   m_Layer: 6
   m_Name: Dishes
   m_TagString: Sackable
@@ -129,3 +130,16 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: f8121b394d385eb4fb4b2e118922ea6d, type: 3}
   sackValue: 5
   monetaryValue: 15
+--- !u!114 &8510131056501893757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7861427483853117196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: 03af7fc1-fe5c-4705-933e-7995f74c399c

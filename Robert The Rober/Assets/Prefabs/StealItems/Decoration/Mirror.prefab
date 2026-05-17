@@ -193,6 +193,7 @@ GameObject:
   - component: {fileID: 659244638720501014}
   - component: {fileID: 4041506238328530047}
   - component: {fileID: 4574807866472609916}
+  - component: {fileID: 5833027287554994234}
   m_Layer: 6
   m_Name: Mirror
   m_TagString: Sackable
@@ -311,3 +312,16 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: f440d73c9411b29409b1ffdddf8017b5, type: 3}
   sackValue: 30
   monetaryValue: 120
+--- !u!114 &5833027287554994234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8093904996169124533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: 53b41dbf-8fdb-40f4-830b-d10bf49db18b
