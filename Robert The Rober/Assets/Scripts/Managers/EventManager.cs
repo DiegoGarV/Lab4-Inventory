@@ -16,9 +16,9 @@ public class EventManager : MonoBehaviour
     public event Action OnStolenInventoryPressed;
     public event Action OnPausePressed;
     public event Action OnJumpPressed;
-
     public Vector2 MoveInput { get; private set; }
     public Vector2 LookInput { get; private set; }
+    public InputDeviceType CurrentDeviceType { get; private set; } = InputDeviceType.Unknown;
 
     private void Awake()
     {
@@ -60,6 +60,7 @@ public class EventManager : MonoBehaviour
     {
         MoveInput = inputActions.GameMap.Move.ReadValue<Vector2>();
         LookInput = inputActions.GameMap.Look.ReadValue<Vector2>();
+        UpdateCurrentDeviceType();
     }
 
     private void HandleInteractPerformed(InputAction.CallbackContext context)
@@ -95,5 +96,39 @@ public class EventManager : MonoBehaviour
     public void MoneyCollected()
     {
         OnMoneyCollected?.Invoke();
+    }
+
+    private void UpdateCurrentDeviceType()
+    {
+        if (Gamepad.current != null)
+        {
+            if (Gamepad.current.leftStick.ReadValue().sqrMagnitude > 0.001f ||
+                Gamepad.current.rightStick.ReadValue().sqrMagnitude > 0.001f ||
+                Gamepad.current.buttonSouth.wasPressedThisFrame ||
+                Gamepad.current.buttonEast.wasPressedThisFrame ||
+                Gamepad.current.startButton.wasPressedThisFrame ||
+                Gamepad.current.leftShoulder.wasPressedThisFrame ||
+                Gamepad.current.rightShoulder.wasPressedThisFrame)
+            {
+                CurrentDeviceType = InputDeviceType.Gamepad;
+                return;
+            }
+        }
+
+        if (Mouse.current != null)
+        {
+            if (Mouse.current.delta.ReadValue().sqrMagnitude > 0.001f ||
+                Mouse.current.leftButton.wasPressedThisFrame ||
+                Mouse.current.rightButton.wasPressedThisFrame)
+            {
+                CurrentDeviceType = InputDeviceType.KeyboardAndMouse;
+                return;
+            }
+        }
+
+        if (Keyboard.current != null && Keyboard.current.anyKey.wasPressedThisFrame)
+        {
+            CurrentDeviceType = InputDeviceType.KeyboardAndMouse;
+        }
     }
 }

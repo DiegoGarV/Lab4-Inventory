@@ -44,4 +44,11 @@ public class UISceneReferences : MonoBehaviour
     public MonoBehaviour purchasedItemsUIController;
     public GameObject stolenItemsPanel;
     public MonoBehaviour stolenItemsUIController;
+
+    [Header("Buttons")]
+    public Button pauseFirstButton;
+    public Button buyPromptFirstButton;
+    public Button toNextSceneFirstButton;
+
+    
 }

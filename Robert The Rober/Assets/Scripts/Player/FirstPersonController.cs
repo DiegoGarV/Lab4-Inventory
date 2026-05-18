@@ -17,7 +17,8 @@ namespace StarterAssets
 		[Tooltip("Sprint speed of the character in m/s")]
 		public float SprintSpeed = 6.0f;
 		[Tooltip("Rotation speed of the character")]
-		public float RotationSpeed = 10.0f;
+		public float MouseSensitivity = 0.08f;
+		public float GamepadSensitivity = 120f;
 		// public float MouseSensitivity = 0.1f;
 		// public float GamepadSensitivity = 120f;
 		[Tooltip("Acceleration and deceleration")]
@@ -84,11 +85,11 @@ namespace StarterAssets
 		{
 			get
 			{
-				#if ENABLE_INPUT_SYSTEM
-				return _playerInput.currentControlScheme == "KeyboardMouse";
-				#else
+#if ENABLE_INPUT_SYSTEM
+				return _playerInput != null && _playerInput.currentControlScheme == "KeyboardAndMouse";
+#else
 				return false;
-				#endif
+#endif
 			}
 		}
 
@@ -161,7 +162,16 @@ namespace StarterAssets
 		{
 			if (_lookInput.sqrMagnitude >= _threshold)
 			{
-				float lookMultiplier = RotationSpeed * Time.deltaTime;
+				float lookMultiplier;
+
+				if (IsCurrentDeviceMouse)
+				{
+					lookMultiplier = MouseSensitivity;
+				}
+				else
+				{
+					lookMultiplier = GamepadSensitivity * Time.deltaTime;
+				}
 
 				_cinemachineTargetPitch -= _lookInput.y * lookMultiplier;
 				_rotationVelocity = _lookInput.x * lookMultiplier;

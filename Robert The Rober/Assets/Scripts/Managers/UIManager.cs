@@ -3,6 +3,8 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
+using System.Collections;
 
 public class UIManager : MonoBehaviour
 {
@@ -28,6 +30,10 @@ public class UIManager : MonoBehaviour
     private TMP_Text buyItemPriceText;
     private TMP_Text currencyInText;
     private Button buyItemButton;
+    private Button pauseFirstButton;
+    private Button buyPromptFirstButton;
+    private Button toNextSceneFirstButton;
+
     public GameObject purchasedItemsPanel;
     public MonoBehaviour purchasedItemsUIController;
     public GameObject stolenItemsPanel;
@@ -36,6 +42,7 @@ public class UIManager : MonoBehaviour
     private StoreItemBase currentStoreItem;
     private bool isPaused = false;
     public bool IsPaused => isPaused;
+    private bool mainMenuButtonAutoSelected = false;
 
     private void Awake()
     {
@@ -74,6 +81,16 @@ public class UIManager : MonoBehaviour
             RebindMoneyController();
             ApplySceneUIState(currentScene);
         }
+    }
+
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            TryAutoSelectMainMenuButtonForGamepad();
+        }
+
+        UpdateCursorVisibilityByDevice();
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -135,8 +152,11 @@ public class UIManager : MonoBehaviour
         purchasedItemsUIController = refs.purchasedItemsUIController;
         stolenItemsPanel = refs.stolenItemsPanel;
         stolenItemsUIController = refs.stolenItemsUIController;
+        pauseFirstButton = refs.pauseFirstButton;
+        buyPromptFirstButton = refs.buyPromptFirstButton;
+        toNextSceneFirstButton = refs.toNextSceneFirstButton;
 
-        Debug.Log($"UIManager: referencias enlazadas para escena {scene.name}");
+        // Debug.Log($"UIManager: referencias enlazadas para escena {scene.name}");
     }
 
     private void ClearSceneReferences()
@@ -165,6 +185,9 @@ public class UIManager : MonoBehaviour
         purchasedItemsUIController = null;
         stolenItemsPanel = null;
         stolenItemsUIController = null;
+        pauseFirstButton = null;
+        buyPromptFirstButton = null;
+        toNextSceneFirstButton = null;
     }
 
     private void ApplySceneUIState(Scene scene)
@@ -182,11 +205,14 @@ public class UIManager : MonoBehaviour
                 bool hasSave = PersistenceManager.Instance != null && PersistenceManager.Instance.HasSaveFile();
                 loadGameButton.interactable = hasSave;
             }
+            
+            mainMenuButtonAutoSelected = false;
         }
         else
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+            mainMenuButtonAutoSelected = false;
         }
 
         if (runawayScreen != null)
@@ -280,6 +306,7 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 0f;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        SelectButton(toNextSceneFirstButton);
     }
 
     private void UpdateRunawayScreenValues()
@@ -309,6 +336,11 @@ public class UIManager : MonoBehaviour
 
         if (pauseMenu != null)
             pauseMenu.SetActive(isPaused);
+
+        if (isPaused)
+        {
+            SelectButton(pauseFirstButton);
+        }
 
         if (firstPersonController != null)
             firstPersonController.enabled = !isPaused;
@@ -417,6 +449,8 @@ public class UIManager : MonoBehaviour
         if (returnToTownPrompt != null)
             returnToTownPrompt.SetActive(true);
 
+        SelectButton(toNextSceneFirstButton);
+
         if (firstPersonController != null)
             firstPersonController.enabled = false;
 
@@ -502,6 +536,8 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 0f;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        SelectButton(buyPromptFirstButton);
     }
 
     public void CloseBuyItemPrompt()
@@ -666,5 +702,66 @@ public class UIManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
+    }
+
+    private void SelectButton(Button button)
+    {
+        if (button == null || EventSystem.current == null) return;
+        if (EventManager.Instance == null) return;
+
+        if (EventManager.Instance.CurrentDeviceType != InputDeviceType.Gamepad)
+            return;
+
+        StartCoroutine(SelectButtonNextFrame(button));
+    }
+
+    private System.Collections.IEnumerator SelectButtonNextFrame(Button button)
+    {
+        yield return null;
+
+        if (button == null || EventSystem.current == null) yield break;
+
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(button.gameObject);
+    }
+
+    private void TryAutoSelectMainMenuButtonForGamepad()
+    {
+        if (mainMenuButtonAutoSelected) return;
+        if (toNextSceneFirstButton == null) return;
+        if (EventManager.Instance == null) return;
+
+        if (EventManager.Instance.CurrentDeviceType == InputDeviceType.Gamepad)
+        {
+            SelectButton(toNextSceneFirstButton);
+            mainMenuButtonAutoSelected = true;
+        }
+    }
+
+    private void UpdateCursorVisibilityByDevice()
+    {
+        if (EventManager.Instance == null)
+            return;
+
+        bool usingGamepad = EventManager.Instance.CurrentDeviceType == InputDeviceType.Gamepad;
+
+        if (usingGamepad)
+        {
+            Cursor.visible = false;
+            return;
+        }
+
+        string sceneName = SceneManager.GetActiveScene().name;
+
+        bool shouldShowCursor =
+            sceneName == "MainMenu" ||
+            isPaused ||
+            (runawayScreen != null && runawayScreen.activeSelf) ||
+            (buyItemPrompt != null && buyItemPrompt.activeSelf) ||
+            (returnToTownPrompt != null && returnToTownPrompt.activeSelf) ||
+            (purchasedItemsPanel != null && purchasedItemsPanel.activeSelf) ||
+            (stolenItemsPanel != null && stolenItemsPanel.activeSelf);
+
+        Cursor.visible = shouldShowCursor;
     }
 }

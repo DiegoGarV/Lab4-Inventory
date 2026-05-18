@@ -180,9 +180,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.5254902, g: 0.6156863, b: 0.91764706, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.5254902, g: 0.6156863, b: 0.91764706, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -293,6 +293,20 @@ MonoBehaviour:
   loadGameButton: {fileID: 183570372}
   returnToTownPrompt: {fileID: 0}
   currencyText: {fileID: 0}
+  buyItemPrompt: {fileID: 0}
+  buyItemNameText: {fileID: 0}
+  buyItemIconImage: {fileID: 0}
+  buyItemDescriptionText: {fileID: 0}
+  buyItemPriceText: {fileID: 0}
+  currencyInText: {fileID: 0}
+  buyItemButton: {fileID: 0}
+  purchasedItemsPanel: {fileID: 0}
+  purchasedItemsUIController: {fileID: 0}
+  stolenItemsPanel: {fileID: 0}
+  stolenItemsUIController: {fileID: 0}
+  pauseFirstButton: {fileID: 0}
+  buyPromptFirstButton: {fileID: 0}
+  toNextSceneFirstButton: {fileID: 1834125083}
 --- !u!4 &252842423
 Transform:
   m_ObjectHideFlags: 0
@@ -479,17 +493,17 @@ MonoBehaviour:
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
   m_XRTrackingOrigin: {fileID: 0}
-  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: 7329fb5c15272f942bbbaea18040b113, type: 3}
+  m_PointAction: {fileID: 9195157276062163627, guid: 7329fb5c15272f942bbbaea18040b113, type: 3}
+  m_MoveAction: {fileID: 4893435826392786074, guid: 7329fb5c15272f942bbbaea18040b113, type: 3}
+  m_SubmitAction: {fileID: 107527201750421190, guid: 7329fb5c15272f942bbbaea18040b113, type: 3}
+  m_CancelAction: {fileID: -4419335750505198697, guid: 7329fb5c15272f942bbbaea18040b113, type: 3}
+  m_LeftClickAction: {fileID: 4220446658768794229, guid: 7329fb5c15272f942bbbaea18040b113, type: 3}
+  m_MiddleClickAction: {fileID: 0}
+  m_RightClickAction: {fileID: 0}
+  m_ScrollWheelAction: {fileID: 0}
+  m_TrackedDevicePositionAction: {fileID: 0}
+  m_TrackedDeviceOrientationAction: {fileID: 0}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
@@ -898,6 +912,30 @@ PrefabInstance:
       value: GameTitle
       objectReference: {fileID: 0}
     - target: {fileID: 5061995437110162928, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 0.91764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061995437110162928, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0.6156863
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061995437110162928, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 0.5254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061995437110162928, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.91764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061995437110162928, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.6156863
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061995437110162928, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.5254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 5061995437110162928, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -1007,6 +1045,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 197983389719996106, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
   m_PrefabInstance: {fileID: 1803958911}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1834125083 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5061995437110162928, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
+  m_PrefabInstance: {fileID: 1803958911}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1903876379
 GameObject:
   m_ObjectHideFlags: 0
@@ -1068,9 +1117,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.5254902, g: 0.6156863, b: 0.91764706, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.5254902, g: 0.6156863, b: 0.91764706, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1274,6 +1323,6 @@ SceneRoots:
   - {fileID: 1211984667}
   - {fileID: 1941418567}
   - {fileID: 1803958911}
-  - {fileID: 1176210175}
   - {fileID: 252842423}
   - {fileID: 1254135015}
+  - {fileID: 1176210175}

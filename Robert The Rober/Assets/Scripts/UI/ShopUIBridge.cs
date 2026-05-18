@@ -31,4 +31,20 @@ public class ShopUIBridge : MonoBehaviour
         if (UIManager.Instance != null)
             UIManager.Instance.BuyCurrentStoreItem();
     }
+
+    public void ResumeGame()
+    {
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.ResumeGame();
+        }
+    }
+
+    public void SaveAndQuit()
+    {
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.SafeCloseGame();
+        }
+    }
 }
