@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d37de220d0f88f149be4943f6b6f7f78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BigLootPickup
-  itemName: big loot
+  itemName: Big Loot
   itemIcon: {fileID: 21300000, guid: ba03fdcc16e496a42b75729779ffe29f, type: 3}
   sackValue: 20
   monetaryValue: 1000000
