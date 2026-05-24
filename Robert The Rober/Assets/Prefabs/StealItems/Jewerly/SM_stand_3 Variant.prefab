@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_bracelet_5 Variant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7968077648820680033, guid: c7ec97be967245d43a74b2c71f5e827a, type: 3}
+      propertyPath: id
+      value: efac036e-97e1-4d56-8828-d72e95258149
+      objectReference: {fileID: 0}
     - target: {fileID: 9035301259874488403, guid: c7ec97be967245d43a74b2c71f5e827a, type: 3}
       propertyPath: itemIcon
       value: 
@@ -85,6 +89,10 @@ PrefabInstance:
     - target: {fileID: -6756419423245137359, guid: 56c669f404162c84480387b2dca6ef26, type: 3}
       propertyPath: itemName
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -52367692999331836, guid: 56c669f404162c84480387b2dca6ef26, type: 3}
+      propertyPath: id
+      value: 4a3d8b74-7a68-49f6-9499-711299be9aef
       objectReference: {fileID: 0}
     - target: {fileID: 8222698502343656517, guid: 56c669f404162c84480387b2dca6ef26, type: 3}
       propertyPath: m_LocalPosition.x
@@ -369,7 +377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EntityID
-  id: 91f5ddd5-52c1-4f1d-b01b-447ec487ff03
+  id: 2d8e613f-3b9b-4990-b2fd-694ac78e5fd0
 --- !u!4 &1855051642729575329 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 233541574ca4aa446815f271d7d43335, type: 3}
@@ -496,6 +504,10 @@ PrefabInstance:
     - target: {fileID: 2195231416904581072, guid: c7ec97be967245d43a74b2c71f5e827a, type: 3}
       propertyPath: m_Name
       value: SM_bracelet_5 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7968077648820680033, guid: c7ec97be967245d43a74b2c71f5e827a, type: 3}
+      propertyPath: id
+      value: 445cd7fa-8f4b-4015-b1e5-07c1bebaf3ed
       objectReference: {fileID: 0}
     - target: {fileID: 9035301259874488403, guid: c7ec97be967245d43a74b2c71f5e827a, type: 3}
       propertyPath: itemIcon
@@ -724,6 +736,10 @@ PrefabInstance:
     - target: {fileID: -6756419423245137359, guid: 56c669f404162c84480387b2dca6ef26, type: 3}
       propertyPath: itemName
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -52367692999331836, guid: 56c669f404162c84480387b2dca6ef26, type: 3}
+      propertyPath: id
+      value: 3fe6f501-1005-484a-ac3b-aca2055ee54b
       objectReference: {fileID: 0}
     - target: {fileID: 8222698502343656517, guid: 56c669f404162c84480387b2dca6ef26, type: 3}
       propertyPath: m_LocalPosition.x

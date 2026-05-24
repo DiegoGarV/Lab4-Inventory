@@ -58816,6 +58816,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 658391581}
     m_Modifications:
+    - target: {fileID: 339490983250250097, guid: 7b8fc01bfac75b642b0bc546ab21c6c1, type: 3}
+      propertyPath: id
+      value: c570eb4f-efc5-4d90-829c-f1ed2ed9a72d
+      objectReference: {fileID: 0}
+    - target: {fileID: 1600111934620309473, guid: 7b8fc01bfac75b642b0bc546ab21c6c1, type: 3}
+      propertyPath: id
+      value: 6fc6e015-90f5-4ad7-b35a-7ad13ba96952
+      objectReference: {fileID: 0}
+    - target: {fileID: 2557283035942906881, guid: 7b8fc01bfac75b642b0bc546ab21c6c1, type: 3}
+      propertyPath: id
+      value: e922edad-5729-4bf6-a563-607037e2e1ab
+      objectReference: {fileID: 0}
     - target: {fileID: 3657556632959858337, guid: 7b8fc01bfac75b642b0bc546ab21c6c1, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -58860,9 +58872,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3788488283822106287, guid: 7b8fc01bfac75b642b0bc546ab21c6c1, type: 3}
+      propertyPath: id
+      value: b04e20b7-d847-4b54-8d72-804427fe1047
+      objectReference: {fileID: 0}
+    - target: {fileID: 3885222707691329689, guid: 7b8fc01bfac75b642b0bc546ab21c6c1, type: 3}
+      propertyPath: id
+      value: 2d49a1ab-b4c6-42fb-a6af-03ac1c182576
+      objectReference: {fileID: 0}
+    - target: {fileID: 7260755340998265968, guid: 7b8fc01bfac75b642b0bc546ab21c6c1, type: 3}
+      propertyPath: id
+      value: 3308c040-cd2c-48df-9d91-e8a1059e63fe
+      objectReference: {fileID: 0}
+    - target: {fileID: 8051596890798520060, guid: 7b8fc01bfac75b642b0bc546ab21c6c1, type: 3}
+      propertyPath: id
+      value: a231ee27-eb46-46cc-bbc3-039a398beaf5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8581334839212500259, guid: 7b8fc01bfac75b642b0bc546ab21c6c1, type: 3}
+      propertyPath: id
+      value: 1e7cc4ec-1fab-4592-8e1a-fba729cdfd24
+      objectReference: {fileID: 0}
     - target: {fileID: 8752324442519972331, guid: 7b8fc01bfac75b642b0bc546ab21c6c1, type: 3}
       propertyPath: m_Name
       value: House2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8769438461053738901, guid: 7b8fc01bfac75b642b0bc546ab21c6c1, type: 3}
+      propertyPath: id
+      value: e13fa502-686b-489d-98c7-aa662c60c67c
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
