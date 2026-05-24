@@ -13,6 +13,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f6c4b28893fd9e34f952e0407c497a3b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f6c4b28893fd9e34f952e0407c497a3b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f6c4b28893fd9e34f952e0407c497a3b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f6c4b28893fd9e34f952e0407c497a3b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
       objectReference: {fileID: 0}
@@ -51,6 +63,10 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f6c4b28893fd9e34f952e0407c497a3b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f6c4b28893fd9e34f952e0407c497a3b, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: f6c4b28893fd9e34f952e0407c497a3b, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -129,4 +145,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EntityID
-  id: 83f17f90-73eb-4cd2-b936-931349fa265e
+  id: 3da9a355-7900-4c9a-9427-642394f8225f
