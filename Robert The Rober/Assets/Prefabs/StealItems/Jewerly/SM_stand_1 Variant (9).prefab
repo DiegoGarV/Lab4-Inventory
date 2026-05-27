@@ -3464,9 +3464,8 @@ GameObject:
   - component: {fileID: 7648688287064495002}
   - component: {fileID: 5602880568531052368}
   - component: {fileID: 6596506267536891723}
-  - component: {fileID: -3483929428489461075}
   - component: {fileID: 7726766413064846570}
-  - component: {fileID: -8580596415930446457}
+  - component: {fileID: -3483929428489461075}
   - component: {fileID: -7925570734877093125}
   m_Layer: 6
   m_Name: SM_stand_1 Variant (9)
@@ -3618,22 +3617,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5, y: 0.060101748, z: 0.29999998}
   m_Center: {x: 0, y: 0.030050874, z: -0.14999999}
---- !u!114 &-3483929428489461075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6251438566184109701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d703ff60ca03c6b45bed5877b5b6130f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::JewerlyController
-  itemName: Jewelry
-  itemIcon: {fileID: 21300000, guid: eb6dff12e0d14e94d9b8c78e44ac0fc6, type: 3}
-  sackValue: 35
-  monetaryValue: 9370
 --- !u!65 &7726766413064846570
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3655,7 +3638,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5, y: 0.028337957, z: 0.29999998}
   m_Center: {x: 0, y: 0.014168979, z: -0.14999999}
---- !u!114 &-8580596415930446457
+--- !u!114 &-3483929428489461075
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3666,11 +3649,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d703ff60ca03c6b45bed5877b5b6130f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::JewerlyPickup
-  itemName: 
-  itemIcon: {fileID: 0}
-  sackValue: 0
-  monetaryValue: 0
+  m_EditorClassIdentifier: Assembly-CSharp::JewerlyController
+  itemName: Jewelry
+  itemIcon: {fileID: 21300000, guid: eb6dff12e0d14e94d9b8c78e44ac0fc6, type: 3}
+  sackValue: 35
+  monetaryValue: 9370
 --- !u!114 &-7925570734877093125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3683,7 +3666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EntityID
-  id: 7c34d6e1-f241-4914-98da-cf7ce6374a7a
+  id: 9a963c33-d206-4702-a904-0e29ed45f78c
 --- !u!1 &6302665811591933415
 GameObject:
   m_ObjectHideFlags: 0

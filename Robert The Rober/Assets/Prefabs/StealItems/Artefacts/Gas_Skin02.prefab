@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EntityID
-  id: 15db940f-b3b2-4b19-9875-4e694e9420ce
+  id: 6664a913-1d12-4976-8e2d-5bfa8d8c93a2
 --- !u!1 &3552242436747660548
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,8 +203,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3552242434864191065}
   m_Father: {fileID: 0}
