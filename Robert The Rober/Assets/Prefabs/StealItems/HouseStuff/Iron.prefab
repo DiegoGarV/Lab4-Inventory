@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 4542424605141132114}
   - component: {fileID: -8340355109030331126}
   - component: {fileID: 5264024943819352595}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Iron
-  m_TagString: Untagged
+  m_TagString: Sackable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,4 +143,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EntityID
-  id: d64a7590-1bd2-47da-b7b7-36fdbd99e26d
+  id: e3e30334-dc9f-427e-84a9-cca8e1bcdbca

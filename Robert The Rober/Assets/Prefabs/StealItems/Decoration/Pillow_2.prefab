@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 8613058118804054579}
   - component: {fileID: -567694517436228490}
   - component: {fileID: -5168874624662428278}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pillow_2
-  m_TagString: Untagged
+  m_TagString: Sackable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 2649458123800312676}
   - component: {fileID: -6897235167896256229}
   - component: {fileID: 8594888462315247800}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Painting_2
-  m_TagString: Untagged
+  m_TagString: Sackable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -68,9 +68,21 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 3eea6188d8b73d2468377127ea782f7b, type: 2}
+    - target: {fileID: -3111565609762313623, guid: 70b3b7402f7eddd4b81a31b45d261592, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 70b3b7402f7eddd4b81a31b45d261592, type: 3}
       propertyPath: m_Name
       value: Painting3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 70b3b7402f7eddd4b81a31b45d261592, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 70b3b7402f7eddd4b81a31b45d261592, type: 3}
+      propertyPath: m_TagString
+      value: Sackable
       objectReference: {fileID: 0}
     - target: {fileID: 4425563974512985078, guid: 70b3b7402f7eddd4b81a31b45d261592, type: 3}
       propertyPath: m_Materials.Array.size
@@ -96,6 +108,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[4]'
       value: 
       objectReference: {fileID: 2100000, guid: 516daade26014f74fbf61c8401044346, type: 2}
+    - target: {fileID: 6433097612276984978, guid: 70b3b7402f7eddd4b81a31b45d261592, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -164,4 +180,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EntityID
-  id: d533963a-6018-4fc5-9bd1-5bfa5833f8d0
+  id: bc134748-d945-4435-a49d-70651a0a35de

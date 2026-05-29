@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 4081695107001863202}
   - component: {fileID: -7336124724940933777}
   - component: {fileID: -7781202054191861596}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Vinyl_Record
-  m_TagString: Untagged
+  m_TagString: Sackable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

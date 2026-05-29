@@ -60,6 +60,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: dish_002
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9155746b8dbe508448f226cc595153ba, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9155746b8dbe508448f226cc595153ba, type: 3}
+      propertyPath: m_TagString
+      value: Sackable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -113,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EntityID
-  id: 36941ee2-c22e-4270-afcb-34a06b612fa8
+  id: 04f9508a-6187-46bb-ae10-82ae243d26ad
 --- !u!114 &-7303578463619007507
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 5343294512639709987}
   - component: {fileID: 2540968389209885259}
   - component: {fileID: 3743225956820048002}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Storage_Box_1
-  m_TagString: Untagged
+  m_TagString: Sackable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

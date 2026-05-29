@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 1344604894438419629}
   - component: {fileID: 4396029003250874469}
   - component: {fileID: 2269315406404309419}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plant_2
-  m_TagString: Untagged
+  m_TagString: Sackable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,4 +143,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EntityID
-  id: 1922f4ba-00a1-4022-823c-401c09543875
+  id: 0d57fb07-ce98-43e5-a726-9709f2363aa5

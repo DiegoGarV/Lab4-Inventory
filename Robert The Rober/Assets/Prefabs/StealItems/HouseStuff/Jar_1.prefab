@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 4535748283805397661}
   - component: {fileID: 6010529502379926869}
   - component: {fileID: 5337743095614737349}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Jar_1
-  m_TagString: Untagged
+  m_TagString: Sackable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,4 +143,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EntityID
-  id: 8e831698-2ba9-4aea-8d72-e131a25cab02
+  id: e491f1ec-a090-4958-9c8d-8b2558f5dd71

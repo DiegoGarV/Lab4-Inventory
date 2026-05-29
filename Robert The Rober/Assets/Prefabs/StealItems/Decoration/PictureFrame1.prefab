@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 65533864657824988}
   - component: {fileID: 9141870976988342248}
   - component: {fileID: 9180923702209118491}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BigPictureFrame
-  m_TagString: Untagged
+  m_TagString: Sackable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EntityID
-  id: d9bad10d-f461-4218-b57e-088ab8587757
+  id: 3a1768b0-58ba-42d4-a52a-9cc4e332edb1
 --- !u!1 &1163033574844990
 GameObject:
   m_ObjectHideFlags: 0

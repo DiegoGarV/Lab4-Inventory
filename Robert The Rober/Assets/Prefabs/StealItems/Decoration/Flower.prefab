@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 8653973996029148124}
   - component: {fileID: 4664485732513371370}
   - component: {fileID: -6294629631021190326}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Flower
-  m_TagString: Untagged
+  m_TagString: Sackable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,4 +143,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EntityID
-  id: b7b3463e-005e-465b-8ed8-29123164d793
+  id: 92643ddb-112b-49e8-ab8e-3dc21849feb6

@@ -44,7 +44,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1403206600122388643, guid: 72ca7aeda21ec674b9bfb91123d0e263, type: 3}
       propertyPath: id
-      value: 0a238517-d742-45cb-b170-3cbb2c7171c7
+      value: 05619d3f-6dd1-4e0e-b8cf-a7f9d7c308f3
       objectReference: {fileID: 0}
     - target: {fileID: 1566978063473202252, guid: 72ca7aeda21ec674b9bfb91123d0e263, type: 3}
       propertyPath: m_Name
@@ -108,6 +108,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3703128842306038444}
     m_Modifications:
+    - target: {fileID: 158889236681127147, guid: d9c9480afa265d94896e13edc024af89, type: 3}
+      propertyPath: id
+      value: 2fb26e76-206a-4604-b771-232833d39af5
+      objectReference: {fileID: 0}
     - target: {fileID: 3734611379897310439, guid: d9c9480afa265d94896e13edc024af89, type: 3}
       propertyPath: m_Name
       value: PC_Monitor
@@ -172,7 +176,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -4155135649970116809, guid: 636cd0f57c70ba442aebc84eb12e10b2, type: 3}
       propertyPath: id
-      value: aade6d02-2db3-41f4-a7f4-70275910451a
+      value: d6b20970-21dd-4b3a-8d77-08b2726aa654
       objectReference: {fileID: 0}
     - target: {fileID: 407933950140954298, guid: 636cd0f57c70ba442aebc84eb12e10b2, type: 3}
       propertyPath: m_LocalPosition.x

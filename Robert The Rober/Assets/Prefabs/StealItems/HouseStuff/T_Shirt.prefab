@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 4410056255352588339}
   - component: {fileID: 5423296424447262388}
   - component: {fileID: -6097930791334077314}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: T_Shirt
-  m_TagString: Untagged
+  m_TagString: Sackable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

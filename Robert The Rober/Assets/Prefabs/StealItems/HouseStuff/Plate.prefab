@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 3174184922305977688}
   - component: {fileID: -5943322115010287018}
   - component: {fileID: -261099855314830891}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plate
-  m_TagString: Untagged
+  m_TagString: Sackable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

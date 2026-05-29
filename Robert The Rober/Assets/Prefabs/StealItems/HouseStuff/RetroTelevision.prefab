@@ -194,9 +194,9 @@ GameObject:
   - component: {fileID: 65802322014781538}
   - component: {fileID: 3259906482493347302}
   - component: {fileID: 5698897712000841166}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TV
-  m_TagString: Untagged
+  m_TagString: Sackable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

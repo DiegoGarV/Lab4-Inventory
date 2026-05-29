@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 2941602439434497978}
   - component: {fileID: 6906364039014153566}
   - component: {fileID: 8497830204906498695}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Teapot
-  m_TagString: Untagged
+  m_TagString: Sackable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

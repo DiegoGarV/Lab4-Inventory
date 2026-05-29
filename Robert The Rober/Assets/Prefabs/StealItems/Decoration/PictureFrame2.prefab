@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 65533864657824988}
   - component: {fileID: 8169472156203222432}
   - component: {fileID: 8645389264268196319}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BigPictureFrame
-  m_TagString: Untagged
+  m_TagString: Sackable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

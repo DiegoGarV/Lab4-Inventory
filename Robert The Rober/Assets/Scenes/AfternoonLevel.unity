@@ -1640,7 +1640,7 @@ MonoBehaviour:
   interactDistance: 3
   interactMask:
     serializedVersion: 2
-    m_Bits: 576
+    m_Bits: 832
 --- !u!1001 &67462236
 PrefabInstance:
   m_ObjectHideFlags: 0

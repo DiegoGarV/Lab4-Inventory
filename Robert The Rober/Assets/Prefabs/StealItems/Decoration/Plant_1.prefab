@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 971559532113320287}
   - component: {fileID: 5386587012123717928}
   - component: {fileID: -4083538192318129421}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plant_1
-  m_TagString: Untagged
+  m_TagString: Sackable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
