@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
 
     private TMP_Text cashText;
     private Animator sackAnimator;
+    private TMP_Text sackLoadText;
     private MonoBehaviour firstPersonController;
     private MonoBehaviour actionController;
     private GameObject runawayScreen;
@@ -39,7 +40,7 @@ public class UIManager : MonoBehaviour
     public GameObject stolenItemsPanel;
     public MonoBehaviour stolenItemsUIController;
 
-    private StoreItemBase currentStoreItem;
+    private StorePurchaseItem currentStoreItem;
     private bool isPaused = false;
     public bool IsPaused => isPaused;
     private bool mainMenuButtonAutoSelected = false;
@@ -131,6 +132,7 @@ public class UIManager : MonoBehaviour
 
         cashText = refs.cashText;
         sackAnimator = refs.sackAnimator;
+        sackLoadText = refs.sackLoadText;
         firstPersonController = refs.firstPersonController;
         actionController = refs.actionController;
         runawayScreen = refs.runawayScreen;
@@ -163,6 +165,7 @@ public class UIManager : MonoBehaviour
     {
         cashText = null;
         sackAnimator = null;
+        sackLoadText = null;
         firstPersonController = null;
         actionController = null;
         runawayScreen = null;
@@ -284,10 +287,13 @@ public class UIManager : MonoBehaviour
 
     private void UpdateSackBar(float currentLoad, float maxLoad)
     {
-        if (sackAnimator == null) return;
+        if (sackAnimator != null) {
+            float normalizedLoad = Mathf.InverseLerp(0f, maxLoad, currentLoad);
+            sackAnimator.SetFloat("Storage", normalizedLoad);
+        }
 
-        float normalizedLoad = Mathf.InverseLerp(0f, maxLoad, currentLoad);
-        sackAnimator.SetFloat("Storage", normalizedLoad);
+        if (sackLoadText != null)
+            sackLoadText.text = $"{Mathf.RoundToInt(currentLoad)}/{Mathf.RoundToInt(maxLoad)}";
     }
 
     public void ShowRunawayScreen()
@@ -497,7 +503,7 @@ public class UIManager : MonoBehaviour
         currencyText.text = "Currency: $" + PlayerProgressManager.Instance.CurrentCurrency;
     }
 
-    public void ShowBuyItemPrompt(StoreItemBase storeItem)
+    public void ShowBuyItemPrompt(StorePurchaseItem storeItem)
     {
         if (storeItem == null) return;
 

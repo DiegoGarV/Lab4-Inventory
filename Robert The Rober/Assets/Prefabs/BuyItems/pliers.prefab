@@ -105,7 +105,7 @@ PrefabInstance:
       addedObject: {fileID: 8206342239303118970}
     - targetCorrespondingSourceObject: {fileID: 8164078558771037576, guid: 79db08bf94b749d41887272e42e1907b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8784422901090019554}
+      addedObject: {fileID: 4675027848245785234}
   m_SourcePrefab: {fileID: 100100000, guid: 79db08bf94b749d41887272e42e1907b, type: 3}
 --- !u!1 &722842660358391231 stripped
 GameObject:
@@ -133,7 +133,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 60.002987, y: 3.074989, z: 17.476328}
   m_Center: {x: -25.449144, y: 1.5398375, z: 0.000030517578}
---- !u!114 &8784422901090019554
+--- !u!114 &4675027848245785234
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,9 +142,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 722842660358391231}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07134b0b7031350429b0c001252f813f, type: 3}
+  m_Script: {fileID: 11500000, guid: 676ea673adfd60d4d8957c48b8b1e2d7, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WireCutterItem
-  itemDefinition: {fileID: 11400000, guid: 1bcc9b54fe0e0a14f82939eae14f6473, type: 2}
-  wasPurchased: 0
-  quantity: 0
+  m_EditorClassIdentifier: Assembly-CSharp::StorePurchaseItem
+  itemDefinition: {fileID: 0}

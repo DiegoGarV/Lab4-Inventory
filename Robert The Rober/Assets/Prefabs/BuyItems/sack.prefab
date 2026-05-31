@@ -73,7 +73,7 @@ PrefabInstance:
       addedObject: {fileID: -1062756792057838583}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 413b90c5539bd024ba3e636ca4ab40a2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6441155039483576099}
+      addedObject: {fileID: 2658758317916905946}
   m_SourcePrefab: {fileID: 100100000, guid: 413b90c5539bd024ba3e636ca4ab40a2, type: 3}
 --- !u!1 &7285742366952850029 stripped
 GameObject:
@@ -101,7 +101,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.008144962, y: 0.0060559427, z: 0.009307104}
   m_Center: {x: 0.0001831913, y: 0.0006072018, z: 0.0046437574}
---- !u!114 &6441155039483576099
+--- !u!114 &2658758317916905946
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,10 +110,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7285742366952850029}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efd1e52b004041e459bfe0dd4d362735, type: 3}
+  m_Script: {fileID: 11500000, guid: 676ea673adfd60d4d8957c48b8b1e2d7, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BiggerBagItem
-  itemDefinition: {fileID: 11400000, guid: 6191cb278c2f85548aa264d7d4a93c98, type: 2}
-  wasPurchased: 0
-  quantity: 0
-  newSackCapacity: 300
+  m_EditorClassIdentifier: Assembly-CSharp::StorePurchaseItem
+  itemDefinition: {fileID: 0}

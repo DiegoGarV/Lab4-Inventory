@@ -7,6 +7,7 @@ public class UISceneReferences : MonoBehaviour
     [Header("Heist HUD")]
     public TMP_Text cashText;
     public Animator sackAnimator;
+    public TMP_Text sackLoadText;
 
     [Header("Controllers")]
     public MonoBehaviour firstPersonController;

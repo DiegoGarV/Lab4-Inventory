@@ -143,7 +143,7 @@ PrefabInstance:
       addedObject: {fileID: 7690721827225479156}
     - targetCorrespondingSourceObject: {fileID: -344004081357383697, guid: 52b637f1f292fb744913bd705169ecac, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5098525845906780124}
+      addedObject: {fileID: 1681904235832160493}
   m_SourcePrefab: {fileID: 100100000, guid: 52b637f1f292fb744913bd705169ecac, type: 3}
 --- !u!1 &8656470580218970563 stripped
 GameObject:
@@ -171,7 +171,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.18685156, y: 0.116304845, z: 0.039089423}
   m_Center: {x: -0.0003315471, y: -0.0010586793, z: -0.000000027939677}
---- !u!114 &5098525845906780124
+--- !u!114 &1681904235832160493
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,10 +180,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8656470580218970563}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a7f12b45ab87274b83509fc20383985, type: 3}
+  m_Script: {fileID: 11500000, guid: 676ea673adfd60d4d8957c48b8b1e2d7, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LockpickItem
-  itemDefinition: {fileID: 11400000, guid: b6209b1d4f3a8694dbb4d6a4120d0157, type: 2}
-  wasPurchased: 0
-  quantity: 0
-  successChance: 0.5
+  m_EditorClassIdentifier: Assembly-CSharp::StorePurchaseItem
+  itemDefinition: {fileID: 0}

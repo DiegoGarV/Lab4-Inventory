@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class StoreItemBase : MonoBehaviour
+public class StorePurchaseItem : MonoBehaviour
 {
     [Header("Item Definition")]
     [SerializeField] private StoreItemDefinition itemDefinition;
@@ -16,6 +16,14 @@ public abstract class StoreItemBase : MonoBehaviour
     public StoreItemEffectType EffectType => itemDefinition != null ? itemDefinition.effectType : StoreItemEffectType.None;
     public string EffectDescription => itemDefinition != null ? itemDefinition.effectDescription : "";
 
+    private void OnValidate()
+    {
+        if (itemDefinition == null)
+        {
+            Debug.LogWarning($"StorePurchaseItem en '{gameObject.name}' no tiene StoreItemDefinition asignado.", this);
+        }
+    }
+
     public virtual bool CanBePurchased(int currentMoney)
     {
         if (itemDefinition == null) return false;
@@ -30,27 +38,9 @@ public abstract class StoreItemBase : MonoBehaviour
 
     public virtual void Purchase()
     {
-        OnPurchaseRegistered();
-
         if (DestroyOnPurchase)
         {
             Destroy(gameObject);
         }
-    }
-
-    protected virtual void OnPurchaseRegistered()
-    {
-    }
-
-    protected virtual void OnConsumedCompletely()
-    {
-    }
-
-    protected virtual void ApplyEffect()
-    {
-    }
-
-    public virtual void ApplyLevelStartEffect()
-    {
     }
 }

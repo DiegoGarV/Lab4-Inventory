@@ -17,4 +17,8 @@ public class StoreItemDefinition : ScriptableObject
     public StoreItemEffectType effectType;
     [TextArea]
     public string effectDescription;
+
+    public virtual void ApplyLevelStartEffect()
+    {
+    }
 }

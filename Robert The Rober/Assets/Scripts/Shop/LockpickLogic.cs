@@ -1,32 +1,41 @@
 using UnityEngine;
 
-public class LockpickItem : StoreItemBase
+public class LockpickLogic : StoreItemLogicBase
 {
-    public const string LockpickItemId = "lockpick";
-
-    protected override void ApplyEffect()
-    {
-        Debug.Log("La ganzúa se usa sobre una puerta desde ActionController.");
-    }
-
     public override void ApplyLevelStartEffect()
     {
-        Debug.Log("Ganzúa comprada y disponible para usar.");
+        Debug.Log("LockpickLogic: ganzúa disponible para usar.");
     }
 
-    protected override void OnConsumedCompletely()
+    public override bool Use(RaycastHit hit)
     {
-        Debug.Log("Ya no quedan ganzúas.");
-    }
+        DoorController door = hit.collider.GetComponentInParent<DoorController>();
 
-    public static bool TryUseOnDoor(DoorController door)
-    {
         if (door == null)
             return false;
 
         if (door.CanOpenNormally())
         {
             door.Interact();
+            return true;
+        }
+
+        if (PlayerProgressManager.Instance == null)
+            return false;
+
+        int lockpickCount = PlayerProgressManager.Instance.GetItemQuantity(ItemId);
+
+        if (lockpickCount <= 0)
+        {
+            Debug.Log("No tienes ganzúas.");
+            return true;
+        }
+
+        bool consumed = PlayerProgressManager.Instance.ConsumeItem(ItemId);
+
+        if (!consumed)
+        {
+            Debug.Log("No se pudo consumir una ganzúa.");
             return true;
         }
 
@@ -42,10 +51,10 @@ public class LockpickItem : StoreItemBase
         }
 
         Debug.Log($"La ganzúa falló. Probabilidad: {successChance * 100f}%");
-        return false;
+        return true;
     }
 
-    private static float GetSuccessChance(DoorController.DoorLevel level)
+    private float GetSuccessChance(DoorController.DoorLevel level)
     {
         switch (level)
         {

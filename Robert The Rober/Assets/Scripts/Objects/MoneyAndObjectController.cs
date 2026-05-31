@@ -99,4 +99,16 @@ public class MoneyAndObjectsController : MonoBehaviour
         OnCashChanged?.Invoke(cashScore);
         OnSackChanged?.Invoke(currentSackLoad, maxSackLoad);
     }
+
+    public void ResetSackCapacity()
+    {
+        maxSackLoad = 150f;
+        OnSackChanged?.Invoke(currentSackLoad, maxSackLoad);
+    }
+
+    public void SetMaxSackLoad(float newMaxLoad)
+    {
+        maxSackLoad = Mathf.Max(1f, newMaxLoad);
+        OnSackChanged?.Invoke(currentSackLoad, maxSackLoad);
+    }
 }

@@ -50,9 +50,9 @@ public class StoreItemsManager : MonoBehaviour
     {
         if (PlayerProgressManager.Instance == null) return;
 
-        StoreItemBase[] allStoreItems = FindObjectsByType<StoreItemBase>(FindObjectsSortMode.None);
+        StorePurchaseItem[] allStoreItems = FindObjectsByType<StorePurchaseItem>(FindObjectsSortMode.None);
 
-        foreach (StoreItemBase item in allStoreItems)
+        foreach (StorePurchaseItem item in allStoreItems)
         {
             if (item == null) continue;
 

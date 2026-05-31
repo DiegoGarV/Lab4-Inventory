@@ -112,7 +112,7 @@ public class ActionController : MonoBehaviour
                 return;
             }
 
-            StoreItemBase buyableItem = hit.collider.GetComponentInParent<StoreItemBase>();
+            StorePurchaseItem buyableItem = hit.collider.GetComponentInParent<StorePurchaseItem>();
 
             if (buyableItem != null)
             {
@@ -161,45 +161,34 @@ public class ActionController : MonoBehaviour
             return;
         }
 
-        DoorController door = hit.collider.GetComponentInParent<DoorController>();
-
-        if (door == null)
-        {
-            Debug.Log("No estás apuntando a una puerta.");
-            return;
-        }
-
-        if (door.CanOpenNormally())
-        {
-            door.Interact();
-            return;
-        }
-
         if (PlayerProgressManager.Instance == null)
             return;
 
-        int lockpickCount = PlayerProgressManager.Instance.GetItemQuantity(LockpickItem.LockpickItemId);
-
-        if (lockpickCount <= 0)
+        if (StoreItemLogicManager.Instance == null)
         {
-            Debug.Log("No tienes ganzúas.");
+            Debug.LogWarning("StoreItemLogicManager.Instance es null.");
             return;
         }
 
-        // Consumimos una ganzúa por intento
-        bool consumed = PlayerProgressManager.Instance.ConsumeItem(LockpickItem.LockpickItemId);
-
-        if (!consumed)
+        foreach (PurchasedStoreItemData purchasedItem in PlayerProgressManager.Instance.PurchasedItems)
         {
-            Debug.Log("No se pudo consumir una ganzúa.");
-            return;
+            if (purchasedItem == null || !purchasedItem.wasPurchased)
+                continue;
+
+            if (purchasedItem.quantity <= 0)
+                continue;
+
+            StoreItemLogicBase logic = StoreItemLogicManager.Instance.GetLogicById(purchasedItem.itemId);
+
+            if (logic == null)
+                continue;
+
+            bool wasUsed = logic.Use(hit);
+
+            if (wasUsed)
+                return;
         }
 
-        bool success = LockpickItem.TryUseOnDoor(door);
-
-        if (!success)
-        {
-            Debug.Log("La ganzúa se rompió o no logró abrir la puerta.");
-        }
+        Debug.Log("Ningún item comprado pudo usarse aquí.");
     }
 }

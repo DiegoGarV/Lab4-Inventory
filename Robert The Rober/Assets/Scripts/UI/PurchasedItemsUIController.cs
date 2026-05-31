@@ -78,11 +78,11 @@ public class PurchasedItemsUIController : MonoBehaviour
         }
     }
 
-    private StoreItemBase FindStoreItemById(string itemId)
+    private StorePurchaseItem FindStoreItemById(string itemId)
     {
-        StoreItemBase[] allStoreItems = FindObjectsByType<StoreItemBase>(FindObjectsSortMode.None);
+        StorePurchaseItem[] allStoreItems = FindObjectsByType<StorePurchaseItem>(FindObjectsSortMode.None);
 
-        foreach (StoreItemBase item in allStoreItems)
+        foreach (StorePurchaseItem item in allStoreItems)
         {
             if (item.ItemId == itemId)
                 return item;

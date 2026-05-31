@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerProgressManager : MonoBehaviour
 {
@@ -25,6 +26,61 @@ public class PlayerProgressManager : MonoBehaviour
         }
 
         Instance = this;
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        SetCurrentLevel(scene.name);
+
+        if (IsHeistScene(scene.name))
+        {
+            ApplyLevelStartItemEffects();
+        }
+    }
+
+    private bool IsHeistScene(string sceneName)
+    {
+        return sceneName == "MorningLevel" || sceneName == "AfternoonLevel";
+    }
+
+    private void ApplyLevelStartItemEffects()
+    {
+        if (MoneyAndObjectsController.Instance != null)
+        {
+            MoneyAndObjectsController.Instance.ResetSackCapacity();
+        }
+        
+        if (StoreItemLogicManager.Instance == null)
+        {
+            Debug.LogWarning("PlayerProgressManager: StoreItemLogicManager.Instance es null.");
+            return;
+        }
+
+        foreach (PurchasedStoreItemData purchasedItem in purchasedItems)
+        {
+            if (purchasedItem == null || !purchasedItem.wasPurchased)
+                continue;
+
+            StoreItemLogicBase itemLogic = StoreItemLogicManager.Instance.GetLogicById(purchasedItem.itemId);
+
+            if (itemLogic == null)
+            {
+                Debug.LogWarning($"PlayerProgressManager: no se encontró lógica para itemId {purchasedItem.itemId}");
+                continue;
+            }
+
+            itemLogic.ApplyLevelStartEffect();
+        }
     }
 
     public void SetCurrency(int value)
@@ -65,7 +121,7 @@ public class PlayerProgressManager : MonoBehaviour
         return item != null ? item.quantity : 0;
     }
 
-    public void RegisterPurchase(StoreItemBase item)
+    public void RegisterPurchase(StorePurchaseItem item)
     {
         if (item == null) return;
 

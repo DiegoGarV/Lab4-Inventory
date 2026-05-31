@@ -4892,6 +4892,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UISceneReferences
   cashText: {fileID: 0}
   sackAnimator: {fileID: 0}
+  sackLoadText: {fileID: 0}
   firstPersonController: {fileID: 338677634}
   actionController: {fileID: 169875223}
   runawayScreen: {fileID: 0}
@@ -5091,6 +5092,7 @@ PrefabInstance:
     - {fileID: 8926662137936227868, guid: cfc5b509ff618d04d8cd9372a55e8283, type: 3}
     - {fileID: 4228977902441369518, guid: cfc5b509ff618d04d8cd9372a55e8283, type: 3}
     - {fileID: 6098585093114246670, guid: cfc5b509ff618d04d8cd9372a55e8283, type: 3}
+    - {fileID: 6723851327814979329, guid: cfc5b509ff618d04d8cd9372a55e8283, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfc5b509ff618d04d8cd9372a55e8283, type: 3}
@@ -9798,6 +9800,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lamb Chop Cooked
       objectReference: {fileID: 0}
+    - target: {fileID: 5291862169146962992, guid: 44b8404b36524d8498b3c9305721f977, type: 3}
+      propertyPath: itemDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: aab73eac29ff6054c8b4ae577f8ab8bf, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15651,7 +15657,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: lockpickingTools
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1681904235832160493, guid: a09641badfc97ca488f78d5c4b789cf4, type: 3}
+      propertyPath: itemDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: b6209b1d4f3a8694dbb4d6a4120d0157, type: 2}
+    m_RemovedComponents:
+    - {fileID: 5098525845906780124, guid: a09641badfc97ca488f78d5c4b789cf4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -15669,6 +15680,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 965097639}
     m_Modifications:
+    - target: {fileID: 4675027848245785234, guid: ed8dcdee9e93b7142b9d9319e26dafe9, type: 3}
+      propertyPath: itemDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 1bcc9b54fe0e0a14f82939eae14f6473, type: 2}
     - target: {fileID: 8612508053579398502, guid: ed8dcdee9e93b7142b9d9319e26dafe9, type: 3}
       propertyPath: m_Name
       value: pliers
@@ -15775,6 +15790,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: masterKey
       objectReference: {fileID: 0}
+    - target: {fileID: 8089410687877365254, guid: c8b7ab3d57d8c1340a631446f8deb922, type: 3}
+      propertyPath: itemDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 24ec9183b4299b949aba8ad70796d10e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15788,6 +15807,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 965097639}
     m_Modifications:
+    - target: {fileID: 444178271559243004, guid: 8baa713d1c18e9549a955d0e9cd16275, type: 3}
+      propertyPath: itemDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: d24c5de71bb7a594d91610f742ec075e, type: 2}
     - target: {fileID: 2538784209382403547, guid: 8baa713d1c18e9549a955d0e9cd16275, type: 3}
       propertyPath: m_Name
       value: catalog
@@ -15851,6 +15874,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 965097639}
     m_Modifications:
+    - target: {fileID: 2658758317916905946, guid: 132c320e54464dc4cb7c8a2e6c8bc445, type: 3}
+      propertyPath: itemDefinition
+      value: 
+      objectReference: {fileID: 11400000, guid: 6191cb278c2f85548aa264d7d4a93c98, type: 2}
     - target: {fileID: 7285742366952850029, guid: 132c320e54464dc4cb7c8a2e6c8bc445, type: 3}
       propertyPath: m_Name
       value: sack
@@ -15895,7 +15922,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6441155039483576099, guid: 132c320e54464dc4cb7c8a2e6c8bc445, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
