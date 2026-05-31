@@ -49,4 +49,15 @@ public class StoreItemLogicManager : MonoBehaviour
         logicById.TryGetValue(itemId, out StoreItemLogicBase logic);
         return logic;
     }
+
+    public T GetLogic<T>() where T : StoreItemLogicBase
+    {
+        foreach (StoreItemLogicBase logic in itemLogics)
+        {
+            if (logic is T typedLogic)
+                return typedLogic;
+        }
+
+        return null;
+    }
 }

@@ -170,9 +170,38 @@ public class ActionController : MonoBehaviour
             return;
         }
 
+        // 1. Intentar primero Master Key
+        MasterKeyLogic masterKeyLogic = StoreItemLogicManager.Instance.GetLogic<MasterKeyLogic>();
+
+        if (masterKeyLogic != null &&
+            PlayerProgressManager.Instance.HasItem(masterKeyLogic.ItemId))
+        {
+            bool used = masterKeyLogic.Use(hit);
+            if (used)
+                return;
+        }
+
+        // 2. Intentar luego Lockpick
+        LockpickLogic lockpickLogic = StoreItemLogicManager.Instance.GetLogic<LockpickLogic>();
+
+        if (lockpickLogic != null &&
+            PlayerProgressManager.Instance.GetItemQuantity(lockpickLogic.ItemId) > 0)
+        {
+            bool used = lockpickLogic.Use(hit);
+            if (used)
+                return;
+        }
+
+        // 3. Intentar los demás items comprados
         foreach (PurchasedStoreItemData purchasedItem in PlayerProgressManager.Instance.PurchasedItems)
         {
             if (purchasedItem == null || !purchasedItem.wasPurchased)
+                continue;
+
+            if (masterKeyLogic != null && purchasedItem.itemId == masterKeyLogic.ItemId)
+                continue;
+
+            if (lockpickLogic != null && purchasedItem.itemId == lockpickLogic.ItemId)
                 continue;
 
             if (purchasedItem.quantity <= 0)

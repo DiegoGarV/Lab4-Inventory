@@ -9,7 +9,21 @@ public class MasterKeyLogic : StoreItemLogicBase
 
     public override bool Use(RaycastHit hit)
     {
-        Debug.Log("MasterKeyLogic: llave maestra usada.");
+        DoorController door = hit.collider.GetComponentInParent<DoorController>();
+
+        if (door == null)
+            return false;
+
+        if (door.CanOpenNormally())
+        {
+            door.Interact();
+            return true;
+        }
+
+        door.UnlockDoor();
+        door.OpenDoor();
+
+        Debug.Log("MasterKeyLogic: la puerta se abrió con la llave maestra.");
         return true;
     }
 }
