@@ -146,7 +146,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: cb00ea109e5985e4a953b541ce373c14, type: 2}
     - target: {fileID: 919132149155446097, guid: 57f965c96b1d87644914d9ad6e04c6ae, type: 3}
       propertyPath: m_Name
-      value: electrical boxes
+      value: electricalBox1
       objectReference: {fileID: 0}
     - target: {fileID: 1165206929050764093, guid: 57f965c96b1d87644914d9ad6e04c6ae, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -236,5 +236,51 @@ PrefabInstance:
     - {fileID: -7885170258214896929, guid: 57f965c96b1d87644914d9ad6e04c6ae, type: 3}
     - {fileID: 1265202918246489698, guid: 57f965c96b1d87644914d9ad6e04c6ae, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 57f965c96b1d87644914d9ad6e04c6ae, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 170072668814459862}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 57f965c96b1d87644914d9ad6e04c6ae, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8005159513607584838}
   m_SourcePrefab: {fileID: 100100000, guid: 57f965c96b1d87644914d9ad6e04c6ae, type: 3}
+--- !u!1 &8846777482413396276 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 57f965c96b1d87644914d9ad6e04c6ae, type: 3}
+  m_PrefabInstance: {fileID: 8504899387495935077}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &170072668814459862
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8846777482413396276}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.11247063, y: 0.6077528, z: 0.7006798}
+  m_Center: {x: 0.021503448, y: -0.0006326437, z: -0.0010471344}
+--- !u!114 &8005159513607584838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8846777482413396276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 285f78d01e91c41428e07275689615fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PowerBoxController
+  connectedCameras: []
+  powerOn: 1

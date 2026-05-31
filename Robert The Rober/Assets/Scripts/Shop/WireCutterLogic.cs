@@ -9,7 +9,19 @@ public class WireCutterLogic : StoreItemLogicBase
 
     public override bool Use(RaycastHit hit)
     {
-        Debug.Log("WireCutterLogic: corta cables usados.");
+        PowerBoxController powerBox = hit.collider.GetComponentInParent<PowerBoxController>();
+
+        if (powerBox == null)
+            return false;
+
+        if (!powerBox.PowerOn)
+        {
+            Debug.Log("WireCutterLogic: esa caja ya no tiene energía.");
+            return true;
+        }
+
+        powerBox.CutPower();
+        Debug.Log("WireCutterLogic: energía cortada.");
         return true;
     }
 }

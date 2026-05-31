@@ -57,16 +57,40 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: c942d41f52344754293cddcc0d6f22ce, type: 2}
     - target: {fileID: -5568371526223589888, guid: 4970b598b22dff74f8af932ef5fb3bea, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: 4970b598b22dff74f8af932ef5fb3bea, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2577548232221058511, guid: 4970b598b22dff74f8af932ef5fb3bea, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2577548232221058511, guid: 4970b598b22dff74f8af932ef5fb3bea, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2577548232221058511, guid: 4970b598b22dff74f8af932ef5fb3bea, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2577548232221058511, guid: 4970b598b22dff74f8af932ef5fb3bea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4970b598b22dff74f8af932ef5fb3bea, type: 3}
       propertyPath: m_Name
       value: SM_safe Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4970b598b22dff74f8af932ef5fb3bea, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4970b598b22dff74f8af932ef5fb3bea, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7202271454713460447, guid: 4970b598b22dff74f8af932ef5fb3bea, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -79,7 +103,56 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4970b598b22dff74f8af932ef5fb3bea, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2903434286810867223}
+    - targetCorrespondingSourceObject: {fileID: -5568371526223589888, guid: 4970b598b22dff74f8af932ef5fb3bea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4006791887367192602}
+    - targetCorrespondingSourceObject: {fileID: -5568371526223589888, guid: 4970b598b22dff74f8af932ef5fb3bea, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1457897510153909730}
   m_SourcePrefab: {fileID: 100100000, guid: 4970b598b22dff74f8af932ef5fb3bea, type: 3}
+--- !u!1 &6242597040852349115 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5568371526223589888, guid: 4970b598b22dff74f8af932ef5fb3bea, type: 3}
+  m_PrefabInstance: {fileID: 7213363035214429883}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &4006791887367192602
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6242597040852349115}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2534964839176971238, guid: 4970b598b22dff74f8af932ef5fb3bea, type: 3}
+--- !u!114 &1457897510153909730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6242597040852349115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5afa6aae247fea48882e751fe0d4bd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorController
+  doorLevel: 2
+  closedYRotation: 0
+  openYRotation: -110
+  isOpen: 0
 --- !u!1 &7555468592539403242 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4970b598b22dff74f8af932ef5fb3bea, type: 3}
