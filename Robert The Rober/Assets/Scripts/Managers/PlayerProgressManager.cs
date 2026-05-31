@@ -13,9 +13,12 @@ public class PlayerProgressManager : MonoBehaviour
     [Header("Purchased Store Items")]
     [SerializeField] private List<PurchasedStoreItemData> purchasedItems = new();
 
+    private bool canSeeItemPrices = false;
+
     public int CurrentCurrency => currentCurrency;
     public string CurrentLevelName => currentLevelName;
     public List<PurchasedStoreItemData> PurchasedItems => purchasedItems;
+    public bool CanSeeItemPrices => canSeeItemPrices;
 
     private void Awake()
     {
@@ -55,11 +58,13 @@ public class PlayerProgressManager : MonoBehaviour
 
     private void ApplyLevelStartItemEffects()
     {
+        ResetLevelItemEffectsFlags();
+        
         if (MoneyAndObjectsController.Instance != null)
         {
             MoneyAndObjectsController.Instance.ResetSackCapacity();
         }
-        
+
         if (StoreItemLogicManager.Instance == null)
         {
             Debug.LogWarning("PlayerProgressManager: StoreItemLogicManager.Instance es null.");
@@ -159,5 +164,15 @@ public class PlayerProgressManager : MonoBehaviour
         currentCurrency = 0;
         currentLevelName = "";
         purchasedItems.Clear();
+    }
+
+    public void SetCanSeeItemPrices(bool value)
+    {
+        canSeeItemPrices = value;
+    }
+
+    public void ResetLevelItemEffectsFlags()
+    {
+        canSeeItemPrices = false;
     }
 }

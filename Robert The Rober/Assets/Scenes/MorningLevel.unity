@@ -32781,6 +32781,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7348335246731431289, guid: 05f610bdf72a02c4ea6a96edf7de4e6c, type: 3}
   m_PrefabInstance: {fileID: 1105907862}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1109746355 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4480882529808850112, guid: cfc5b509ff618d04d8cd9372a55e8283, type: 3}
+  m_PrefabInstance: {fileID: 8087552085990390928}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &1113786935
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45298,6 +45309,8 @@ MonoBehaviour:
   cashText: {fileID: 2094790178}
   sackAnimator: {fileID: 81283830}
   sackLoadText: {fileID: 8087552085990390929}
+  sackableHintText: {fileID: 8087552085990390930}
+  sackableValueText: {fileID: 1109746355}
   firstPersonController: {fileID: 1216912425}
   actionController: {fileID: 66072483}
   runawayScreen: {fileID: 1220261381}
@@ -61447,6 +61460,17 @@ PrefabInstance:
 --- !u!114 &8087552085990390929 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5946192356130177507, guid: cfc5b509ff618d04d8cd9372a55e8283, type: 3}
+  m_PrefabInstance: {fileID: 8087552085990390928}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &8087552085990390930 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5784276543999026356, guid: cfc5b509ff618d04d8cd9372a55e8283, type: 3}
   m_PrefabInstance: {fileID: 8087552085990390928}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

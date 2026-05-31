@@ -4893,6 +4893,7 @@ MonoBehaviour:
   cashText: {fileID: 0}
   sackAnimator: {fileID: 0}
   sackLoadText: {fileID: 0}
+  sackableHintText: {fileID: 0}
   firstPersonController: {fileID: 338677634}
   actionController: {fileID: 169875223}
   runawayScreen: {fileID: 0}
@@ -5093,6 +5094,8 @@ PrefabInstance:
     - {fileID: 4228977902441369518, guid: cfc5b509ff618d04d8cd9372a55e8283, type: 3}
     - {fileID: 6098585093114246670, guid: cfc5b509ff618d04d8cd9372a55e8283, type: 3}
     - {fileID: 6723851327814979329, guid: cfc5b509ff618d04d8cd9372a55e8283, type: 3}
+    - {fileID: 3498768762294571149, guid: cfc5b509ff618d04d8cd9372a55e8283, type: 3}
+    - {fileID: 2636573512058009752, guid: cfc5b509ff618d04d8cd9372a55e8283, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfc5b509ff618d04d8cd9372a55e8283, type: 3}

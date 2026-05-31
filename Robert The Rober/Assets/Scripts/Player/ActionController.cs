@@ -27,6 +27,11 @@ public class ActionController : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        UpdateSackableHint();
+    }
+
     private void OnDestroy()
     {
         if (EventManager.Instance != null)
@@ -219,5 +224,47 @@ public class ActionController : MonoBehaviour
         }
 
         Debug.Log("Ningún item comprado pudo usarse aquí.");
+    }
+
+    private void UpdateSackableHint()
+    {
+        if (cam == null)
+        {
+            cam = Camera.main;
+            if (cam == null) return;
+        }
+
+        if (UIManager.Instance == null)
+            return;
+
+        if (Physics.Raycast(
+            cam.transform.position,
+            cam.transform.forward,
+            out RaycastHit hit,
+            interactDistance,
+            interactMask,
+            QueryTriggerInteraction.Collide))
+        {
+            if (hit.collider.CompareTag("Sackable"))
+            {
+                Pickup pickup = hit.collider.GetComponentInParent<Pickup>();
+
+                if (pickup != null)
+                {
+                    bool showPrice = PlayerProgressManager.Instance != null &&
+                                    PlayerProgressManager.Instance.CanSeeItemPrices;
+
+                    UIManager.Instance.ShowSackableHint(
+                        pickup.SackValue,
+                        pickup.MonetaryValue,
+                        showPrice
+                    );
+
+                    return;
+                }
+            }
+        }
+
+        UIManager.Instance.HideSackableHint();
     }
 }

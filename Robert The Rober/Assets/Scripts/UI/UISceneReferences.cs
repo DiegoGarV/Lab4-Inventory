@@ -8,6 +8,8 @@ public class UISceneReferences : MonoBehaviour
     public TMP_Text cashText;
     public Animator sackAnimator;
     public TMP_Text sackLoadText;
+    public TMP_Text sackableHintText;
+    public TMP_Text sackableValueText;
 
     [Header("Controllers")]
     public MonoBehaviour firstPersonController;

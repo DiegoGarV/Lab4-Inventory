@@ -13,6 +13,8 @@ public class UIManager : MonoBehaviour
     private TMP_Text cashText;
     private Animator sackAnimator;
     private TMP_Text sackLoadText;
+    private TMP_Text sackableHintText;
+    private TMP_Text sackableValueText;
     private MonoBehaviour firstPersonController;
     private MonoBehaviour actionController;
     private GameObject runawayScreen;
@@ -133,6 +135,8 @@ public class UIManager : MonoBehaviour
         cashText = refs.cashText;
         sackAnimator = refs.sackAnimator;
         sackLoadText = refs.sackLoadText;
+        sackableHintText = refs.sackableHintText;
+        sackableValueText = refs.sackableValueText;
         firstPersonController = refs.firstPersonController;
         actionController = refs.actionController;
         runawayScreen = refs.runawayScreen;
@@ -166,6 +170,8 @@ public class UIManager : MonoBehaviour
         cashText = null;
         sackAnimator = null;
         sackLoadText = null;
+        sackableHintText = null;
+        sackableValueText = null;
         firstPersonController = null;
         actionController = null;
         runawayScreen = null;
@@ -249,6 +255,12 @@ public class UIManager : MonoBehaviour
         {
             StoreItemsManager.Instance.SyncStoreSceneItems();
         }
+
+        if (sackableHintText != null)
+            sackableHintText.gameObject.SetActive(false);
+
+        if (sackableValueText != null)
+            sackableValueText.gameObject.SetActive(false);
 
         UpdateStoreCurrency();
     }
@@ -769,5 +781,36 @@ public class UIManager : MonoBehaviour
             (stolenItemsPanel != null && stolenItemsPanel.activeSelf);
 
         Cursor.visible = shouldShowCursor;
+    }
+
+    public void ShowSackableHint(float sackValue, int monetaryValue, bool showPrice)
+    {
+        if (sackableHintText != null)
+        {
+            sackableHintText.text = $"Space: {Mathf.RoundToInt(sackValue)}";
+            sackableHintText.gameObject.SetActive(true);
+        }
+
+        if (sackableValueText != null)
+        {
+            if (showPrice)
+            {
+                sackableValueText.text = $"Value: ${monetaryValue}";
+                sackableValueText.gameObject.SetActive(true);
+            }
+            else
+            {
+                sackableValueText.gameObject.SetActive(false);
+            }
+        }
+    }
+
+    public void HideSackableHint()
+    {
+        if (sackableHintText != null)
+            sackableHintText.gameObject.SetActive(false);
+
+        if (sackableValueText != null)
+            sackableValueText.gameObject.SetActive(false);
     }
 }

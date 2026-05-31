@@ -4,6 +4,10 @@ public class CatalogLogic : StoreItemLogicBase
 {
     public override void ApplyLevelStartEffect()
     {
-        Debug.Log("CatalogLogic: catálogo disponible para usar.");
+        if (PlayerProgressManager.Instance != null)
+        {
+            PlayerProgressManager.Instance.SetCanSeeItemPrices(true);
+            Debug.Log("CatalogLogic: ahora se puede ver el valor de los objetos.");
+        }
     }
 }
