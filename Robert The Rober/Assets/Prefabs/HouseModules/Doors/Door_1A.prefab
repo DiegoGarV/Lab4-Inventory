@@ -1,5 +1,53 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6106064377060554592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5361206657054914197}
+  - component: {fileID: 6111525808846966260}
+  m_Layer: 0
+  m_Name: DoorBlocker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5361206657054914197
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6106064377060554592}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.546, y: -1.0109999, z: 0.087}
+  m_LocalScale: {x: 1.1115, y: 1.9705, z: 0.16541481}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 202231548456049310}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!208 &6111525808846966260
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6106064377060554592}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &6342062413248217533
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,6 +494,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Exterior_Door_Tile
       objectReference: {fileID: 0}
+    - target: {fileID: 3270991001825467147, guid: 2d0df1a3730617f4a917d6dfc70e53f2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8908973473434199149, guid: 2d0df1a3730617f4a917d6dfc70e53f2, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -776,6 +828,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7647719773740356045, guid: 339aefca50fd7ea43a548819cf03cea6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2536593413511325432}
+    - targetCorrespondingSourceObject: {fileID: 7647719773740356045, guid: 339aefca50fd7ea43a548819cf03cea6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5361206657054914197}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1635039950223524199, guid: 339aefca50fd7ea43a548819cf03cea6, type: 3}
       insertIndex: -1
@@ -807,7 +862,7 @@ MonoBehaviour:
   closedYRotation: 0
   openYRotation: 110
   isOpen: 0
-  isUnlockedPermanently: 0
+  navMeshObstacle: {fileID: 6111525808846966260}
 --- !u!1001 &8274924540490086492
 PrefabInstance:
   m_ObjectHideFlags: 0

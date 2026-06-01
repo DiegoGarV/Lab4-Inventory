@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class DoorController : MonoBehaviour
 {
@@ -18,6 +19,9 @@ public class DoorController : MonoBehaviour
     [Header("Current State")]
     [SerializeField] private bool isOpen = false;
 
+    [Header("Navigation")]
+    [SerializeField] private NavMeshObstacle navMeshObstacle;
+
     private bool wasOpened = false;
 
     public DoorLevel CurrentDoorLevel => doorLevel;
@@ -26,7 +30,11 @@ public class DoorController : MonoBehaviour
 
     private void Start()
     {
+        if (navMeshObstacle == null)
+            navMeshObstacle = GetComponent<NavMeshObstacle>();
+
         ApplyRotationInstant();
+        UpdateNavigationState();
     }
 
     public bool CanOpenNormally()
@@ -55,12 +63,14 @@ public class DoorController : MonoBehaviour
     {
         isOpen = true;
         SetYRotation(openYRotation);
+        UpdateNavigationState();
     }
 
     public void CloseDoor()
     {
         isOpen = false;
         SetYRotation(closedYRotation);
+        UpdateNavigationState();
     }
 
     public void ToggleDoor()
@@ -82,5 +92,13 @@ public class DoorController : MonoBehaviour
         Vector3 currentEuler = transform.localEulerAngles;
         currentEuler.y = yRotation;
         transform.localEulerAngles = currentEuler;
+    }
+
+    private void UpdateNavigationState()
+    {
+        if (navMeshObstacle == null)
+            return;
+
+        navMeshObstacle.enabled = !isOpen;
     }
 }

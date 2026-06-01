@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8751386502240410090}
-  m_Layer: 3
+  m_Layer: 11
   m_Name: RoofFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4425002332855253896}
   - component: {fileID: 6929903507547979056}
   - component: {fileID: 7247307016184708276}
-  m_Layer: 3
+  m_Layer: 11
   m_Name: Interior_FloorToRoof_Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
