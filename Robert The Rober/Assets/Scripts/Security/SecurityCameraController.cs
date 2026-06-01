@@ -50,7 +50,14 @@ public class SecurityCameraController : MonoBehaviour
 
             if (!Physics.Raycast(viewOrigin.position, directionToTarget, distanceToTarget, obstructionMask))
             {
-                Debug.Log($"Cámara {name}: jugador detectado.");
+                if (UIManager.Instance != null)
+                {
+                    UIManager.Instance.ShowCaughtScreen();
+                }
+                else
+                {
+                    Debug.Log($"Cámara {name}: jugador detectado.");
+                }
                 return;
             }
         }

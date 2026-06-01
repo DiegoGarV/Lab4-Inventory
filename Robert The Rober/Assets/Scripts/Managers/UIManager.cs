@@ -813,4 +813,11 @@ public class UIManager : MonoBehaviour
         if (sackableValueText != null)
             sackableValueText.gameObject.SetActive(false);
     }
+
+    public void ShowCaughtScreen()
+    {
+        Debug.Log("El jugador fue atrapado o detectado.");
+        
+        // TODO: implementar pantalla de captura
+    }
 }

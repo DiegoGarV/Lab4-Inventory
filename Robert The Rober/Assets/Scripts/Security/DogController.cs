@@ -12,6 +12,7 @@ public class DogController : MonoBehaviour
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private float runSpeed = 3.5f;
     [SerializeField] private float walkSpeed = 1.5f;
+    [SerializeField] private float eatDistance = 1f;
 
     [Header("Animation")]
     [SerializeField] private Animator animator;
@@ -21,7 +22,11 @@ public class DogController : MonoBehaviour
     [SerializeField] private string isEatingParam = "IsEating";
     [SerializeField] private string isBlockedParam = "IsBlocked";
 
+    [Header("Eating")]
+    [SerializeField] private Transform mouthPoint;
+
     private Transform currentTarget;
+    private Transform currentMeatTarget;
     private bool isDistracted = false;
 
     private void Start()
@@ -34,6 +39,9 @@ public class DogController : MonoBehaviour
 
         if (detectionOrigin == null)
             detectionOrigin = transform;
+
+        if (mouthPoint == null)
+            mouthPoint = transform;
 
         SetSittingState(true);
         SetAngryState(false);
@@ -51,7 +59,7 @@ public class DogController : MonoBehaviour
     {
         if (isDistracted)
         {
-            UpdateAnimatorSpeed(0f);
+            HandleDistractedState();
             return;
         }
 
@@ -122,6 +130,53 @@ public class DogController : MonoBehaviour
         UpdateAnimatorSpeed(agent.velocity.magnitude);
     }
 
+    private void HandleDistractedState()
+    {
+        if (agent == null)
+            return;
+
+        if (currentMeatTarget == null)
+        {
+            agent.isStopped = true;
+            UpdateAnimatorSpeed(0f);
+            return;
+        }
+
+        Vector3 targetPosition = currentMeatTarget.position;
+
+        agent.isStopped = false;
+        agent.speed = walkSpeed;
+        agent.SetDestination(targetPosition);
+
+        if (agent.pathPending)
+            return;
+
+        UpdateAnimatorSpeed(agent.velocity.magnitude);
+
+        float distanceToMeat = Vector3.Distance(mouthPoint.position, currentMeatTarget.position);
+
+        if (distanceToMeat <= eatDistance)
+        {
+            Debug.Log("Perro llegó a la carne. Distancia: " + distanceToMeat);
+            StartEating();
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (((1 << other.gameObject.layer) & playerMask) == 0)
+            return;
+
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.ShowCaughtScreen();
+        }
+        else
+        {
+            Debug.Log("El perro atrapó al jugador.");
+        }
+    }
+
     private void StayIdle()
     {
         if (agent != null)
@@ -167,11 +222,13 @@ public class DogController : MonoBehaviour
 
         isDistracted = true;
         currentTarget = null;
+        currentMeatTarget = meatTarget;
 
         SetAngryState(false);
         SetSittingState(false);
         SetEatingState(false);
         SetBlockedState(false);
+
         agent.isStopped = false;
         agent.speed = walkSpeed;
         agent.SetDestination(meatTarget.position);
@@ -182,7 +239,13 @@ public class DogController : MonoBehaviour
         if (agent != null)
             agent.isStopped = true;
 
+        isDistracted = true;
+        currentTarget = null;
+
         UpdateAnimatorSpeed(0f);
+        SetBlockedState(false);
+        SetAngryState(false);
+        SetSittingState(false);
         SetEatingState(true);
     }
 

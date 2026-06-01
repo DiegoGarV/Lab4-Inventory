@@ -396,6 +396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a09e265171e41464ba44a82962e9a16f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorldStateManager
+  isPlayerInsideHouse: 0
 --- !u!1 &828576464
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,6 +487,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MeatLogic
   itemId: steak
+  thrownMeatPrefab: {fileID: 2199520570192686080, guid: 44b8404b36524d8498b3c9305721f977, type: 3}
+  throwDistance: 5
+  spawnHeight: 0.5
+  groundCheckDistance: 5
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &1042947552
 GameObject:
   m_ObjectHideFlags: 0
