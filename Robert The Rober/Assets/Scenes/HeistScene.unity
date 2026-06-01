@@ -3946,6 +3946,10 @@ PrefabInstance:
       value: a5e19ad7-a425-4190-a435-bd225b71bd51
       objectReference: {fileID: 0}
     - target: {fileID: 5309339581074841588, guid: 2f31c755d56a1f04c99079c171333c33, type: 3}
+      propertyPath: houseId
+      value: House1B
+      objectReference: {fileID: 0}
+    - target: {fileID: 5309339581074841588, guid: 2f31c755d56a1f04c99079c171333c33, type: 3}
       propertyPath: doors.Array.data[1].doorId
       value: 325426e9-7bf0-426d-adef-16c12c8b4016
       objectReference: {fileID: 0}
@@ -3973,6 +3977,22 @@ PrefabInstance:
       propertyPath: doors.Array.data[7].doorId
       value: 7109d497-c0a5-4425-a2db-52bbade81879
       objectReference: {fileID: 0}
+    - target: {fileID: 5309339581074841588, guid: 2f31c755d56a1f04c99079c171333c33, type: 3}
+      propertyPath: cameras.Array.data[0].cameraId
+      value: fbdf56a6-1de3-4511-b3b2-173f49ce9844
+      objectReference: {fileID: 0}
+    - target: {fileID: 5309339581074841588, guid: 2f31c755d56a1f04c99079c171333c33, type: 3}
+      propertyPath: cameras.Array.data[1].cameraId
+      value: 1a451459-f0c2-4943-be81-8d053fcc3897
+      objectReference: {fileID: 0}
+    - target: {fileID: 5309339581074841588, guid: 2f31c755d56a1f04c99079c171333c33, type: 3}
+      propertyPath: cameras.Array.data[0].cameraRoot
+      value: 
+      objectReference: {fileID: 1827601252}
+    - target: {fileID: 5309339581074841588, guid: 2f31c755d56a1f04c99079c171333c33, type: 3}
+      propertyPath: cameras.Array.data[1].cameraRoot
+      value: 
+      objectReference: {fileID: 778631072}
     - target: {fileID: 5309339581074841588, guid: 2f31c755d56a1f04c99079c171333c33, type: 3}
       propertyPath: lootItems.Array.data[1].pickupId
       value: a5e19ad7-a425-4190-a435-bd225b71bd51
@@ -22289,6 +22309,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7348335246731431289, guid: 05f610bdf72a02c4ea6a96edf7de4e6c, type: 3}
   m_PrefabInstance: {fileID: 778123323}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &778631072 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6959897057278190496, guid: 2f31c755d56a1f04c99079c171333c33, type: 3}
+  m_PrefabInstance: {fileID: 155841454}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &781514277
 PrefabInstance:
@@ -55397,6 +55422,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823003957}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1827601252 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2987548394662394670, guid: 2f31c755d56a1f04c99079c171333c33, type: 3}
+  m_PrefabInstance: {fileID: 155841454}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1828067527
 PrefabInstance:
   m_ObjectHideFlags: 0

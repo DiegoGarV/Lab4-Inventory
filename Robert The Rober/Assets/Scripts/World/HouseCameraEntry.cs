@@ -5,5 +5,6 @@ using UnityEngine;
 public class HouseCameraEntry
 {
     public SecurityCameraController camera;
+    public GameObject cameraRoot;
     public string cameraId;
 }

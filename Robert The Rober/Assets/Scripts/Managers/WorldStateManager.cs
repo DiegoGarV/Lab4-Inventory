@@ -9,11 +9,13 @@ public class WorldStateManager : MonoBehaviour
     [SerializeField] private List<string> stolenThingsIds = new();
     [SerializeField] private List<string> openDoorIds = new();
     [SerializeField] private List<SavedDoorState> savedDoorStates = new();
+    [SerializeField] private List<string> housesWithActiveCamerasIds = new();
 
     public bool IsPlayerInsideHouse => isPlayerInsideHouse;
     public List<string> StolenThingsIds => stolenThingsIds;
     public List<string> OpenDoorIds => openDoorIds;
     public List<SavedDoorState> SavedDoorStates => savedDoorStates;
+    public List<string> HousesWithActiveCamerasIds => housesWithActiveCamerasIds;
 
     private void Awake()
     {
@@ -56,6 +58,7 @@ public class WorldStateManager : MonoBehaviour
         stolenThingsIds.Clear();
         openDoorIds.Clear();
         savedDoorStates.Clear();
+        housesWithActiveCamerasIds.Clear();
     }
 
     public void SaveCurrentlyOpenDoor(string doorId)
@@ -97,6 +100,25 @@ public class WorldStateManager : MonoBehaviour
         else
         {
             savedDoorStates.Add(new SavedDoorState(doorId, newLevel));
+        }
+    }
+
+    public bool HasActiveCamerasInHouse(string houseId)
+    {
+        if (string.IsNullOrEmpty(houseId))
+            return false;
+
+        return housesWithActiveCamerasIds.Contains(houseId);
+    }
+
+    public void ActivateCamerasInHouse(string houseId)
+    {
+        if (string.IsNullOrEmpty(houseId))
+            return;
+
+        if (!housesWithActiveCamerasIds.Contains(houseId))
+        {
+            housesWithActiveCamerasIds.Add(houseId);
         }
     }
 }

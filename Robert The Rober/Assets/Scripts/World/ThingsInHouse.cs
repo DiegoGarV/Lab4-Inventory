@@ -19,6 +19,11 @@ public class ThingsInHouse : MonoBehaviour
     [SerializeField] private DogController dog;
     [SerializeField] private string dogId;
 
+    [Header("Camera Security Rule")]
+    [SerializeField] private int cameraActivationBagCapacity = 150;
+    [SerializeField] private int cameraValueIgnoreAbove = 30000;
+    [SerializeField] private float cameraActivationPercent = 0.60f;
+
     public string HouseId => houseId;
     public List<HouseLootEntry> LootItems => lootItems;
     public List<HouseDoorEntry> Doors => doors;
@@ -38,9 +43,10 @@ public class ThingsInHouse : MonoBehaviour
     private void Start()
     {
         ApplyStolenLootState();
-        DisableCamerasAtStart();
-        DisableDogAtStart();
+        ApplyCameraState();
+        ApplyDogState();
         ApplySavedDoorStates();
+        EvaluateCameraSecurityUpgrade();
     }
 
     private void RefreshIds()
@@ -94,15 +100,29 @@ public class ThingsInHouse : MonoBehaviour
             if (entry == null || entry.camera == null)
                 continue;
 
-            EntityID entityId = entry.camera.GetComponent<EntityID>();
+            if (entry.cameraRoot == null)
+            {
+                EntityID entityId = entry.camera.GetComponent<EntityID>();
 
-            if (entityId == null)
-                entityId = entry.camera.GetComponentInParent<EntityID>();
+                if (entityId == null)
+                    entityId = entry.camera.GetComponentInParent<EntityID>();
 
-            if (entityId == null)
-                entityId = entry.camera.GetComponentInChildren<EntityID>();
+                if (entityId == null)
+                    entityId = entry.camera.GetComponentInChildren<EntityID>();
 
-            entry.cameraId = entityId != null ? entityId.ID : "";
+                if (entityId != null)
+                    entry.cameraRoot = entityId.gameObject;
+            }
+
+            if (entry.cameraRoot != null)
+            {
+                EntityID entityId = entry.cameraRoot.GetComponent<EntityID>();
+                entry.cameraId = entityId != null ? entityId.ID : "";
+            }
+            else
+            {
+                entry.cameraId = "";
+            }
         }
     }
 
@@ -161,36 +181,27 @@ public class ThingsInHouse : MonoBehaviour
         }
     }
 
-    private void DisableCamerasAtStart()
-    {
-        foreach (HouseCameraEntry entry in cameras)
-        {
-            if (entry == null || entry.camera == null)
-                continue;
+    // private void DisableCamerasAtStart()
+    // {
+    //     foreach (HouseCameraEntry entry in cameras)
+    //     {
+    //         if (entry == null)
+    //             continue;
 
-            EntityID entityId = entry.camera.GetComponent<EntityID>();
+    //         if (entry.cameraRoot != null)
+    //         {
+    //             entry.cameraRoot.SetActive(false);
+    //         }
+    //     }
+    // }
 
-            if (entityId == null)
-                entityId = entry.camera.GetComponentInParent<EntityID>();
-
-            if (entityId != null)
-            {
-                entityId.gameObject.SetActive(false);
-            }
-            else
-            {
-                entry.camera.gameObject.SetActive(false);
-            }
-        }
-    }
-
-    private void DisableDogAtStart()
-    {
-        if (dog != null)
-        {
-            dog.gameObject.SetActive(false);
-        }
-    }
+    // private void DisableDogAtStart()
+    // {
+    //     if (dog != null)
+    //     {
+    //         dog.gameObject.SetActive(false);
+    //     }
+    // }
 
     private void ApplySavedDoorStates()
     {
@@ -233,29 +244,20 @@ public class ThingsInHouse : MonoBehaviour
             {
                 openDoorsInThisHouse++;
             }
-
-            Debug.Log($"[{HouseId}] Door {entry.doorId} | CurrentLevel={entry.door.CurrentDoorLevel} | WasOpenLastRun={wasOpen}");
         }
-
-        Debug.Log($"[{HouseId}] totalDoors={totalDoors} | openDoorsInThisHouse={openDoorsInThisHouse}");
 
         if (totalDoors == 0)
             return;
 
         if (openDoorsInThisHouse >= Mathf.CeilToInt(totalDoors / 2f))
         {
-            Debug.Log($"[{HouseId}] Subiendo seguridad de puertas");
             foreach (HouseDoorEntry entry in doors)
             {
                 if (entry == null || entry.door == null || string.IsNullOrEmpty(entry.doorId))
                     continue;
 
-                Debug.Log($"Antes de subir: {entry.doorId} -> {entry.door.CurrentDoorLevel}");
-
                 entry.door.ForceClosed();
                 entry.door.UpgradeSecurityLevel();
-
-                Debug.Log($"Después de subir: {entry.doorId} -> {entry.door.CurrentDoorLevel}");
 
                 WorldStateManager.Instance.SetSavedDoorLevel(
                     entry.doorId,
@@ -277,8 +279,6 @@ public class ThingsInHouse : MonoBehaviour
             if (entry == null || entry.door == null || string.IsNullOrEmpty(entry.doorId))
                 continue;
 
-            Debug.Log($"Puerta {entry.doorId} | IsOpen = {entry.door.IsOpen} | Baseline = {entry.sceneStartDoorLevel}");
-
             if (entry.door.IsOpen)
             {
                 WorldStateManager.Instance.SaveCurrentlyOpenDoor(entry.doorId);
@@ -290,5 +290,144 @@ public class ThingsInHouse : MonoBehaviour
                 entry.sceneStartDoorLevel
             );
         }
+    }
+
+    private void ApplyCameraState()
+    {
+        bool shouldBeActive =
+            WorldStateManager.Instance != null &&
+            WorldStateManager.Instance.HasActiveCamerasInHouse(houseId);
+
+        foreach (HouseCameraEntry entry in cameras)
+        {
+            if (entry == null || entry.camera == null)
+                continue;
+
+            entry.cameraRoot.SetActive(shouldBeActive);
+            Debug.Log($"[{houseId}] Camera root {entry.cameraRoot.name} -> active = {shouldBeActive}");
+        }
+    }
+
+    private int CalculateStolenValueInThisHouse()
+    {
+        if (WorldStateManager.Instance == null)
+            return 0;
+
+        int total = 0;
+
+        foreach (HouseLootEntry entry in lootItems)
+        {
+            if (entry == null || entry.pickup == null || string.IsNullOrEmpty(entry.pickupId))
+                continue;
+
+            if (!WorldStateManager.Instance.IsThingStolen(entry.pickupId))
+                continue;
+
+            if (entry.pickup.MonetaryValue > cameraValueIgnoreAbove)
+                continue;
+
+            total += entry.pickup.MonetaryValue;
+        }
+
+        return total;
+    }
+
+    private int CalculateBestPossibleLootValueForCameras()
+    {
+        List<Pickup> validLoot = new();
+
+        foreach (HouseLootEntry entry in lootItems)
+        {
+            if (entry == null || entry.pickup == null)
+                continue;
+
+            if (entry.pickup.MonetaryValue > cameraValueIgnoreAbove)
+                continue;
+
+            if (entry.pickup.SackValue <= 0)
+                continue;
+
+            validLoot.Add(entry.pickup);
+        }
+
+        int capacity = cameraActivationBagCapacity;
+        int[,] dp = new int[validLoot.Count + 1, capacity + 1];
+
+        for (int i = 1; i <= validLoot.Count; i++)
+        {
+            int weight = Mathf.RoundToInt(validLoot[i - 1].SackValue);
+            int value = validLoot[i - 1].MonetaryValue;
+
+            for (int w = 0; w <= capacity; w++)
+            {
+                dp[i, w] = dp[i - 1, w];
+
+                if (weight <= w)
+                {
+                    dp[i, w] = Mathf.Max(
+                        dp[i, w],
+                        dp[i - 1, w - weight] + value
+                    );
+                }
+            }
+        }
+
+        return dp[validLoot.Count, capacity];
+    }
+
+    private void EvaluateCameraSecurityUpgrade()
+    {
+        if (WorldStateManager.Instance == null)
+            return;
+
+        if (WorldStateManager.Instance.HasActiveCamerasInHouse(houseId))
+            return;
+
+        int stolenValue = CalculateStolenValueInThisHouse();
+        int bestPossibleValue = CalculateBestPossibleLootValueForCameras();
+
+        if (bestPossibleValue <= 0)
+            return;
+
+        float stolenPercent = (float)stolenValue / bestPossibleValue;
+
+        Debug.Log(
+            $"[{houseId}] Camera check | stolenValue={stolenValue} | bestPossibleValue={bestPossibleValue} | percent={stolenPercent:P0}"
+        );
+
+        if (stolenPercent > cameraActivationPercent)
+        {
+            WorldStateManager.Instance.ActivateCamerasInHouse(houseId);
+            ApplyCameraState();
+
+            Debug.Log($"[{houseId}] Cámaras activadas.");
+        }
+    }
+
+    private GameObject GetCameraRootObject(SecurityCameraController cameraController)
+    {
+        if (cameraController == null)
+            return null;
+
+        EntityID entityId = cameraController.GetComponent<EntityID>();
+
+        if (entityId == null)
+            entityId = cameraController.GetComponentInParent<EntityID>();
+
+        if (entityId == null)
+            entityId = cameraController.GetComponentInChildren<EntityID>();
+
+        if (entityId != null)
+            return entityId.gameObject;
+
+        return cameraController.gameObject;
+    }
+
+    private void ApplyDogState()
+    {
+        if (dog == null)
+            return;
+
+        dog.gameObject.SetActive(false);
     }
 }
