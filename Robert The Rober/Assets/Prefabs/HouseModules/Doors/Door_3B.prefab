@@ -245,6 +245,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6496748334773340241, guid: c7049498fdae1fa4992800082e31571c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4027232510571617090}
+    - targetCorrespondingSourceObject: {fileID: 6496748334773340241, guid: c7049498fdae1fa4992800082e31571c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6386279593110318792}
   m_SourcePrefab: {fileID: 100100000, guid: c7049498fdae1fa4992800082e31571c, type: 3}
 --- !u!4 &2416587269174351969 stripped
 Transform:
@@ -272,7 +275,20 @@ MonoBehaviour:
   closedYRotation: 0
   openYRotation: 110
   isOpen: 0
-  isUnlockedPermanently: 0
+  navMeshObstacle: {fileID: 0}
+--- !u!114 &6386279593110318792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5152294824059615129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: f58f2a20-0b90-4154-a419-ce73b0be25d4
 --- !u!1001 &2177052104775470988
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1668,6 +1668,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7686693402781363205}
     m_Modifications:
+    - target: {fileID: 2610581391513519148, guid: 750b5b79ce0ce464bbb70d0166296e9d, type: 3}
+      propertyPath: id
+      value: 7765d33f-e4d2-4dcf-9ee6-ba21215a8c8e
+      objectReference: {fileID: 0}
     - target: {fileID: 3784975644127368396, guid: 750b5b79ce0ce464bbb70d0166296e9d, type: 3}
       propertyPath: m_Name
       value: Door_2B (4)
@@ -2200,6 +2204,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door_3B (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6386279593110318792, guid: aebb4c000f05a6747bb1fd65e0e5a981, type: 3}
+      propertyPath: id
+      value: 8e1761aa-e936-440d-814c-5d7d27b4d57e
+      objectReference: {fileID: 0}
     - target: {fileID: 8498816880434209736, guid: aebb4c000f05a6747bb1fd65e0e5a981, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -2331,6 +2339,10 @@ PrefabInstance:
     - target: {fileID: 409751081883940656, guid: aebb4c000f05a6747bb1fd65e0e5a981, type: 3}
       propertyPath: m_Name
       value: Door_3B
+      objectReference: {fileID: 0}
+    - target: {fileID: 6386279593110318792, guid: aebb4c000f05a6747bb1fd65e0e5a981, type: 3}
+      propertyPath: id
+      value: be78415c-a75a-4fc1-ad9c-9147b94d3e80
       objectReference: {fileID: 0}
     - target: {fileID: 8498816880434209736, guid: aebb4c000f05a6747bb1fd65e0e5a981, type: 3}
       propertyPath: m_RootOrder
@@ -3796,6 +3808,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door_3B (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6386279593110318792, guid: aebb4c000f05a6747bb1fd65e0e5a981, type: 3}
+      propertyPath: id
+      value: e781b035-8e57-432c-a27e-7f83692de159
+      objectReference: {fileID: 0}
     - target: {fileID: 8498816880434209736, guid: aebb4c000f05a6747bb1fd65e0e5a981, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -3858,6 +3874,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7686693402781363205}
     m_Modifications:
+    - target: {fileID: 2610581391513519148, guid: 750b5b79ce0ce464bbb70d0166296e9d, type: 3}
+      propertyPath: id
+      value: a0e7eec6-ff58-4274-a200-6fbfc46f78e3
+      objectReference: {fileID: 0}
     - target: {fileID: 3784975644127368396, guid: 750b5b79ce0ce464bbb70d0166296e9d, type: 3}
       propertyPath: m_Name
       value: Door_2B (3)
@@ -4980,6 +5000,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7686693402781363205}
     m_Modifications:
+    - target: {fileID: 2610581391513519148, guid: 750b5b79ce0ce464bbb70d0166296e9d, type: 3}
+      propertyPath: id
+      value: 2fc43957-28ec-4937-a3e4-bdd8e06c8c1f
+      objectReference: {fileID: 0}
     - target: {fileID: 3784975644127368396, guid: 750b5b79ce0ce464bbb70d0166296e9d, type: 3}
       propertyPath: m_Name
       value: Door_2B (5)
@@ -5981,6 +6005,10 @@ PrefabInstance:
     - target: {fileID: 409751081883940656, guid: aebb4c000f05a6747bb1fd65e0e5a981, type: 3}
       propertyPath: m_Name
       value: Door_3B
+      objectReference: {fileID: 0}
+    - target: {fileID: 6386279593110318792, guid: aebb4c000f05a6747bb1fd65e0e5a981, type: 3}
+      propertyPath: id
+      value: 660b8065-00ca-44a3-97ac-89c01a9f6b72
       objectReference: {fileID: 0}
     - target: {fileID: 8498816880434209736, guid: aebb4c000f05a6747bb1fd65e0e5a981, type: 3}
       propertyPath: m_RootOrder
@@ -8948,6 +8976,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7686693402781363205}
     m_Modifications:
+    - target: {fileID: 2610581391513519148, guid: 750b5b79ce0ce464bbb70d0166296e9d, type: 3}
+      propertyPath: id
+      value: b6b96cf7-d58b-4069-9df1-15cb363e53bd
+      objectReference: {fileID: 0}
     - target: {fileID: 3784975644127368396, guid: 750b5b79ce0ce464bbb70d0166296e9d, type: 3}
       propertyPath: m_Name
       value: Door_2B (2)
@@ -13724,6 +13756,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7686693403279004346}
     m_Modifications:
+    - target: {fileID: 2610581391513519148, guid: 750b5b79ce0ce464bbb70d0166296e9d, type: 3}
+      propertyPath: id
+      value: 66c447bc-598a-435b-b2ba-b2cc2f3ed3c1
+      objectReference: {fileID: 0}
     - target: {fileID: 3784975644127368396, guid: 750b5b79ce0ce464bbb70d0166296e9d, type: 3}
       propertyPath: m_Name
       value: Door_2B (6)
@@ -14128,6 +14164,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7686693403279004346}
     m_Modifications:
+    - target: {fileID: 2610581391513519148, guid: 750b5b79ce0ce464bbb70d0166296e9d, type: 3}
+      propertyPath: id
+      value: 6c57b6a1-70e9-45fb-afdb-e1294bcc27e1
+      objectReference: {fileID: 0}
     - target: {fileID: 3784975644127368396, guid: 750b5b79ce0ce464bbb70d0166296e9d, type: 3}
       propertyPath: m_Name
       value: Door_2B (4)
@@ -15522,6 +15562,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7686693403279004346}
     m_Modifications:
+    - target: {fileID: 2610581391513519148, guid: 750b5b79ce0ce464bbb70d0166296e9d, type: 3}
+      propertyPath: id
+      value: 928e01c9-f529-4c48-8493-a47dad12fb2c
+      objectReference: {fileID: 0}
     - target: {fileID: 3784975644127368396, guid: 750b5b79ce0ce464bbb70d0166296e9d, type: 3}
       propertyPath: m_Name
       value: Door_2B (2)
@@ -15794,6 +15838,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7686693403279004346}
     m_Modifications:
+    - target: {fileID: 2610581391513519148, guid: 750b5b79ce0ce464bbb70d0166296e9d, type: 3}
+      propertyPath: id
+      value: 029d2e0b-2f2c-450f-acb3-17b7f517e380
+      objectReference: {fileID: 0}
     - target: {fileID: 3784975644127368396, guid: 750b5b79ce0ce464bbb70d0166296e9d, type: 3}
       propertyPath: m_Name
       value: Door_2B (3)
@@ -16132,6 +16180,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7686693403279004346}
     m_Modifications:
+    - target: {fileID: 2610581391513519148, guid: 750b5b79ce0ce464bbb70d0166296e9d, type: 3}
+      propertyPath: id
+      value: 6fa3fdde-e8f5-415d-b0a1-b4b045731eb8
+      objectReference: {fileID: 0}
     - target: {fileID: 3784975644127368396, guid: 750b5b79ce0ce464bbb70d0166296e9d, type: 3}
       propertyPath: m_Name
       value: Door_2B (5)
@@ -16749,6 +16801,10 @@ PrefabInstance:
     - target: {fileID: 202231548456049310, guid: 0c447d68afe357744b28e7c773cd345b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 343563919380189152, guid: 0c447d68afe357744b28e7c773cd345b, type: 3}
+      propertyPath: id
+      value: 0b031cf8-1063-4d0e-a13c-3f10307fdb78
       objectReference: {fileID: 0}
     - target: {fileID: 5853624981177429370, guid: 0c447d68afe357744b28e7c773cd345b, type: 3}
       propertyPath: m_RootOrder
@@ -17608,6 +17664,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7686693403279004346}
     m_Modifications:
+    - target: {fileID: 2610581391513519148, guid: 750b5b79ce0ce464bbb70d0166296e9d, type: 3}
+      propertyPath: id
+      value: 78738057-86cd-4bc0-8ba5-cbcd2cacf5a7
+      objectReference: {fileID: 0}
     - target: {fileID: 3784975644127368396, guid: 750b5b79ce0ce464bbb70d0166296e9d, type: 3}
       propertyPath: m_Name
       value: Door_2B

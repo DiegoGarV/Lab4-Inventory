@@ -90,13 +90,34 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -4084672777538192892, guid: 523f4cb16c53e054f88b501c59d70e4a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9137679828918536470}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 523f4cb16c53e054f88b501c59d70e4a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2831298555646640657}
   m_SourcePrefab: {fileID: 100100000, guid: 523f4cb16c53e054f88b501c59d70e4a, type: 3}
 --- !u!4 &739511915424031971 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4084672777538192892, guid: 523f4cb16c53e054f88b501c59d70e4a, type: 3}
   m_PrefabInstance: {fileID: 5553806865967881959}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4742989949096764342 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 523f4cb16c53e054f88b501c59d70e4a, type: 3}
+  m_PrefabInstance: {fileID: 5553806865967881959}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2831298555646640657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4742989949096764342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: f3c501e2-22ed-4db7-94ea-9f73602850d1
 --- !u!1001 &8738450134851677949
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -178,7 +199,7 @@ PrefabInstance:
       addedObject: {fileID: 6598202082311415607}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: be384d3bbf600ab49b492d51c3bb71ce, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5802088843243493025}
+      addedObject: {fileID: 1617724768640245525}
   m_SourcePrefab: {fileID: 100100000, guid: be384d3bbf600ab49b492d51c3bb71ce, type: 3}
 --- !u!1 &8467998514297787308 stripped
 GameObject:
@@ -207,7 +228,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 3613567641014311022, guid: be384d3bbf600ab49b492d51c3bb71ce, type: 3}
---- !u!114 &5802088843243493025
+--- !u!114 &1617724768640245525
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

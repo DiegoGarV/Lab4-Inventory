@@ -91,11 +91,21 @@ public class ActionController : MonoBehaviour
                 if (MoneyAndObjectsController.Instance != null &&
                     MoneyAndObjectsController.Instance.CanCollect(pickup))
                 {
+                    EntityID entityId = pickup.GetComponent<EntityID>();
+
+                    if (entityId == null)
+                        entityId = pickup.GetComponentInParent<EntityID>();
+
+                    if (entityId != null && WorldStateManager.Instance != null)
+                    {
+                        WorldStateManager.Instance.RegisterStolenThing(entityId.ID);
+                    }
+
                     pickup.Collect();
                 }
                 else
                 {
-                    Debug.Log("La bolsa está llena. Solo puedes recoger billetes.");
+                    Debug.Log("Este objeto ya no cabe en la bolsa.");
                 }
 
                 return;

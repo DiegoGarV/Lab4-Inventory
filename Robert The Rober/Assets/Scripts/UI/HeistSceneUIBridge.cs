@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MorningLevelUIBridge : MonoBehaviour
+public class HeistSceneUIBridge : MonoBehaviour
 {
     public void ResumeGame()
     {

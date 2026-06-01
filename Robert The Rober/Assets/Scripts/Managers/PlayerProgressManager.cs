@@ -53,13 +53,13 @@ public class PlayerProgressManager : MonoBehaviour
 
     private bool IsHeistScene(string sceneName)
     {
-        return sceneName == "MorningLevel" || sceneName == "AfternoonLevel";
+        return sceneName == "HeistScene";
     }
 
     private void ApplyLevelStartItemEffects()
     {
         ResetLevelItemEffectsFlags();
-        
+
         if (MoneyAndObjectsController.Instance != null)
         {
             MoneyAndObjectsController.Instance.ResetSackCapacity();

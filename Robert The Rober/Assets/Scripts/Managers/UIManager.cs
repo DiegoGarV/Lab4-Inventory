@@ -111,6 +111,11 @@ public class UIManager : MonoBehaviour
             PersistenceManager.Instance.ApplyLoadedGame();
             PersistenceManager.Instance.ClearLoadFlag();
         }
+
+        if (scene.name == "HeistScene" && WorldStateManager.Instance != null)
+        {
+            StartCoroutine(EvaluateDoorSecurityNextFrame());
+        }
     }
 
     private void BindSceneReferences(Scene scene)
@@ -431,10 +436,10 @@ public class UIManager : MonoBehaviour
             PersistenceManager.Instance.PrepareNewGame();
 
         if (PlayerProgressManager.Instance != null)
-            PlayerProgressManager.Instance.SetCurrentLevel("MorningLevel");
+            PlayerProgressManager.Instance.SetCurrentLevel("HeistScene");
 
         if (SceneTransitionManager.Instance != null)
-            SceneTransitionManager.Instance.LoadSceneWithLoadingScreen("MorningLevel");
+            SceneTransitionManager.Instance.LoadSceneWithLoadingScreen("HeistScene");
     }
 
     public void LoadGame()
@@ -446,7 +451,7 @@ public class UIManager : MonoBehaviour
 
         PersistenceManager.Instance.PrepareLoadGame();
         if (SceneTransitionManager.Instance != null)
-            SceneTransitionManager.Instance.LoadSceneWithLoadingScreen("MorningLevel");
+            SceneTransitionManager.Instance.LoadSceneWithLoadingScreen("HeistScene");
     }
 
     public void GoToStore()
@@ -461,6 +466,21 @@ public class UIManager : MonoBehaviour
 
             PlayerProgressManager.Instance.AddCurrency(totalCollected);
             PlayerProgressManager.Instance.SetCurrentLevel("Shop");
+        }
+
+        ThingsInHouse[] allHouses = FindObjectsByType<ThingsInHouse>(FindObjectsSortMode.None);
+
+        if (WorldStateManager.Instance != null)
+        {
+            WorldStateManager.Instance.ClearOpenDoorIds();
+
+            foreach (ThingsInHouse house in allHouses)
+            {
+                if (house != null)
+                {
+                    house.ReportOpenDoorsToWorldState();
+                }
+            }
         }
 
         if (SceneTransitionManager.Instance != null)
@@ -494,10 +514,10 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1f;
 
         if (PlayerProgressManager.Instance != null)
-            PlayerProgressManager.Instance.SetCurrentLevel("AfternoonLevel");
+            PlayerProgressManager.Instance.SetCurrentLevel("HeistScene");
 
         if (SceneTransitionManager.Instance != null)
-            SceneTransitionManager.Instance.LoadSceneWithLoadingScreen("AfternoonLevel");
+            SceneTransitionManager.Instance.LoadSceneWithLoadingScreen("HeistScene");
     }
 
     public void CancelReturnToTown()
@@ -877,5 +897,25 @@ public class UIManager : MonoBehaviour
             EventManager.Instance.CurrentDeviceType == InputDeviceType.Gamepad;
 
         Cursor.visible = !usingGamepad;
+    }
+
+    private IEnumerator EvaluateDoorSecurityNextFrame()
+    {
+        yield return null;
+
+        if (WorldStateManager.Instance == null)
+            yield break;
+
+        ThingsInHouse[] allHouses = FindObjectsByType<ThingsInHouse>(FindObjectsSortMode.None);
+
+        foreach (ThingsInHouse house in allHouses)
+        {
+            if (house != null)
+            {
+                house.EvaluateOpenDoorsSecurityUpgrade();
+            }
+        }
+
+        WorldStateManager.Instance.ClearOpenDoorIds();
     }
 }

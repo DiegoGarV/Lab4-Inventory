@@ -101,4 +101,49 @@ public class DoorController : MonoBehaviour
 
         navMeshObstacle.enabled = !isOpen;
     }
+
+    public void SetDoorLevel(DoorLevel newLevel)
+    {
+        doorLevel = newLevel;
+    }
+
+    public void ForceClosed()
+    {
+        isOpen = false;
+        SetYRotation(closedYRotation);
+        UpdateNavigationState();
+    }
+
+    public void SetOpenState(bool value)
+    {
+        isOpen = value;
+
+        if (isOpen)
+            SetYRotation(openYRotation);
+        else
+            SetYRotation(closedYRotation);
+
+        UpdateNavigationState();
+    }
+
+    public void UpgradeSecurityLevel()
+    {
+        switch (doorLevel)
+        {
+            case DoorLevel.Open:
+                doorLevel = DoorLevel.CloseEasy;
+                break;
+
+            case DoorLevel.CloseEasy:
+                doorLevel = DoorLevel.CloseMid;
+                break;
+
+            case DoorLevel.CloseMid:
+                doorLevel = DoorLevel.CloseHard;
+                break;
+
+            case DoorLevel.CloseHard:
+                break;
+        }
+    }
 }

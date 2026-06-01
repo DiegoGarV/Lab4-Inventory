@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: e598dadcdfdda0848bc67d2fbd411a1a
   - enabled: 1
-    path: Assets/Scenes/MorningLevel.unity
+    path: Assets/Scenes/HeistScene.unity
     guid: 16996010ffac54543b69c4b65ec0b2fb
   - enabled: 1
     path: Assets/Scenes/AfternoonLevel.unity

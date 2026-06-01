@@ -5086,6 +5086,7 @@ GameObject:
   - component: {fileID: 1855347008105849803}
   - component: {fileID: 3044375123033825756}
   - component: {fileID: 7351947242093653769}
+  - component: {fileID: 6799667926538068721}
   m_Layer: 9
   m_Name: germanshepherd
   m_TagString: Untagged
@@ -5204,6 +5205,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.26900196, y: 0.7527147, z: 0.7508893}
   m_Center: {x: -0.0020418167, y: 0.39499912, z: 0.12455535}
+--- !u!114 &6799667926538068721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6544990386230654568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4444d3e86a8d688409b74f70349912fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityID
+  id: 4d9bde52-c496-426a-890b-6b8bf7487cdc
 --- !u!1 &6564017302769477680
 GameObject:
   m_ObjectHideFlags: 0
