@@ -22,6 +22,7 @@ public class UIManager : MonoBehaviour
     private TMP_Text runawayItemsMoneyText;
     private TMP_Text runawayTotalText;
     private GameObject pauseMenu;
+    private GameObject caughtScreen;
     private Button loadGameButton;
     private MoneyAndObjectsController boundMoneyController;
     private GameObject returnToTownPrompt;
@@ -144,6 +145,7 @@ public class UIManager : MonoBehaviour
         runawayItemsMoneyText = refs.runawayItemsMoneyText;
         runawayTotalText = refs.runawayTotalText;
         pauseMenu = refs.pauseMenu;
+        caughtScreen = refs.caughtScreen;
         loadGameButton = refs.loadGameButton;
         returnToTownPrompt = refs.returnToTownPrompt;
         currencyText = refs.currencyText;
@@ -179,6 +181,7 @@ public class UIManager : MonoBehaviour
         runawayItemsMoneyText = null;
         runawayTotalText = null;
         pauseMenu = null;
+        caughtScreen = null;
         loadGameButton = null;
         returnToTownPrompt = null;
         currencyText = null;
@@ -261,6 +264,9 @@ public class UIManager : MonoBehaviour
 
         if (sackableValueText != null)
             sackableValueText.gameObject.SetActive(false);
+
+        if (caughtScreen != null)
+            caughtScreen.SetActive(false);
 
         UpdateStoreCurrency();
     }
@@ -348,6 +354,9 @@ public class UIManager : MonoBehaviour
     public void TogglePauseMenu()
     {
         if (runawayScreen != null && runawayScreen.activeSelf)
+            return;
+
+        if (caughtScreen != null && caughtScreen.activeSelf)
             return;
 
         isPaused = !isPaused;
@@ -643,6 +652,9 @@ public class UIManager : MonoBehaviour
         if (stolenItemsPanel != null && stolenItemsPanel.activeSelf)
             return;
 
+        if (caughtScreen != null && caughtScreen.activeSelf)
+            return;
+
         bool willOpen = !purchasedItemsPanel.activeSelf;
         Debug.Log("UIManager: TogglePurchasedItemsPanel -> " + willOpen);
 
@@ -686,6 +698,9 @@ public class UIManager : MonoBehaviour
         }
 
         if (purchasedItemsPanel != null && purchasedItemsPanel.activeSelf)
+            return;
+
+        if (caughtScreen != null && caughtScreen.activeSelf)
             return;
 
         bool willOpen = !stolenItemsPanel.activeSelf;
@@ -778,7 +793,8 @@ public class UIManager : MonoBehaviour
             (buyItemPrompt != null && buyItemPrompt.activeSelf) ||
             (returnToTownPrompt != null && returnToTownPrompt.activeSelf) ||
             (purchasedItemsPanel != null && purchasedItemsPanel.activeSelf) ||
-            (stolenItemsPanel != null && stolenItemsPanel.activeSelf);
+            (stolenItemsPanel != null && stolenItemsPanel.activeSelf) ||
+            (caughtScreen != null && caughtScreen.activeSelf);
 
         Cursor.visible = shouldShowCursor;
     }
@@ -816,8 +832,50 @@ public class UIManager : MonoBehaviour
 
     public void ShowCaughtScreen()
     {
-        Debug.Log("El jugador fue atrapado o detectado.");
-        
-        // TODO: implementar pantalla de captura
+        if (caughtScreen == null)
+        {
+            Debug.LogWarning("UIManager: caughtScreen es null.");
+            return;
+        }
+
+        // Evitar reabrir si ya está activa
+        if (caughtScreen.activeSelf)
+            return;
+
+        // Ocultar otros UI
+        if (pauseMenu != null)
+            pauseMenu.SetActive(false);
+
+        if (runawayScreen != null)
+            runawayScreen.SetActive(false);
+
+        if (buyItemPrompt != null)
+            buyItemPrompt.SetActive(false);
+
+        if (returnToTownPrompt != null)
+            returnToTownPrompt.SetActive(false);
+
+        if (purchasedItemsPanel != null)
+            purchasedItemsPanel.SetActive(false);
+
+        if (stolenItemsPanel != null)
+            stolenItemsPanel.SetActive(false);
+
+        if (firstPersonController != null)
+            firstPersonController.enabled = false;
+
+        if (actionController != null)
+            actionController.enabled = false;
+
+        caughtScreen.SetActive(true);
+
+        Time.timeScale = 0f;
+        Cursor.lockState = CursorLockMode.None;
+
+        bool usingGamepad =
+            EventManager.Instance != null &&
+            EventManager.Instance.CurrentDeviceType == InputDeviceType.Gamepad;
+
+        Cursor.visible = !usingGamepad;
     }
 }

@@ -23,6 +23,9 @@ public class UISceneReferences : MonoBehaviour
 
     [Header("Pause Menu")]
     public GameObject pauseMenu;
+    
+    [Header("Caught Screen")]
+    public GameObject caughtScreen;
 
     [Header("Main Menu")]
     public Button loadGameButton;

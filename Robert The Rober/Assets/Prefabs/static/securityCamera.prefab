@@ -1,60 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &206962274681725291
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9034114080579794000}
-  - component: {fileID: 5921806216675549866}
-  m_Layer: 0
-  m_Name: viewOriginal
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &9034114080579794000
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 206962274681725291}
-  serializedVersion: 2
-  m_LocalRotation: {x: -1, y: -0, z: -0, w: 0.00000008146034}
-  m_LocalPosition: {x: 0, y: 0, z: 0.11}
-  m_LocalScale: {x: 2.3482997, y: 2.3482997, z: 2.3482997}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 9137679828918536470}
-  m_Father: {fileID: 739511915424031971}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5921806216675549866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 206962274681725291}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97a9733020174a8449ef260477ecf465, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SecurityCameraController
-  viewDistance: 8
-  viewAngle: 45
-  obstructionMask:
-    serializedVersion: 2
-    m_Bits: 129
-  playerMask:
-    serializedVersion: 2
-    m_Bits: 1024
-  viewOrigin: {fileID: 9034114080579794000}
-  visionVisual: {fileID: 8467998514297787308}
 --- !u!1001 &5553806865967881959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -144,7 +89,7 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -4084672777538192892, guid: 523f4cb16c53e054f88b501c59d70e4a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 9034114080579794000}
+      addedObject: {fileID: 9137679828918536470}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 523f4cb16c53e054f88b501c59d70e4a, type: 3}
 --- !u!4 &739511915424031971 stripped
@@ -158,19 +103,19 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 9034114080579794000}
+    m_TransformParent: {fileID: 739511915424031971}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: be384d3bbf600ab49b492d51c3bb71ce, type: 3}
       propertyPath: m_LocalScale.x
-      value: 320
+      value: 751.45593
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be384d3bbf600ab49b492d51c3bb71ce, type: 3}
       propertyPath: m_LocalScale.y
-      value: 100
+      value: 234.82997
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be384d3bbf600ab49b492d51c3bb71ce, type: 3}
       propertyPath: m_LocalScale.z
-      value: 390
+      value: 915.8369
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be384d3bbf600ab49b492d51c3bb71ce, type: 3}
       propertyPath: m_LocalPosition.x
@@ -182,7 +127,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be384d3bbf600ab49b492d51c3bb71ce, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.898
+      value: -9.043669
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be384d3bbf600ab49b492d51c3bb71ce, type: 3}
       propertyPath: m_LocalRotation.w
@@ -190,15 +135,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be384d3bbf600ab49b492d51c3bb71ce, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be384d3bbf600ab49b492d51c3bb71ce, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0.00000008146034
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be384d3bbf600ab49b492d51c3bb71ce, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be384d3bbf600ab49b492d51c3bb71ce, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -227,13 +172,54 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: be384d3bbf600ab49b492d51c3bb71ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6598202082311415607}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: be384d3bbf600ab49b492d51c3bb71ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5802088843243493025}
   m_SourcePrefab: {fileID: 100100000, guid: be384d3bbf600ab49b492d51c3bb71ce, type: 3}
 --- !u!1 &8467998514297787308 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: be384d3bbf600ab49b492d51c3bb71ce, type: 3}
   m_PrefabInstance: {fileID: 8738450134851677949}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &6598202082311415607
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8467998514297787308}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3613567641014311022, guid: be384d3bbf600ab49b492d51c3bb71ce, type: 3}
+--- !u!114 &5802088843243493025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8467998514297787308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a9733020174a8449ef260477ecf465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SecurityCameraController
+  visionVisual: {fileID: 8467998514297787308}
 --- !u!4 &9137679828918536470 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: be384d3bbf600ab49b492d51c3bb71ce, type: 3}

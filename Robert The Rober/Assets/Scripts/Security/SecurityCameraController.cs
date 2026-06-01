@@ -2,14 +2,7 @@ using UnityEngine;
 
 public class SecurityCameraController : MonoBehaviour
 {
-    [Header("Vision")]
-    [SerializeField] private float viewDistance = 8f;
-    [SerializeField] private float viewAngle = 45f;
-    [SerializeField] private LayerMask obstructionMask;
-    [SerializeField] private LayerMask playerMask;
-
     [Header("References")]
-    [SerializeField] private Transform viewOrigin;
     [SerializeField] private GameObject visionVisual;
 
     private bool isPowered = true;
@@ -18,49 +11,7 @@ public class SecurityCameraController : MonoBehaviour
 
     private void Start()
     {
-        if (viewOrigin == null)
-            viewOrigin = transform;
-
         UpdateVisionVisual();
-    }
-
-    private void Update()
-    {
-        if (!isPowered)
-            return;
-
-        DetectPlayer();
-    }
-
-    private void DetectPlayer()
-    {
-        Collider[] hits = Physics.OverlapSphere(viewOrigin.position, viewDistance, playerMask);
-
-        foreach (Collider hit in hits)
-        {
-            Transform target = hit.transform;
-
-            Vector3 directionToTarget = (target.position - viewOrigin.position).normalized;
-            float angle = Vector3.Angle(viewOrigin.forward, directionToTarget);
-
-            if (angle > viewAngle * 0.5f)
-                continue;
-
-            float distanceToTarget = Vector3.Distance(viewOrigin.position, target.position);
-
-            if (!Physics.Raycast(viewOrigin.position, directionToTarget, distanceToTarget, obstructionMask))
-            {
-                if (UIManager.Instance != null)
-                {
-                    UIManager.Instance.ShowCaughtScreen();
-                }
-                else
-                {
-                    Debug.Log($"Cámara {name}: jugador detectado.");
-                }
-                return;
-            }
-        }
     }
 
     public void SetPowered(bool value)
@@ -75,24 +26,21 @@ public class SecurityCameraController : MonoBehaviour
             visionVisual.SetActive(isPowered);
     }
 
-    private void OnDrawGizmosSelected()
+    private void OnTriggerEnter(Collider other)
     {
-        if (viewOrigin == null)
-            viewOrigin = transform;
+        if (!isPowered)
+            return;
 
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(viewOrigin.position, viewDistance);
+        if (!other.CompareTag("Player"))
+            return;
 
-        Vector3 leftDir = Quaternion.Euler(0f, -viewAngle * 0.5f, 0f) * viewOrigin.forward;
-        Vector3 rightDir = Quaternion.Euler(0f, viewAngle * 0.5f, 0f) * viewOrigin.forward;
-
-        Gizmos.color = Color.cyan;
-        Gizmos.DrawRay(viewOrigin.position, leftDir * viewDistance);
-        Gizmos.DrawRay(viewOrigin.position, rightDir * viewDistance);
-        Gizmos.DrawRay(viewOrigin.position, viewOrigin.forward * viewDistance);
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.ShowCaughtScreen();
+        }
+        else
+        {
+            Debug.Log($"Cámara {name}: jugador detectado.");
+        }
     }
-
-    public float ViewDistance => viewDistance;
-    public float ViewAngle => viewAngle;
-    public Transform ViewOrigin => viewOrigin;
 }
