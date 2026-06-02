@@ -34,6 +34,14 @@ public class HeistSceneUIBridge : MonoBehaviour
         }
     }
 
+    public void ReturnToMainMenuWithoutSaving()
+    {
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.ReturnToMainMenuWithoutSaving();
+        }
+    }
+
     public void GoToStore()
     {
         if (UIManager.Instance != null)

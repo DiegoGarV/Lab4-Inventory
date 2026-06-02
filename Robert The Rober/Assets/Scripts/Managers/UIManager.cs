@@ -21,6 +21,7 @@ public class UIManager : MonoBehaviour
     private TMP_Text runawayCashText;
     private TMP_Text runawayItemsMoneyText;
     private TMP_Text runawayTotalText;
+    private TMP_Text runawayCurrencyText;    
     private GameObject pauseMenu;
     private GameObject caughtScreen;
     private Button loadGameButton;
@@ -149,6 +150,7 @@ public class UIManager : MonoBehaviour
         runawayCashText = refs.runawayCashText;
         runawayItemsMoneyText = refs.runawayItemsMoneyText;
         runawayTotalText = refs.runawayTotalText;
+        runawayCurrencyText = refs.runawayCurrencyText;
         pauseMenu = refs.pauseMenu;
         caughtScreen = refs.caughtScreen;
         loadGameButton = refs.loadGameButton;
@@ -185,6 +187,7 @@ public class UIManager : MonoBehaviour
         runawayCashText = null;
         runawayItemsMoneyText = null;
         runawayTotalText = null;
+        runawayCurrencyText = null;
         pauseMenu = null;
         caughtScreen = null;
         loadGameButton = null;
@@ -354,6 +357,12 @@ public class UIManager : MonoBehaviour
 
         if (runawayTotalText != null)
             runawayTotalText.text = $"${totalCollected}";
+
+        if (runawayCurrencyText != null && PlayerProgressManager.Instance != null)
+        {
+            int updatedCurrency = PlayerProgressManager.Instance.CurrentCurrency + totalCollected;
+            runawayCurrencyText.text = $"${updatedCurrency}";
+        }
     }
 
     public void TogglePauseMenu()
@@ -415,17 +424,22 @@ public class UIManager : MonoBehaviour
         if (PersistenceManager.Instance != null)
             PersistenceManager.Instance.SaveGame();
 
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
+        if (SceneTransitionManager.Instance != null)
+            SceneTransitionManager.Instance.LoadSceneWithLoadingScreen("MainMenu");
     }
 
     public void RestartGame()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        if (PlayerProgressManager.Instance != null)
+            PlayerProgressManager.Instance.ResetProgress();
+
+        if (WorldStateManager.Instance != null)
+            WorldStateManager.Instance.ClearWorldState();
+
+        if (SceneTransitionManager.Instance != null)
+            SceneTransitionManager.Instance.LoadSceneWithLoadingScreen("HeistScene");
     }
 
     public void NewGame()
@@ -487,8 +501,12 @@ public class UIManager : MonoBehaviour
             SceneTransitionManager.Instance.LoadSceneWithLoadingScreen("Shop");
     }
 
-    public void OpenSettings()
+    public void ReturnToMainMenuWithoutSaving()
     {
+        Time.timeScale = 1f;
+
+        if (SceneTransitionManager.Instance != null)
+            SceneTransitionManager.Instance.LoadSceneWithLoadingScreen("MainMenu");
     }
 
     public void ShowReturnToTownPrompt()

@@ -14,9 +14,9 @@ public class MainMenuUIBridge : MonoBehaviour
             UIManager.Instance.LoadGame();
     }
 
-    public void OpenSettings()
+    public void CloseGame()
     {
         if (UIManager.Instance != null)
-            UIManager.Instance.OpenSettings();
+            UIManager.Instance.CloseGame();
     }
 }

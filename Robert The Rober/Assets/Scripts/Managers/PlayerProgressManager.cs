@@ -162,7 +162,7 @@ public class PlayerProgressManager : MonoBehaviour
     public void ResetProgress()
     {
         currentCurrency = 0;
-        currentLevelName = "";
+        currentLevelName = "HeistScene";
         purchasedItems.Clear();
     }
 
@@ -174,5 +174,14 @@ public class PlayerProgressManager : MonoBehaviour
     public void ResetLevelItemEffectsFlags()
     {
         canSeeItemPrices = false;
+    }
+
+    public void LoadFromSaveData(SaveData data)
+    {
+        if (data == null) return;
+
+        currentCurrency = data.currentCurrency;
+        currentLevelName = data.currentLevelName;
+        purchasedItems = new List<PurchasedStoreItemData>(data.purchasedItems);
     }
 }

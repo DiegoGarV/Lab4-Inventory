@@ -1,6 +1,7 @@
-using System.IO;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PersistenceManager : MonoBehaviour
 {
@@ -8,13 +9,9 @@ public class PersistenceManager : MonoBehaviour
 
     private string saveFilePath;
     private SaveData loadedData;
-    private List<string> collectedPickupIds = new();
 
     public SaveData LoadedData => loadedData;
-    public List<string> CollectedPickupIds => collectedPickupIds;
-
     public bool ShouldLoadGame { get; private set; }
-    private Transform playerTransform;
 
     private void Awake()
     {
@@ -25,28 +22,7 @@ public class PersistenceManager : MonoBehaviour
         }
 
         Instance = this;
-
         saveFilePath = Path.Combine(Application.persistentDataPath, "savegame.json");
-    }
-
-    private void OnEnable()
-    {
-        Pickup.OnPickupCollected += HandlePickupCollected;
-    }
-
-    private void OnDisable()
-    {
-        Pickup.OnPickupCollected -= HandlePickupCollected;
-    }
-
-    private void HandlePickupCollected(Pickup pickup)
-    {
-        if (pickup == null) return;
-
-        if (!string.IsNullOrEmpty(pickup.PickupId) && !collectedPickupIds.Contains(pickup.PickupId))
-        {
-            collectedPickupIds.Add(pickup.PickupId);
-        }
     }
 
     public bool HasSaveFile()
@@ -56,36 +32,12 @@ public class PersistenceManager : MonoBehaviour
 
     public void SaveGame()
     {
-        playerTransform = null;
-
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player != null)
-            playerTransform = player.transform;
-
-        if (playerTransform == null)
-        {
-            Debug.LogError("No se encontró el jugador para guardar.");
-            return;
-        }
-
-        if (MoneyAndObjectsController.Instance == null)
-        {
-            Debug.LogError("No existe MoneyAndObjectsController al guardar.");
-            return;
-        }
-
         SaveData data = new SaveData();
 
-        data.cashScore = MoneyAndObjectsController.Instance.CashScore;
-        data.storedLootValue = MoneyAndObjectsController.Instance.StoredLootValue;
-        data.currentSackLoad = MoneyAndObjectsController.Instance.CurrentSackLoad;
-
-        data.playerPosX = playerTransform.position.x;
-        data.playerPosY = playerTransform.position.y;
-        data.playerPosZ = playerTransform.position.z;
-        data.playerRotY = playerTransform.eulerAngles.y;
-
-        data.collectedPickupIds = new List<string>(collectedPickupIds);
+        SavePlayerProgress(data);
+        SaveWorldState(data);
+        SavePlayerTransform(data);
+        SaveCurrentHeistRun(data);
 
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(saveFilePath, json);
@@ -93,6 +45,58 @@ public class PersistenceManager : MonoBehaviour
         loadedData = data;
 
         Debug.Log("Juego guardado en: " + saveFilePath);
+    }
+
+    private void SavePlayerProgress(SaveData data)
+    {
+        if (PlayerProgressManager.Instance == null)
+            return;
+
+        data.currentCurrency = PlayerProgressManager.Instance.CurrentCurrency;
+        data.currentLevelName = PlayerProgressManager.Instance.CurrentLevelName;
+        data.purchasedItems = new List<PurchasedStoreItemData>(PlayerProgressManager.Instance.PurchasedItems);
+    }
+
+    private void SaveWorldState(SaveData data)
+    {
+        if (WorldStateManager.Instance == null)
+            return;
+
+        data.isPlayerInsideHouse = WorldStateManager.Instance.IsPlayerInsideHouse;
+        data.stolenThingsIds = new List<string>(WorldStateManager.Instance.StolenThingsIds);
+        data.openDoorIds = new List<string>(WorldStateManager.Instance.OpenDoorIds);
+        data.savedDoorStates = new List<SavedDoorState>(WorldStateManager.Instance.SavedDoorStates);
+        data.housesWithActiveCamerasIds = new List<string>(WorldStateManager.Instance.HousesWithActiveCamerasIds);
+        data.housesWithActiveDogIds = new List<string>(WorldStateManager.Instance.HousesWithActiveDogIds);
+    }
+
+    private void SavePlayerTransform(SaveData data)
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player == null)
+            return;
+
+        Transform playerTransform = player.transform;
+
+        data.playerPosX = playerTransform.position.x;
+        data.playerPosY = playerTransform.position.y;
+        data.playerPosZ = playerTransform.position.z;
+        data.playerRotY = playerTransform.eulerAngles.y;
+    }
+
+    private void SaveCurrentHeistRun(SaveData data)
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        if (currentScene.name != "HeistScene")
+            return;
+
+        if (MoneyAndObjectsController.Instance == null)
+            return;
+
+        data.cashScore = MoneyAndObjectsController.Instance.CashScore;
+        data.storedLootValue = MoneyAndObjectsController.Instance.StoredLootValue;
+        data.currentSackLoad = MoneyAndObjectsController.Instance.CurrentSackLoad;
     }
 
     public SaveData LoadGame()
@@ -106,47 +110,45 @@ public class PersistenceManager : MonoBehaviour
         string json = File.ReadAllText(saveFilePath);
         loadedData = JsonUtility.FromJson<SaveData>(json);
 
-        collectedPickupIds = new List<string>(loadedData.collectedPickupIds);
-
         Debug.Log("Juego cargado desde: " + saveFilePath);
         return loadedData;
     }
 
-    public void ClearRuntimeData()
+    public void ApplyLoadedGame()
     {
-        loadedData = null;
-        collectedPickupIds.Clear();
-    }
-
-    public void DeleteSave()
-    {
-        if (HasSaveFile())
+        if (loadedData == null)
         {
-            File.Delete(saveFilePath);
+            Debug.LogWarning("No hay datos cargados para aplicar.");
+            return;
         }
 
-        ClearRuntimeData();
+        ApplyPlayerProgress(loadedData);
+        ApplyWorldState(loadedData);
+        RestorePlayerTransform(loadedData);
+        ApplyCurrentHeistRun(loadedData);
     }
 
-    private void RemoveCollectedPickups(List<string> collectedIds)
+    private void ApplyPlayerProgress(SaveData data)
     {
-        if (collectedIds == null) return;
+        if (PlayerProgressManager.Instance == null)
+            return;
 
-        Pickup[] allPickups = FindObjectsByType<Pickup>(FindObjectsSortMode.None);
+        PlayerProgressManager.Instance.LoadFromSaveData(data);
+    }
 
-        foreach (Pickup pickup in allPickups)
-        {
-            if (collectedIds.Contains(pickup.PickupId))
-            {
-                Destroy(pickup.gameObject);
-            }
-        }
+    private void ApplyWorldState(SaveData data)
+    {
+        if (WorldStateManager.Instance == null)
+            return;
+
+        WorldStateManager.Instance.LoadFromSaveData(data);
     }
 
     private void RestorePlayerTransform(SaveData data)
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player == null) return;
+        if (player == null)
+            return;
 
         player.transform.position = new Vector3(
             data.playerPosX,
@@ -159,35 +161,34 @@ public class PersistenceManager : MonoBehaviour
         player.transform.eulerAngles = euler;
     }
 
-    public void ApplyLoadedGame()
+    private void ApplyCurrentHeistRun(SaveData data)
     {
-        if (loadedData == null)
-        {
-            Debug.LogWarning("No hay datos cargados para aplicar.");
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        if (currentScene.name != "HeistScene")
             return;
-        }
 
-        RestorePlayerTransform(loadedData);
+        if (MoneyAndObjectsController.Instance == null)
+            return;
 
-        if (MoneyAndObjectsController.Instance != null)
+        MoneyAndObjectsController.Instance.LoadFromSaveData(data);
+    }
+
+    public void DeleteSave()
+    {
+        if (HasSaveFile())
         {
-            MoneyAndObjectsController.Instance.LoadFromSaveData(loadedData);
+            File.Delete(saveFilePath);
         }
 
-        RemoveCollectedPickups(loadedData.collectedPickupIds);
-
-        InventoryUIController inventoryUI = FindFirstObjectByType<InventoryUIController>();
-        if (inventoryUI != null)
-        {
-            inventoryUI.LoadInventoryFromSave(loadedData.collectedPickupIds);
-        }
+        loadedData = null;
+        ShouldLoadGame = false;
     }
 
     public void PrepareNewGame()
     {
         ShouldLoadGame = false;
         loadedData = null;
-        collectedPickupIds.Clear();
     }
 
     public void PrepareLoadGame()

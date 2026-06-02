@@ -4,17 +4,27 @@ using System.Collections.Generic;
 [Serializable]
 public class SaveData
 {
-    // Money and Objects Score
-    public int cashScore;
-    public int storedLootValue;
-    public float currentSackLoad;
+    // PlayerProgressManager
+    public int currentCurrency;
+    public string currentLevelName;
+    public List<PurchasedStoreItemData> purchasedItems = new();
 
-    // Player Position and Rotation
+    // WorldStateManager
+    public bool isPlayerInsideHouse;
+    public List<string> stolenThingsIds = new();
+    public List<string> openDoorIds = new();
+    public List<SavedDoorState> savedDoorStates = new();
+    public List<string> housesWithActiveCamerasIds = new();
+    public List<string> housesWithActiveDogIds = new();
+
+    // Posición del jugador
     public float playerPosX;
     public float playerPosY;
     public float playerPosZ;
     public float playerRotY;
 
-    // Collected items for inventory and world state
-    public List<string> collectedPickupIds = new();
+    // Estado de run actual en HeistScene
+    public int cashScore;
+    public int storedLootValue;
+    public float currentSackLoad;
 }

@@ -283,13 +283,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UISceneReferences
   cashText: {fileID: 0}
   sackAnimator: {fileID: 0}
+  sackLoadText: {fileID: 0}
+  sackableHintText: {fileID: 0}
+  sackableValueText: {fileID: 0}
   firstPersonController: {fileID: 0}
   actionController: {fileID: 0}
   runawayScreen: {fileID: 0}
   runawayCashText: {fileID: 0}
   runawayItemsMoneyText: {fileID: 0}
   runawayTotalText: {fileID: 0}
+  runawayCurrencyText: {fileID: 0}
   pauseMenu: {fileID: 0}
+  caughtScreen: {fileID: 0}
   loadGameButton: {fileID: 183570372}
   returnToTownPrompt: {fileID: 0}
   currencyText: {fileID: 0}
@@ -731,7 +736,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Settings
+  m_text: Close Game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -984,6 +989,10 @@ PrefabInstance:
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7409092578468641448, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7409092578468641448, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
@@ -1031,6 +1040,8 @@ PrefabInstance:
     - {fileID: 3944055941657700771, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
     - {fileID: 5429333391476939209, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
     - {fileID: 7827792039809945627, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
+    - {fileID: 2630695579961513255, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
+    - {fileID: 1284653962777767895, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 197983389719996106, guid: 2f3d560a40bec764b9b5a10f2e307554, type: 3}
       insertIndex: -1
@@ -1069,7 +1080,7 @@ GameObject:
   - component: {fileID: 1903876382}
   - component: {fileID: 1903876381}
   m_Layer: 5
-  m_Name: SettingsGameButton
+  m_Name: CloseGameButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1141,7 +1152,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1254135014}
         m_TargetAssemblyTypeName: MainMenuUIBridge, Assembly-CSharp
-        m_MethodName: OpenSettings
+        m_MethodName: CloseGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

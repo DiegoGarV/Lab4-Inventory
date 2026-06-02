@@ -20,6 +20,7 @@ public class UISceneReferences : MonoBehaviour
     public TMP_Text runawayCashText;
     public TMP_Text runawayItemsMoneyText;
     public TMP_Text runawayTotalText;
+    public TMP_Text runawayCurrencyText;
 
     [Header("Pause Menu")]
     public GameObject pauseMenu;

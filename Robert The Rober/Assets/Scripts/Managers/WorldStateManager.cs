@@ -10,12 +10,14 @@ public class WorldStateManager : MonoBehaviour
     [SerializeField] private List<string> openDoorIds = new();
     [SerializeField] private List<SavedDoorState> savedDoorStates = new();
     [SerializeField] private List<string> housesWithActiveCamerasIds = new();
+    [SerializeField] private List<string> housesWithActiveDogIds = new();
 
     public bool IsPlayerInsideHouse => isPlayerInsideHouse;
     public List<string> StolenThingsIds => stolenThingsIds;
     public List<string> OpenDoorIds => openDoorIds;
     public List<SavedDoorState> SavedDoorStates => savedDoorStates;
     public List<string> HousesWithActiveCamerasIds => housesWithActiveCamerasIds;
+    public List<string> HousesWithActiveDogIds => housesWithActiveDogIds;
 
     private void Awake()
     {
@@ -59,6 +61,7 @@ public class WorldStateManager : MonoBehaviour
         openDoorIds.Clear();
         savedDoorStates.Clear();
         housesWithActiveCamerasIds.Clear();
+        housesWithActiveDogIds.Clear();
     }
 
     public void SaveCurrentlyOpenDoor(string doorId)
@@ -120,5 +123,36 @@ public class WorldStateManager : MonoBehaviour
         {
             housesWithActiveCamerasIds.Add(houseId);
         }
+    }
+
+    public bool HasActiveDogInHouse(string houseId)
+    {
+        if (string.IsNullOrEmpty(houseId))
+            return false;
+
+        return housesWithActiveDogIds.Contains(houseId);
+    }
+
+    public void ActivateDogInHouse(string houseId)
+    {
+        if (string.IsNullOrEmpty(houseId))
+            return;
+
+        if (!housesWithActiveDogIds.Contains(houseId))
+        {
+            housesWithActiveDogIds.Add(houseId);
+        }
+    }
+
+    public void LoadFromSaveData(SaveData data)
+    {
+        if (data == null) return;
+
+        isPlayerInsideHouse = data.isPlayerInsideHouse;
+        stolenThingsIds = new List<string>(data.stolenThingsIds);
+        openDoorIds = new List<string>(data.openDoorIds);
+        savedDoorStates = new List<SavedDoorState>(data.savedDoorStates);
+        housesWithActiveCamerasIds = new List<string>(data.housesWithActiveCamerasIds);
+        housesWithActiveDogIds = new List<string>(data.housesWithActiveDogIds);
     }
 }

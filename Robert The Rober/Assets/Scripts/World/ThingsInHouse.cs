@@ -24,6 +24,9 @@ public class ThingsInHouse : MonoBehaviour
     [SerializeField] private int cameraValueIgnoreAbove = 30000;
     [SerializeField] private float cameraActivationPercent = 0.60f;
 
+    [Header("Dog Security Rule")]
+    [SerializeField] private float dogActivationWeightThreshold = 50f;
+
     public string HouseId => houseId;
     public List<HouseLootEntry> LootItems => lootItems;
     public List<HouseDoorEntry> Doors => doors;
@@ -47,6 +50,7 @@ public class ThingsInHouse : MonoBehaviour
         ApplyDogState();
         ApplySavedDoorStates();
         EvaluateCameraSecurityUpgrade();
+        EvaluateDogSecurityUpgrade();
     }
 
     private void RefreshIds()
@@ -180,28 +184,6 @@ public class ThingsInHouse : MonoBehaviour
             }
         }
     }
-
-    // private void DisableCamerasAtStart()
-    // {
-    //     foreach (HouseCameraEntry entry in cameras)
-    //     {
-    //         if (entry == null)
-    //             continue;
-
-    //         if (entry.cameraRoot != null)
-    //         {
-    //             entry.cameraRoot.SetActive(false);
-    //         }
-    //     }
-    // }
-
-    // private void DisableDogAtStart()
-    // {
-    //     if (dog != null)
-    //     {
-    //         dog.gameObject.SetActive(false);
-    //     }
-    // }
 
     private void ApplySavedDoorStates()
     {
@@ -428,6 +410,37 @@ public class ThingsInHouse : MonoBehaviour
         if (dog == null)
             return;
 
-        dog.gameObject.SetActive(false);
+        bool shouldBeActive =
+            WorldStateManager.Instance != null &&
+            WorldStateManager.Instance.HasActiveDogInHouse(houseId);
+
+        dog.gameObject.SetActive(shouldBeActive);
+    }
+
+    private void EvaluateDogSecurityUpgrade()
+    {
+        if (WorldStateManager.Instance == null)
+            return;
+
+        if (WorldStateManager.Instance.HasActiveDogInHouse(houseId))
+            return;
+
+        foreach (HouseLootEntry entry in lootItems)
+        {
+            if (entry == null || entry.pickup == null || string.IsNullOrEmpty(entry.pickupId))
+                continue;
+
+            if (!WorldStateManager.Instance.IsThingStolen(entry.pickupId))
+                continue;
+
+            if (entry.pickup.SackValue >= dogActivationWeightThreshold)
+            {
+                WorldStateManager.Instance.ActivateDogInHouse(houseId);
+                ApplyDogState();
+
+                Debug.Log($"[{houseId}] Perro activado por objeto pesado: {entry.pickup.name} | Peso: {entry.pickup.SackValue}");
+                return;
+            }
+        }
     }
 }
