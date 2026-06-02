@@ -24493,6 +24493,10 @@ PrefabInstance:
       propertyPath: pickupId
       value: twisted_money_003
       objectReference: {fileID: 0}
+    - target: {fileID: 2569246756906475391, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: id
+      value: b73c1845-1185-4842-98fc-ab3700a6c917
+      objectReference: {fileID: 0}
     - target: {fileID: 2642279874828911716, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: little_mirror_001
@@ -25100,6 +25104,214 @@ PrefabInstance:
     - target: {fileID: 7282712645340137462, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
       value: gold_bar_006
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: doors.Array.data[0].doorId
+      value: 0f6a767d-3757-415a-a33f-532568380f8f
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: doors.Array.data[1].doorId
+      value: 9510fd0e-6b79-4018-b351-67e1312a7a8c
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: doors.Array.data[2].doorId
+      value: bd3f4c0d-50bf-4b23-a728-c4bfe17e22ee
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: doors.Array.data[3].doorId
+      value: eb028d91-26ed-4953-82f0-712f14088231
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: doors.Array.data[4].doorId
+      value: d5fd89f6-df99-4dc7-8334-8887a6bfa75e
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: doors.Array.data[5].doorId
+      value: 02406968-ce6c-415e-978a-e24bc305cda1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: doors.Array.data[6].doorId
+      value: 4acb3e54-0d89-414c-abf8-d004f315b42d
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: doors.Array.data[7].doorId
+      value: a0357d88-1b0b-4366-9000-db052a70bd92
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: doors.Array.data[8].doorId
+      value: a0357d88-1b0b-4366-9000-db052a70bd92
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: doors.Array.data[9].doorId
+      value: e1a4c8e6-f16c-4583-be17-248405aaa0ff
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: doors.Array.data[10].doorId
+      value: d8f6a370-c2f2-4b1e-8333-f899185f4e98
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: doors.Array.data[11].doorId
+      value: 411333e9-1316-4558-938d-8a4fa7a3105e
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: doors.Array.data[12].doorId
+      value: 677c61ad-b8b3-42dd-86fb-f139e60295fc
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: doors.Array.data[13].doorId
+      value: 991745c0-26bd-4f66-891b-b6d7d06c424d
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: doors.Array.data[14].doorId
+      value: 21c93a21-508f-491f-a5b7-3189caf01616
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: cameras.Array.data[1].cameraId
+      value: b73c1845-1185-4842-98fc-ab3700a6c917
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[1].pickupId
+      value: 2cc2f602-089b-4150-9196-359797d356a6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[5].pickupId
+      value: 5e8d36d7-3cee-42b6-baa1-e06479f79e07
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[6].pickupId
+      value: db5c47f6-943b-437a-bb87-f788abbd0ac5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[8].pickupId
+      value: 8da1205d-d8cb-45ce-91ed-d053305bd33c
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[13].pickupId
+      value: 3f0a4315-8873-46e4-b36d-f161edd3fdde
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[24].pickupId
+      value: 756466a8-1466-42f9-8f85-c38b3a6d91c1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[25].pickupId
+      value: ba0c1e78-8a02-4756-8720-d1e5b73dc377
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[26].pickupId
+      value: ef7787ab-014c-47c7-99e1-758a9e9f3b7a
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[27].pickupId
+      value: 584734d3-5c73-43af-81ae-42ab657ed6ec
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[28].pickupId
+      value: cd5676e5-a483-47bd-aefc-4c3359d2c097
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[30].pickupId
+      value: 2a2f6811-2b9d-4974-a108-f9e5512687ce
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[33].pickupId
+      value: 0fe747bc-cffe-4475-b868-78f22b84b35e
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[34].pickupId
+      value: be29221e-2899-4fb6-9538-60e3c458e914
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[39].pickupId
+      value: ca3bae36-1c42-4c29-ad8b-25ecd3c3f104
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[40].pickupId
+      value: 99d4ee10-dcdb-4e77-9f7f-aa5dec5e0152
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[43].pickupId
+      value: 0fcae6e0-122f-47c4-afd9-d0b66e8b7bfc
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[44].pickupId
+      value: 21a20886-b531-486f-9e9f-27aa0c3eeb43
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[45].pickupId
+      value: 6e407700-1e43-4476-8de2-e836c5dbfad3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[46].pickupId
+      value: 023f9453-c829-4ab7-b7c4-740d797d6a67
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[47].pickupId
+      value: 939548bc-38de-4398-bcbb-59f5cab929ec
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[48].pickupId
+      value: 6cdde946-963b-453e-a44e-401ced3c69e3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[52].pickupId
+      value: 22eb154f-4fa1-43f9-8fa3-b3b217b8b1fa
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[53].pickupId
+      value: 9d33f34e-53c2-48f1-adb8-21217bc31c27
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[54].pickupId
+      value: 33c02a20-11ea-4dad-a31d-294941bec497
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[55].pickupId
+      value: a99ff02a-a67e-4272-a277-edc7bbfdfee5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[56].pickupId
+      value: 4ffdd889-27bf-4516-b916-f556406d35c8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[61].pickupId
+      value: 6bbb5eb1-9356-4219-9fbc-46c02c0a270f
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[62].pickupId
+      value: 80d89a04-669a-45b5-8db2-eb55a16befc4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[64].pickupId
+      value: b61bae54-c018-4b61-af6f-20ec97217455
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[66].pickupId
+      value: 608e1fe3-91fe-41cf-9ab6-6b35dd4b549e
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[68].pickupId
+      value: 93b4ddb0-49ca-4926-9595-de82ea4ab748
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[69].pickupId
+      value: 77771561-dede-406d-b1a4-a5776bf3b76d
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[70].pickupId
+      value: 92954382-81ff-42ac-89e0-5e59a040055e
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[81].pickupId
+      value: a9c9c943-c906-4078-9ed3-6a3ce4b320d7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[82].pickupId
+      value: ad2d3b74-5eca-438e-b7ad-2cd863cf85ba
+      objectReference: {fileID: 0}
+    - target: {fileID: 7390979423620968865, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
+      propertyPath: lootItems.Array.data[83].pickupId
+      value: cac00f55-0921-4c67-a4f4-3b14ec392a49
       objectReference: {fileID: 0}
     - target: {fileID: 7447866259434339496, guid: 71adca0decb8bcc49aacf03ce0eba097, type: 3}
       propertyPath: pickupId
