@@ -29,6 +29,12 @@ public class ActionController : MonoBehaviour
 
     private void Update()
     {
+        if (UIManager.Instance != null && UIManager.Instance.IsBlockingGameplayInput)
+        {
+            UIManager.Instance.HideSackableHint();
+            return;
+        }
+
         UpdateSackableHint();
     }
 
@@ -70,6 +76,9 @@ public class ActionController : MonoBehaviour
 
     private void HandleInteractPressed()
     {
+        if (UIManager.Instance != null && UIManager.Instance.IsBlockingGameplayInput)
+            return;
+
         if (cam == null)
         {
             cam = Camera.main;
@@ -143,15 +152,7 @@ public class ActionController : MonoBehaviour
 
             if (heistDoor != null)
             {
-                if (heistDoor.CanOpenNormally())
-                {
-                    heistDoor.Interact();
-                }
-                else
-                {
-                    Debug.Log("La puerta está cerrada. Necesitas una herramienta para abrirla.");
-                }
-
+                heistDoor.Interact();
                 return;
             }
         }
@@ -159,6 +160,9 @@ public class ActionController : MonoBehaviour
 
     private void HandleUseItemPressed()
     {
+        if (UIManager.Instance != null && UIManager.Instance.IsBlockingGameplayInput)
+            return;
+
         if (cam == null)
         {
             cam = Camera.main;
@@ -231,6 +235,32 @@ public class ActionController : MonoBehaviour
 
             if (wasUsed)
                 return;
+        }
+
+        bool interactionSupportsSomeItem = false;
+
+        // Revisar si el hit era válido para algún item lógico, aunque no lo tengas
+        foreach (StoreItemLogicBase logic in StoreItemLogicManager.Instance.AllLogics)
+        {
+            if (logic == null)
+                continue;
+
+            if (logic.CanUseOn(hit))
+            {
+                interactionSupportsSomeItem = true;
+                break;
+            }
+        }
+
+        if (interactionSupportsSomeItem)
+        {
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlayMissingRequiredItem();
+            }
+
+            Debug.Log("Te falta el objeto necesario para interactuar aquí.");
+            return;
         }
 
         Debug.Log("Ningún item comprado pudo usarse aquí.");

@@ -21,7 +21,16 @@ public class WireCutterLogic : StoreItemLogicBase
         }
 
         powerBox.CutPower();
-        Debug.Log("WireCutterLogic: energía cortada.");
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayWireCutterUse();
+        }
         return true;
+    }
+
+    public override bool CanUseOn(RaycastHit hit)
+    {
+        PowerBoxController powerBox = hit.collider.GetComponentInParent<PowerBoxController>();
+        return powerBox != null && powerBox.PowerOn;
     }
 }

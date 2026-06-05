@@ -46,7 +46,11 @@ public class DoorController : MonoBehaviour
     {
         if (!CanOpenNormally())
         {
-            Debug.Log("La puerta está cerrada. Necesitas una herramienta para abrirla.");
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlayDoorLocked();
+            }
+
             return;
         }
 

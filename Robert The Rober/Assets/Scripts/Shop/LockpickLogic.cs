@@ -41,17 +41,33 @@ public class LockpickLogic : StoreItemLogicBase
 
         float successChance = GetSuccessChance(door.CurrentDoorLevel);
         float roll = Random.value;
+        Debug.Log($"Probabilidad: {successChance * 100f}%");
 
         if (roll <= successChance)
         {
             door.UnlockDoor();
             door.OpenDoor();
-            Debug.Log($"Ganzúa exitosa. Probabilidad: {successChance * 100f}%");
+
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlayLockpickSuccess();
+            }
+
             return true;
         }
 
-        Debug.Log($"La ganzúa falló. Probabilidad: {successChance * 100f}%");
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayLockpickFail();
+        }
+
         return true;
+    }
+
+    public override bool CanUseOn(RaycastHit hit)
+    {
+        DoorController door = hit.collider.GetComponentInParent<DoorController>();
+        return door != null && !door.CanOpenNormally();
     }
 
     private float GetSuccessChance(DoorController.DoorLevel level)

@@ -54,12 +54,34 @@ public class MoneyAndObjectsController : MonoBehaviour
         {
             cashScore += pickup.MonetaryValue;
             OnCashChanged?.Invoke(cashScore);
+
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlayMoneyPickup();
+            }
+
             return;
         }
 
         currentSackLoad += pickup.SackValue;
         currentSackLoad = Mathf.Clamp(currentSackLoad, 0f, maxSackLoad);
         storedLootValue += pickup.MonetaryValue;
+
+        if (pickup is BigLootPickup)
+        {
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlayBigLootPickup();
+            }
+        }
+
+        if (currentSackLoad >= maxSackLoad)
+        {
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlaySackFull();
+            }
+        }
 
         OnSackChanged?.Invoke(currentSackLoad, maxSackLoad);
     }

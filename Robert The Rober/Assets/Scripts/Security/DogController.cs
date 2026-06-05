@@ -167,13 +167,14 @@ public class DogController : MonoBehaviour
         if (((1 << other.gameObject.layer) & playerMask) == 0)
             return;
 
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayDogBite();
+        }
+
         if (UIManager.Instance != null)
         {
             UIManager.Instance.ShowCaughtScreen();
-        }
-        else
-        {
-            Debug.Log("El perro atrapó al jugador.");
         }
     }
 

@@ -80,7 +80,17 @@ public class MeatLogic : StoreItemLogicBase
 
         dog.DistractWithMeat(meatInstance.transform);
 
-        Debug.Log("MeatLogic: carne lanzada para distraer al perro.");
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayThrowMeat();
+        }
+
         return true;
+    }
+
+    public override bool CanUseOn(RaycastHit hit)
+    {
+        DogController dog = hit.collider.GetComponentInParent<DogController>();
+        return dog != null;
     }
 }

@@ -14,4 +14,9 @@ public abstract class StoreItemLogicBase : MonoBehaviour
     {
         return false;
     }
+
+    public virtual bool CanUseOn(RaycastHit hit)
+    {
+        return false;
+    }
 }

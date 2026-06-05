@@ -14,6 +14,14 @@ public class HouseDoorTrigger : MonoBehaviour
 
         WorldStateManager.Instance.TogglePlayerInsideHouse();
 
+        if (WorldStateManager.Instance.IsPlayerInsideHouse)
+        {
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlayEnterHouse();
+            }
+        }
+
         Debug.Log("HouseDoorTrigger: jugador cambió estado interior/exterior. Ahora dentro = " +
                   WorldStateManager.Instance.IsPlayerInsideHouse);
     }

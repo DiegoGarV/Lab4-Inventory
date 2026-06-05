@@ -170,8 +170,6 @@ public class UIManager : MonoBehaviour
         pauseFirstButton = refs.pauseFirstButton;
         buyPromptFirstButton = refs.buyPromptFirstButton;
         toNextSceneFirstButton = refs.toNextSceneFirstButton;
-
-        // Debug.Log($"UIManager: referencias enlazadas para escena {scene.name}");
     }
 
     private void ClearSceneReferences()
@@ -297,13 +295,22 @@ public class UIManager : MonoBehaviour
             UpdateCashText(boundMoneyController.CashScore);
             UpdateSackBar(boundMoneyController.CurrentSackLoad, boundMoneyController.MaxSackLoad);
 
-            Debug.Log("UIManager: rebind a MoneyAndObjectsController exitoso.");
+            // Debug.Log("UIManager: rebind a MoneyAndObjectsController exitoso.");
         }
         else
         {
-            Debug.LogWarning("UIManager: no encontró MoneyAndObjectsController para enlazar.");
+            // Debug.LogWarning("UIManager: no encontró MoneyAndObjectsController para enlazar.");
         }
     }
+
+    public bool IsBlockingGameplayInput =>
+        (pauseMenu != null && pauseMenu.activeSelf) ||
+        (runawayScreen != null && runawayScreen.activeSelf) ||
+        (buyItemPrompt != null && buyItemPrompt.activeSelf) ||
+        (returnToTownPrompt != null && returnToTownPrompt.activeSelf) ||
+        (purchasedItemsPanel != null && purchasedItemsPanel.activeSelf) ||
+        (stolenItemsPanel != null && stolenItemsPanel.activeSelf) ||
+        (caughtScreen != null && caughtScreen.activeSelf);
 
     private void UpdateCashText(int currentCash)
     {
@@ -666,6 +673,11 @@ public class UIManager : MonoBehaviour
         bool shouldDisappear = currentStoreItem.DestroyOnPurchase;
 
         currentStoreItem.Purchase();
+
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayBuyItem();
+        }
 
         UpdateStoreCurrency();
 

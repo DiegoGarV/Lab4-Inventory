@@ -9,6 +9,8 @@ public class StoreItemLogicManager : MonoBehaviour
 
     private Dictionary<string, StoreItemLogicBase> logicById = new();
 
+    public IEnumerable<StoreItemLogicBase> AllLogics => logicById.Values;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)

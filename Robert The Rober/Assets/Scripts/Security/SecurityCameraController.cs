@@ -38,9 +38,10 @@ public class SecurityCameraController : MonoBehaviour
         {
             UIManager.Instance.ShowCaughtScreen();
         }
-        else
+        
+        if (UIManager.Instance != null)
         {
-            Debug.Log($"Cámara {name}: jugador detectado.");
+            UIManager.Instance.ShowCaughtScreen();
         }
     }
 }
