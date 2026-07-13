@@ -868,7 +868,7 @@ MonoBehaviour:
   bigLootPickupClip: {fileID: 8300000, guid: 42269dd28867b0d41b29538ad959d22f, type: 3}
   missingRequiredItemClip: {fileID: 8300000, guid: 84283bde72b6ad546a92c6a24824d8b3, type: 3}
   sackFullClip: {fileID: 8300000, guid: 8f0c06b540d62234f8050972d9a1cdf5, type: 3}
-  lockpickFailClip: {fileID: 0}
+  lockpickFailClip: {fileID: 8300000, guid: f936f88399f63314fbe3b3606e8fd9ea, type: 3}
   defaultSfxCooldown: 1
   doorLockedCooldown: 1
   enterHouseCooldown: 1
